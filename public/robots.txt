@@ -1,0 +1,10 @@
+# Robots.txt for Ay Bıçak
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://aybicak.com/sitemap.xml
+
+# Disallow admin/private areas
+Disallow: /api/
+Disallow: /_next/

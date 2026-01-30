@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+}
+
+@layer base {
+  :root {
+    --background: #1a1a1a;
+    /* Dark Deep Base */
+    --foreground: #F0F0E8;
+    /* Soft White Text */
+
+    --card: #252525;
+    /* Dark Card Surface */
+    --card-foreground: #F0F0E8;
+
+    --popover: #2A2A2A;
+    --popover-foreground: #F0F0E8;
+
+    --primary: #F0F0E8;
+    /* Light Primary */
+    --primary-foreground: #1a1a1a;
+
+    --secondary: #333333;
+    /* Dark Surface Highlight */
+    --secondary-foreground: #F0F0E8;
+
+    --muted: #404040;
+    --muted-foreground: #A0A096;
+    /* Muted Grey Text */
+
+    --accent: #D4AF37;
+    /* Rich Gold - Matches Dark Mode better */
+    --accent-foreground: #1a1a1a;
+
+    --destructive: #8B0000;
+    --destructive-foreground: #F0F0E8;
+
+    --border: #404040;
+    --input: #333333;
+    --ring: #D4AF37;
+
+    --radius: 0.2rem;
+
+    --glass: rgba(30, 30, 30, 0.7);
+    /* Dark Glass */
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: #1a1a1a;
+  /* background-image moved to fixed div in layout.tsx for performance */
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* "Live Lighting" Effect Wrapper - OPTIMIZED */
+.titanium-sheen {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 70%);
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+  /* Removed infinite scale animation to fix performance stutter */
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 border border-white/10 shadow-xl;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .glass-panel-dark {
+    @apply bg-[#1a1a1a]/60 border border-white/5;
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+.btn-glint {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glint::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%);
+  transform: skewX(-25deg);
+  transition: all 0.5s;
+}
+
+.btn-glint:hover::after {
+  left: 150%;
+  transition: 0.7s ease-in-out;
+}
