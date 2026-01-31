@@ -59,18 +59,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 {/* Main Navbar */}
-                <div className={`w-full transition-all duration-500 ease-in-out ${isScrolled ? "py-3" : "py-5"} relative`}>
-                    {/* Logo - With glassmorphism effect matching navbar */}
-                    <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[70]">
-                        <div className="relative h-12 md:h-16 px-4 transition-transform hover:scale-105 flex items-center justify-center bg-white/[0.15] backdrop-blur-lg rounded-xl border border-white/10">
-                            <img
-                                src="/logo.png"
-                                alt="Ay Bıçak"
-                                className="h-full w-auto object-contain mix-blend-luminosity opacity-95"
-                            />
-                        </div>
-                    </Link>
-
+                <div className={`w-full transition-all duration-500 ease-in-out ${isScrolled ? "py-3" : "py-5"}`}>
                     <div className="max-w-7xl mx-auto px-6 relative flex items-center justify-between bg-white/[0.15] backdrop-blur-lg rounded-2xl border border-white/10 shadow-lg shadow-white/5 p-2">
 
                         {/* Left: Desktop Links */}
@@ -89,8 +78,16 @@ export default function Navbar() {
                             ))}
                         </div>
 
-                        {/* Center: Spacer for logo */}
-                        <div className="w-56 md:w-80" />
+                        {/* Center: Logo - Inside glassmorphism container */}
+                        <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]">
+                            <div className="relative h-16 md:h-24 transition-transform hover:scale-105 flex items-center justify-center">
+                                <img
+                                    src="/logo-seamless.png"
+                                    alt="Ay Bıçak"
+                                    className="h-full w-auto object-contain"
+                                />
+                            </div>
+                        </Link>
 
                         {/* Right: Actions */}
                         <div className="flex items-center justify-end gap-2 md:gap-4 flex-1">
