@@ -59,7 +59,18 @@ export default function Navbar() {
                     </div>
                 </div>
                 {/* Main Navbar */}
-                <div className={`w-full transition-all duration-500 ease-in-out ${isScrolled ? "py-3" : "py-5"}`}>
+                <div className={`w-full transition-all duration-500 ease-in-out ${isScrolled ? "py-3" : "py-5"} relative`}>
+                    {/* Logo - Outside glassmorphism container */}
+                    <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[70]">
+                        <div className="relative w-56 h-14 md:w-80 md:h-20 transition-transform hover:scale-105 flex items-center justify-center">
+                            <img
+                                src="/logo.png"
+                                alt="Ay Bıçak"
+                                className="h-full w-auto object-contain"
+                            />
+                        </div>
+                    </Link>
+
                     <div className="max-w-7xl mx-auto px-6 relative flex items-center justify-between bg-white/[0.15] backdrop-blur-lg rounded-2xl border border-white/10 shadow-lg shadow-white/5 p-2">
 
                         {/* Left: Desktop Links */}
@@ -78,20 +89,8 @@ export default function Navbar() {
                             ))}
                         </div>
 
-                        {/* Center: Logo */}
-                        <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]">
-                            <div
-                                className="relative w-56 h-14 md:w-80 md:h-20 transition-transform hover:scale-105 flex items-center justify-center"
-                                style={{ backdropFilter: 'none', WebkitBackdropFilter: 'none', background: 'transparent' }}
-                            >
-                                <img
-                                    src="/logo.png"
-                                    alt="Ay Bıçak"
-                                    className="h-full w-auto object-contain mix-blend-multiply opacity-90"
-                                    style={{ background: 'transparent' }}
-                                />
-                            </div>
-                        </Link>
+                        {/* Center: Spacer for logo */}
+                        <div className="w-56 md:w-80" />
 
                         {/* Right: Actions */}
                         <div className="flex items-center justify-end gap-2 md:gap-4 flex-1">
