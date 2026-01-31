@@ -23,6 +23,6 @@ def remove_black_background(input_path, output_path):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    process_img = "public/logo-screen.png" # This is the black bg white text logo
+    process_img = "public/logo-bold-source.png" # The new bold white text logo
     output_img = "public/logo-final.png"
     remove_black_background(process_img, output_img)
