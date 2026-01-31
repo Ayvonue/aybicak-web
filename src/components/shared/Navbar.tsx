@@ -62,9 +62,9 @@ export default function Navbar() {
                 <div className={`w-full transition-all duration-500 ease-in-out ${isScrolled ? "py-3" : "py-5"} relative`}>
                     {/* Logo - Outside glassmorphism container */}
                     <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[70]">
-                        <div className="relative w-56 h-14 md:w-80 md:h-20 transition-transform hover:scale-105 flex items-center justify-center">
+                        <div className="relative h-10 md:h-14 transition-transform hover:scale-105 flex items-center justify-center">
                             <img
-                                src="/logo.png"
+                                src="/logo-dark.png"
                                 alt="Ay Bıçak"
                                 className="h-full w-auto object-contain"
                             />
