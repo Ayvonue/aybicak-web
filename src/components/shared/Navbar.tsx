@@ -85,7 +85,7 @@ export default function Navbar() {
                                     src="/logo.png"
                                     alt="Ay Bıçak"
                                     fill
-                                    className="object-contain object-center"
+                                    className="object-contain object-center mix-blend-multiply opacity-90"
                                     priority
                                 />
                             </div>
