@@ -80,14 +80,12 @@ export default function Navbar() {
 
                         {/* Center: Logo */}
                         <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]">
-                            <div className="relative w-56 h-14 md:w-80 md:h-20 transition-transform hover:scale-105">
-                                <Image
+                            <div className="relative w-56 h-14 md:w-80 md:h-20 transition-transform hover:scale-105 flex items-center justify-center">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
                                     src="/logo.png"
                                     alt="Ay Bıçak"
-                                    fill
-                                    className="object-contain object-center mix-blend-multiply opacity-90"
-                                    priority
-                                    unoptimized
+                                    className="h-full w-auto object-contain mix-blend-multiply opacity-90"
                                 />
                             </div>
                         </Link>
