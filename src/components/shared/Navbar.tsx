@@ -60,13 +60,13 @@ export default function Navbar() {
                 </div>
                 {/* Main Navbar */}
                 <div className={`w-full transition-all duration-500 ease-in-out ${isScrolled ? "py-3" : "py-5"} relative`}>
-                    {/* Logo - Outside glassmorphism container */}
+                    {/* Logo - With glassmorphism effect matching navbar */}
                     <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[70]">
-                        <div className="relative h-10 md:h-14 transition-transform hover:scale-105 flex items-center justify-center">
+                        <div className="relative h-12 md:h-16 px-4 transition-transform hover:scale-105 flex items-center justify-center bg-white/[0.15] backdrop-blur-lg rounded-xl border border-white/10">
                             <img
-                                src="/logo-dark.png"
+                                src="/logo.png"
                                 alt="Ay Bıçak"
-                                className="h-full w-auto object-contain"
+                                className="h-full w-auto object-contain mix-blend-luminosity opacity-95"
                             />
                         </div>
                     </Link>
