@@ -82,9 +82,9 @@ export default function Navbar() {
                         <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]">
                             <div className="relative h-16 md:h-24 transition-transform hover:scale-105 flex items-center justify-center">
                                 <img
-                                    src="/logo-seamless.png"
+                                    src="/logo-screen.png"
                                     alt="Ay Bıçak"
-                                    className="h-full w-auto object-contain"
+                                    className="h-full w-auto object-contain mix-blend-screen"
                                 />
                             </div>
                         </Link>
