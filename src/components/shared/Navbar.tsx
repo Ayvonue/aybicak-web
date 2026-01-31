@@ -82,7 +82,7 @@ export default function Navbar() {
                         <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]">
                             <div className="relative w-56 h-14 md:w-80 md:h-20 transition-transform hover:scale-105">
                                 <Image
-                                    src="/logo-full.png"
+                                    src="/logo-navbar.png"
                                     alt="Ay Bıçak"
                                     fill
                                     className="object-contain object-center drop-shadow-lg"
