@@ -43,10 +43,10 @@ export default function Footer() {
                     <div className="space-y-6">
                         <h4 className="text-sm font-bold text-white uppercase tracking-widest border-l-2 border-yellow-600 pl-3">Müşteri İlişkileri</h4>
                         <ul className="space-y-3 text-sm text-zinc-400">
-                            <li><FooterLink href="/orders">Sipariş Takibi</FooterLink></li>
+                            <li><FooterLink href="/account/orders">Sipariş Takibi</FooterLink></li>
+                            <li><FooterLink href="/sss">Sıkça Sorulan Sorular</FooterLink></li>
                             <li><FooterLink href="/shipping">Kargo ve Teslimat</FooterLink></li>
                             <li><FooterLink href="/return">İade ve Değişim</FooterLink></li>
-                            <li><FooterLink href="/care">Bıçak Bakım Rehberi</FooterLink></li>
                         </ul>
                     </div>
 

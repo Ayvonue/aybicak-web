@@ -80,8 +80,35 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ay Bıçak",
+    "url": "https://aybicak.com",
+    "logo": "https://aybicak.com/logo-full.png",
+    "description": "30 yıllık ustalıkla üretilen el yapımı premium bıçaklar",
+    "sameAs": ["https://www.instagram.com/aybicak"]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ay Bıçak",
+    "url": "https://aybicak.com"
+  };
+
   return (
     <html lang="tr" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className="antialiased font-sans text-foreground">
         <BackgroundLayer />
         <SmoothScroll />
