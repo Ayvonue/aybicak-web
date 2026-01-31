@@ -82,7 +82,7 @@ export default function Navbar() {
                         <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]">
                             <div className="relative h-10 md:h-14 flex items-center justify-center">
                                 <img
-                                    src="/logo-clean-v31.png"
+                                    src="/logo-final-v32.png"
                                     alt="Ay Bıçak"
                                     className="h-full w-auto object-contain"
                                 />
