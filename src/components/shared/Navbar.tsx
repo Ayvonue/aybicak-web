@@ -87,6 +87,7 @@ export default function Navbar() {
                                     fill
                                     className="object-contain object-center mix-blend-multiply opacity-90"
                                     priority
+                                    unoptimized
                                 />
                             </div>
                         </Link>
