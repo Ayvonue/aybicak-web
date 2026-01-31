@@ -80,9 +80,9 @@ export default function Navbar() {
 
                         {/* Center: Logo - Inside glassmorphism container */}
                         <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]">
-                            <div className="relative h-12 md:h-16 flex items-center justify-center">
+                            <div className="relative h-10 md:h-14 flex items-center justify-center">
                                 <img
-                                    src="/logo-fit-final.png"
+                                    src="/logo-small-final.png"
                                     alt="Ay Bıçak"
                                     className="h-full w-auto object-contain"
                                 />
