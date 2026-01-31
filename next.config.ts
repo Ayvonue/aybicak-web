@@ -8,7 +8,10 @@ const nextConfig: NextConfig = {
         hostname: "www.bicakmarket.com",
       },
     ],
+    // Disable image optimization completely to preserve PNG transparency
+    unoptimized: true,
   },
 };
 
 export default nextConfig;
+
