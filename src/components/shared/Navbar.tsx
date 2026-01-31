@@ -84,7 +84,7 @@ export default function Navbar() {
                                 <img
                                     src="/logo-v6.png"
                                     alt="Ay Bıçak"
-                                    className="h-full w-auto object-contain"
+                                    className="h-full w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
                                 />
                             </div>
                         </Link>
