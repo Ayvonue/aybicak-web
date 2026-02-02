@@ -4,6 +4,7 @@ import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import SmoothScroll from "@/components/shared/SmoothScroll";
 import ScrollToTop from "@/components/shared/ScrollToTop";
@@ -122,6 +123,7 @@ export default function RootLayout({
             </CartProvider>
           </AuthProvider>
         </FavoritesProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
