@@ -72,7 +72,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "El Yapımı Mutfak Bıçak Seti 4lü (Stantlı). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Mutfak Bıçak Seti 4lü (Stantlı). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5171",
@@ -99,7 +99,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Hayalet Çakı (Koç Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Hayalet Çakı (Koç Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5169",
@@ -111,7 +111,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı n690 Geyik Boynuz Ful Kabze Çakı No1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı n690 Geyik Boynuz Ful Kabze Çakı No1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5167",
@@ -123,7 +123,7 @@ export const products: Product[] = [
         "handle": "Doğal Ahşap",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Hayalet Çakı (Ahşap Kabze). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Doğal Ahşap detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Hayalet Çakı (Ahşap Kabze). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Doğal Ahşap detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5165",
@@ -135,7 +135,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı n690 Geyik Boynuz Kabze Çakı No2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı n690 Geyik Boynuz Kabze Çakı No2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5162",
@@ -147,7 +147,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "Eko Bıçak Kurban Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Eko Bıçak Kurban Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5161",
@@ -159,7 +159,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Kemer Klipsli İçten Kilitli Çakı n690. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kemer Klipsli İçten Kilitli Çakı n690. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5160",
@@ -171,7 +171,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Kemer Klipsli n690 Çakı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kemer Klipsli n690 Çakı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5158",
@@ -183,7 +183,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Kasatura ve  Kamp Çakısı Kombin. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kasatura ve  Kamp Çakısı Kombin. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5157",
@@ -195,7 +195,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Kamp Baltası. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kamp Baltası. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5156",
@@ -207,7 +207,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "N695 Sallama avcı kamp bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "N695 Sallama avcı kamp bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5155",
@@ -219,7 +219,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı n695  Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı n695  Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5154",
@@ -231,7 +231,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Kolye Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kolye Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5153",
@@ -243,7 +243,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Kolye Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kolye Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5152",
@@ -255,7 +255,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Kamp Avcı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kamp Avcı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5151",
@@ -267,7 +267,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Kamp Doğa Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kamp Doğa Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5150",
@@ -279,7 +279,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5149",
@@ -291,7 +291,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "N695 Avcı Kamp Bıçağı Kambur (Epoksi). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "N695 Avcı Kamp Bıçağı Kambur (Epoksi). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5148",
@@ -303,7 +303,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Tracker Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Tracker Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5147",
@@ -315,7 +315,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Doğa Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Doğa Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5146",
@@ -327,7 +327,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Buschcarf Kamp Doğa Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Buschcarf Kamp Doğa Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5145",
@@ -339,7 +339,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Kamp Bıçağı (Epoksi). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kamp Bıçağı (Epoksi). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5144",
@@ -351,7 +351,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5143",
@@ -363,7 +363,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Kamp Bıçağı n695. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kamp Bıçağı n695. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5142",
@@ -375,7 +375,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Dövme Kamp Baltası no 3 Çift Yönlü Özel Seri. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Dövme Çelik (Ck75) kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Dövme Kamp Baltası no 3 Çift Yönlü Özel Seri. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Dövme Çelik (Ck75) kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5140",
@@ -387,7 +387,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Dövme Kamp Baltası no 2 Çift Yönlü. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Dövme Çelik (Ck75) kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Dövme Kamp Baltası no 2 Çift Yönlü. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Dövme Çelik (Ck75) kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5138",
@@ -399,7 +399,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Kamp Baltası no 1 Çift Yönlü. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kamp Baltası no 1 Çift Yönlü. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5136",
@@ -411,7 +411,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı  Zülfikar Kılıcı (A70). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı  Zülfikar Kılıcı (A70). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5135",
@@ -423,7 +423,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kılıç",
         "isNew": true,
-        "description": "El Yapımı 3 Hilal Kurt Başlı Özel Kılıç. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı 3 Hilal Kurt Başlı Özel Kılıç. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5134",
@@ -435,7 +435,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Kurt Başlı TÜRK Kılıcı (Geyik Kabze). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kurt Başlı TÜRK Kılıcı (Geyik Kabze). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5133",
@@ -447,7 +447,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Kurt Başlı Pala no:1 (Geyik Kabze). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kurt Başlı Pala no:1 (Geyik Kabze). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5132",
@@ -459,7 +459,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Kurt Başlı Pala no:2 (Geyik Kabze). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kurt Başlı Pala no:2 (Geyik Kabze). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5131",
@@ -471,7 +471,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Kurt Başlı Büyük Kukri Sallama Bıçağı (Geyik Kabze). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kurt Başlı Büyük Kukri Sallama Bıçağı (Geyik Kabze). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5130",
@@ -483,7 +483,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Kurt Başlı Büyük Kukri Sallama Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kurt Başlı Büyük Kukri Sallama Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5129",
@@ -495,7 +495,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Türk kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Türk kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5128",
@@ -507,7 +507,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Büyük Kukri Sallama Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Büyük Kukri Sallama Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5127",
@@ -519,7 +519,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı  Fatih Sultan Mehmet Han Kılıcı (A70). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı  Fatih Sultan Mehmet Han Kılıcı (A70). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5126",
@@ -531,7 +531,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kılıç",
         "isNew": true,
-        "description": "El Yapımı  Kartal Başlı Kılıç. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı  Kartal Başlı Kılıç. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5125",
@@ -543,7 +543,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kılıç",
         "isNew": true,
-        "description": "El Yapımı Kurt Başlı Kılıç. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kurt Başlı Kılıç. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5124",
@@ -555,7 +555,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı  Yalmanlı Kılıcı (A90). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı  Yalmanlı Kılıcı (A90). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5123",
@@ -567,7 +567,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Katana Kılıcı (90cm). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Katana Kılıcı (90cm). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5122",
@@ -579,7 +579,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Katana Kılıcı (60cm). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Katana Kılıcı (60cm). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5118",
@@ -591,7 +591,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "GİZEMLİ KUTU. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "GİZEMLİ KUTU. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5117",
@@ -603,7 +603,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı n690 Çakı Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı n690 Çakı Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5116",
@@ -615,7 +615,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "5+1 Bıçak Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "5+1 Bıçak Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5115",
@@ -627,7 +627,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Kolye Bıçakları ve Kamp Çakısı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kolye Bıçakları ve Kamp Çakısı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5114",
@@ -639,7 +639,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Meyve Bıçağı - Cep Çakısı- Mini Avcı Bıçağı Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Meyve Bıçağı - Cep Çakısı- Mini Avcı Bıçağı Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5113",
@@ -651,7 +651,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Av Bıçağı - Çakı- Kurban Bıçağı Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Av Bıçağı - Çakı- Kurban Bıçağı Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5112",
@@ -663,7 +663,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "Beşli Kurban Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Beşli Kurban Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5111",
@@ -675,7 +675,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Dövme Satır. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Dövme Çelik (Ck75) kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Dövme Satır. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Dövme Çelik (Ck75) kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5109",
@@ -687,7 +687,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "KAMPANYA Çakı - Bıçak Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "KAMPANYA Çakı - Bıçak Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5108",
@@ -699,7 +699,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "Dörtlü Bıçak Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Dörtlü Bıçak Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5107",
@@ -711,7 +711,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Budama Seti (Budama Makası, Aşı Çakısı ve Sıyırma Çakısı). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Budama Seti (Budama Makası, Aşı Çakısı ve Sıyırma Çakısı). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5106",
@@ -723,7 +723,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Çakı Şöleni. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çakı Şöleni. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5105",
@@ -735,7 +735,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "Kurban Bıçağı Seti Beşli. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kurban Bıçağı Seti Beşli. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5103",
@@ -747,7 +747,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "5+1 Kurban Bıçağı Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "5+1 Kurban Bıçağı Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5101",
@@ -759,7 +759,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı   Çakıı No2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı   Çakıı No2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5100",
@@ -771,7 +771,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Sırttan Kilitli Çakı Aypa (Epoksi). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Sırttan Kilitli Çakı Aypa (Epoksi). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5099",
@@ -783,7 +783,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Sırttan Kilitli Çakı Aypa. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Sırttan Kilitli Çakı Aypa. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5098",
@@ -795,7 +795,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Babalı Oğullu Epoksi Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Babalı Oğullu Epoksi Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5097",
@@ -807,7 +807,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Babalı Oğullu Epoksi. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Babalı Oğullu Epoksi. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5095",
@@ -819,7 +819,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Sırttan Kilitli Çakı Bm. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Sırttan Kilitli Çakı Bm. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5092",
@@ -831,7 +831,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Cep Çakısı n690 HM2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Cep Çakısı n690 HM2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5089",
@@ -843,7 +843,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı N690 Altın İşlemeli bm03. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı N690 Altın İşlemeli bm03. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5088",
@@ -855,7 +855,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı N690 Altın İşlemeli bm02. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı N690 Altın İşlemeli bm02. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5082",
@@ -867,7 +867,7 @@ export const products: Product[] = [
         "handle": "Kompak (Verzalit)",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı n690 Çakı (Kompak, Klipsli). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Kompak (Verzalit) detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı n690 Çakı (Kompak, Klipsli). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Kompak (Verzalit) detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5081",
@@ -879,7 +879,7 @@ export const products: Product[] = [
         "handle": "Kompak (Verzalit)",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı n690 Çakı (Kompak). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Kompak (Verzalit) detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı n690 Çakı (Kompak). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Kompak (Verzalit) detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5080",
@@ -891,7 +891,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Masaüstü Hediyelik Zülfikar Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Masaüstü Hediyelik Zülfikar Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5079",
@@ -903,7 +903,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Masaüstü Hediyelik Sultan Selim Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Masaüstü Hediyelik Sultan Selim Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5078",
@@ -915,7 +915,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Masaüstü Hediyelik Yatağan Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Masaüstü Hediyelik Yatağan Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5077",
@@ -927,7 +927,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Masaüstü Hediyelik Simbat Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Masaüstü Hediyelik Simbat Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5074",
@@ -939,7 +939,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Kurt Başlı Zülfikar Kılıcı (Geyik Kabze). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kurt Başlı Zülfikar Kılıcı (Geyik Kabze). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5073",
@@ -951,7 +951,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Sırttan Kilitli Çakı bm223. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Sırttan Kilitli Çakı bm223. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5072",
@@ -963,7 +963,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Yatağan Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Yatağan Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5071",
@@ -975,7 +975,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Kilitli Çakı Hyt. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kilitli Çakı Hyt. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5070",
@@ -987,7 +987,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Kamp Şef Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kamp Şef Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5067",
@@ -999,7 +999,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı av Bıçağı SK06. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı av Bıçağı SK06. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5066",
@@ -1011,7 +1011,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı av Bıçağı SK03(Epoksi). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı av Bıçağı SK03(Epoksi). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5063",
@@ -1023,7 +1023,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Sallama Kamp Palası (Ağaç). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Sallama Kamp Palası (Ağaç). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5062",
@@ -1035,7 +1035,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Sallama Kamp Palası. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Sallama Kamp Palası. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5061",
@@ -1047,7 +1047,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Büyük Bıçak Kukri Pala (Geyik). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Büyük Bıçak Kukri Pala (Geyik). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5060",
@@ -1059,7 +1059,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Büyük Bıçak Kukri Pala. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Büyük Bıçak Kukri Pala. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5059",
@@ -1071,7 +1071,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Geyik Motifli Doğa Bıçağı (Ceviz-Zeytin). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Geyik Motifli Doğa Bıçağı (Ceviz-Zeytin). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5058",
@@ -1083,7 +1083,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Geyik Motifli Doğa Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Geyik Motifli Doğa Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5057",
@@ -1095,7 +1095,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "n690 Epoksi Kabze Çakı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "n690 Epoksi Kabze Çakı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5056",
@@ -1107,7 +1107,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Çakı Kombine. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çakı Kombine. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5055",
@@ -1119,7 +1119,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "n690 El Yapımı Sırttan kilitli Çakı sm. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "n690 El Yapımı Sırttan kilitli Çakı sm. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5054",
@@ -1131,7 +1131,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Eğri Yüzlü Aşı Çakısı Kablo Sıyırma Çakısı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Eğri Yüzlü Aşı Çakısı Kablo Sıyırma Çakısı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5052",
@@ -1143,7 +1143,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "Mutfak Bıçağı Seti 3lü. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mutfak Bıçağı Seti 3lü. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5049",
@@ -1155,7 +1155,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 09. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 09. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5048",
@@ -1167,7 +1167,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 08. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 08. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5047",
@@ -1179,7 +1179,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 07. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 07. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5046",
@@ -1191,7 +1191,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 05. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 05. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5045",
@@ -1203,7 +1203,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 06. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 06. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5043",
@@ -1215,7 +1215,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 04. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 04. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5042",
@@ -1227,7 +1227,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 03. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 03. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5041",
@@ -1239,7 +1239,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 02. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 02. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5040",
@@ -1251,7 +1251,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Epoksi Kabze Av Bıçağı 01. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Epoksi Kabze Av Bıçağı 01. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5039",
@@ -1263,7 +1263,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Sırttan Kilitli Çakı TA02. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Sırttan Kilitli Çakı TA02. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5038",
@@ -1275,7 +1275,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Sırttan Kilitli Çakı TA01. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Sırttan Kilitli Çakı TA01. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5034",
@@ -1287,7 +1287,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı av Bıçağı SK03. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı av Bıçağı SK03. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5033",
@@ -1299,7 +1299,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı av Bıçağı SK02. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı av Bıçağı SK02. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5032",
@@ -1311,7 +1311,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı av Bıçağı SK01. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı av Bıçağı SK01. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5030",
@@ -1323,7 +1323,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "n690 Avcı Cep Çakısı S.M. 2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "n690 Avcı Cep Çakısı S.M. 2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5025",
@@ -1335,7 +1335,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "İşlemeli Namlu Bushcraft Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "İşlemeli Namlu Bushcraft Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5024",
@@ -1347,7 +1347,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Büyük Boy Çift Ağızlı Bıçak Kombini. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Büyük Boy Çift Ağızlı Bıçak Kombini. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5023",
@@ -1359,7 +1359,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El Yapımı Cep Çakısı HG İşleme Saplı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Cep Çakısı HG İşleme Saplı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5022",
@@ -1371,7 +1371,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "El yapımı n690 Cep Çakısı H.M.. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El yapımı n690 Cep Çakısı H.M.. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5021",
@@ -1383,7 +1383,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "n690 Avcı Cep Çakısı S.M.. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "n690 Avcı Cep Çakısı S.M.. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5020",
@@ -1395,7 +1395,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Çift Ağızlı Kombine Geyik Boynuz Kabze. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Çift Ağızlı Kombine Geyik Boynuz Kabze. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5019",
@@ -1407,7 +1407,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Çift Ağızlı Geyik Kabze Kombin. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağızlı Geyik Kabze Kombin. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5018",
@@ -1419,7 +1419,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": true,
-        "description": "Beşli El Yapımı Çift Ağızlı Kama Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Beşli El Yapımı Çift Ağızlı Kama Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5016",
@@ -1431,7 +1431,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": true,
-        "description": "El Yapımı Çift Ağızlı Kombin. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağızlı Kombin. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5015",
@@ -1443,7 +1443,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "N690 Yaylı Cep Çakısı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "N690 Yaylı Cep Çakısı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5011",
@@ -1455,7 +1455,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Sırttan  Kilitli Cep Çakısı ( Epoksi ) H.G.. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Sırttan  Kilitli Cep Çakısı ( Epoksi ) H.G.. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5010",
@@ -1467,7 +1467,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": true,
-        "description": "Yeni Kilitli Cep Çakısı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Kilitli Cep Çakısı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5008",
@@ -1479,7 +1479,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "Av Bıçağı El Yapımı Kavisli. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Av Bıçağı El Yapımı Kavisli. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5007",
@@ -1491,7 +1491,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Geyik Boynuzu Kabze Bel Bıçağı no 1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Geyik Boynuzu Kabze Bel Bıçağı no 1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5004",
@@ -1503,7 +1503,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Yeni Kurt Başlı Çift Ağız Kama ( Geyik Boynuz ). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Kurt Başlı Çift Ağız Kama ( Geyik Boynuz ). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5003",
@@ -1515,7 +1515,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Yeni N695 Kampçı Av Bıçağı ( Geyik Boynuz ). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni N695 Kampçı Av Bıçağı ( Geyik Boynuz ). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5002",
@@ -1527,7 +1527,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "El Yapımı Riddick Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Riddick Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5001",
@@ -1539,7 +1539,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "Yeni Bushcraft Önlüklü Av Bıçağı ( Geyik Boynuz ). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Bushcraft Önlüklü Av Bıçağı ( Geyik Boynuz ). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "5000",
@@ -1551,7 +1551,7 @@ export const products: Product[] = [
         "handle": "Gül Ağacı",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Prinç Örgülü Kurt Başlıklı Av ve Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Prinç Örgülü Kurt Başlıklı Av ve Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4999",
@@ -1563,7 +1563,7 @@ export const products: Product[] = [
         "handle": "Gül Ağacı",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "Prinç Örgülü Kurt Başlıklı Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Prinç Örgülü Kurt Başlıklı Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4997",
@@ -1575,7 +1575,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": true,
-        "description": "Yeni Ayyıldız Kurtbaşlı Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Ayyıldız Kurtbaşlı Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4996",
@@ -1587,7 +1587,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Karambit Model Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Karambit Model Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4995",
@@ -1599,7 +1599,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "İkili Kombin Çift Ağız Kampçı Seti ( Geyik Boynuzu ). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "İkili Kombin Çift Ağız Kampçı Seti ( Geyik Boynuzu ). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4994",
@@ -1611,7 +1611,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Çift Ağız Kampçı Bıçağı No:2 ( Geyik Boynuz ). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağız Kampçı Bıçağı No:2 ( Geyik Boynuz ). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4993",
@@ -1623,7 +1623,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Çift Ağız Kampçı Bıçağı No:1 ( Geyik Boynuz ). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağız Kampçı Bıçağı No:1 ( Geyik Boynuz ). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4992",
@@ -1635,7 +1635,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Yeni İkili bushcraft (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni İkili bushcraft (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4991",
@@ -1647,7 +1647,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Kampçı Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kampçı Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4990",
@@ -1659,7 +1659,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Yeni İkili bushcraft kamp bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni İkili bushcraft kamp bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4986",
@@ -1671,7 +1671,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "N690 El Yapımı Kafadan Kitlenebilir Çakı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "N690 El Yapımı Kafadan Kitlenebilir Çakı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N690 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4985",
@@ -1683,7 +1683,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kafadan Kitlenebilir Çoban Çakısı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kafadan Kitlenebilir Çoban Çakısı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4984",
@@ -1695,7 +1695,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Çift Ağız Avcı  Kamp  Bıçağı Kama (Ceviz Kabze). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağız Avcı  Kamp  Bıçağı Kama (Ceviz Kabze). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4980",
@@ -1707,7 +1707,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Kurt Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kurt Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4968",
@@ -1719,7 +1719,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Simbat Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Simbat Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4958",
@@ -1731,7 +1731,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "4’lü Kamp Seti (005). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "4’lü Kamp Seti (005). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4957",
@@ -1743,7 +1743,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "4’lü Kamp Seti (004). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "4’lü Kamp Seti (004). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4955",
@@ -1755,7 +1755,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kemik Çoban Çakı No:1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kemik Çoban Çakı No:1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4954",
@@ -1767,7 +1767,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "Bushcraft Av Bıçağı (Kök Ceviz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Bushcraft Av Bıçağı (Kök Ceviz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4952",
@@ -1779,7 +1779,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kemik Çoban Çakı No:2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kemik Çoban Çakı No:2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4950",
@@ -1791,7 +1791,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Bushcraft Kampçı Av Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Bushcraft Kampçı Av Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4949",
@@ -1803,7 +1803,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kemik Çoban Çakı No:3. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kemik Çoban Çakı No:3. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4948",
@@ -1815,7 +1815,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı N695 Kampçı Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı N695 Kampçı Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4947",
@@ -1827,7 +1827,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Yeni Geyik Boynuz N695 Kampçı Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Geyik Boynuz N695 Kampçı Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4946",
@@ -1839,7 +1839,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Geyik Boynuz Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Geyik Boynuz Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4945",
@@ -1851,7 +1851,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Çift Bıçaklı Aşı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Çift Bıçaklı Aşı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4944",
@@ -1863,7 +1863,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "Temiz iş Düz Aşı Çakısı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Temiz iş Düz Aşı Çakısı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4941",
@@ -1875,7 +1875,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Geyik Boynuz Bushcraft N695 Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Geyik Boynuz Bushcraft N695 Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4940",
@@ -1887,7 +1887,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Geyik Boynuz Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Geyik Boynuz Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4939",
@@ -1899,7 +1899,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "Aşı Çakısı Eğri Dövme Bıçak Büyük Boy. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Dövme Çelik (Ck75) kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Aşı Çakısı Eğri Dövme Bıçak Büyük Boy. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Dövme Çelik (Ck75) kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4937",
@@ -1911,7 +1911,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Bushcraft Avcı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Bushcraft Avcı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4936",
@@ -1923,7 +1923,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Aşı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Aşı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4934",
@@ -1935,7 +1935,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El yapımı Büyük Kampçı Av Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El yapımı Büyük Kampçı Av Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4932",
@@ -1947,7 +1947,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "4’lü Kamp Seti (003). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "4’lü Kamp Seti (003). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4930",
@@ -1959,7 +1959,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "4’lü Kamp Seti (001). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "4’lü Kamp Seti (001). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4928",
@@ -1971,7 +1971,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kafadan Kilitlenebilir Çoban Çakı No:2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kafadan Kilitlenebilir Çoban Çakı No:2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4919",
@@ -1983,7 +1983,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kurt Baskılı Kampçı Cep Çakısı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kurt Baskılı Kampçı Cep Çakısı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4914",
@@ -1995,7 +1995,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Cep Çakısı SM1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Cep Çakısı SM1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4911",
@@ -2007,7 +2007,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Yeni Geyik Boynuz N695 Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Geyik Boynuz N695 Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4910",
@@ -2019,7 +2019,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Buscraft El Yapımı Kampçı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Buscraft El Yapımı Kampçı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4909",
@@ -2031,7 +2031,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Prinç Örgülü Geyik Boynuz Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Prinç Örgülü Geyik Boynuz Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4908",
@@ -2043,7 +2043,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Avcı kamp bıçağı bm. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Avcı kamp bıçağı bm. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4906",
@@ -2055,7 +2055,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": true,
-        "description": "Yeni Geyik boynuz el yapımı karambit. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Geyik boynuz el yapımı karambit. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4905",
@@ -2067,7 +2067,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Geyik Boynuz Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Geyik Boynuz Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4904",
@@ -2079,7 +2079,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Kampçı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kampçı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4902",
@@ -2091,7 +2091,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Kök Ceviz Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kök Ceviz Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4900",
@@ -2103,7 +2103,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Kök Ceviz Kamp Ve Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kök Ceviz Kamp Ve Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4897",
@@ -2115,7 +2115,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Çift Ağız Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağız Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4896",
@@ -2127,7 +2127,7 @@ export const products: Product[] = [
         "handle": "Gül Ağacı",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Prinç Örgülü Kurt Başlı Bel Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Prinç Örgülü Kurt Başlı Bel Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4889",
@@ -2139,7 +2139,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Riddick Bıçak. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Riddick Bıçak. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4888",
@@ -2151,7 +2151,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Pasta Kılıcı (Sallama). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Pasta Kılıcı (Sallama). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4887",
@@ -2163,7 +2163,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Masaüstü Yatağan Palası. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Masaüstü Yatağan Palası. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4886",
@@ -2175,7 +2175,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Simbat Kılıcı (50cm). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Simbat Kılıcı (50cm). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4882",
@@ -2187,7 +2187,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kilitli Cep Çakısı (MK). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kilitli Cep Çakısı (MK). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4880",
@@ -2199,7 +2199,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kemik Cep Çakısı No:2 (MA). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kemik Cep Çakısı No:2 (MA). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4879",
@@ -2211,7 +2211,7 @@ export const products: Product[] = [
         "handle": "Gül Ağacı",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Örgülü Kemik Cep Çakısı (MA) No:2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Örgülü Kemik Cep Çakısı (MA) No:2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4875",
@@ -2223,7 +2223,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Cep Kamp Çakısı no1 MA-. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Cep Kamp Çakısı no1 MA-. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4871",
@@ -2235,7 +2235,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Cep Çakısı HG 2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Cep Çakısı HG 2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4868",
@@ -2247,7 +2247,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Türk Bayrağı İşlemeli Çift Ağız Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Türk Bayrağı İşlemeli Çift Ağız Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4853",
@@ -2259,7 +2259,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Kamp Bıçağı N695. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kamp Bıçağı N695. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4848",
@@ -2271,7 +2271,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "Mutfak Bıçağı no : 3. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mutfak Bıçağı no : 3. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4847",
@@ -2283,7 +2283,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "Mutfak Bıçağı no : 2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mutfak Bıçağı no : 2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4846",
@@ -2295,7 +2295,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "Mutfak Bıçağı no : 1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mutfak Bıçağı no : 1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4835",
@@ -2307,7 +2307,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı (0514). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı (0514). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4833",
@@ -2319,7 +2319,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Şef Bıçağı no 2 (Desenli). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Şef Bıçağı no 2 (Desenli). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4832",
@@ -2331,7 +2331,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Şef Bıçağı no 2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Şef Bıçağı no 2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4831",
@@ -2343,7 +2343,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Şef Bıçağı no1 (Desenli). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Şef Bıçağı no1 (Desenli). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4830",
@@ -2355,7 +2355,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Şef Bıçağı no 1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Şef Bıçağı no 1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4825",
@@ -2367,7 +2367,7 @@ export const products: Product[] = [
         "handle": "Gül Ağacı",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "Prinç Örgülü Ayyıldız Avcı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Prinç Örgülü Ayyıldız Avcı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4823",
@@ -2379,7 +2379,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı (0502). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı (0502). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4822",
@@ -2391,7 +2391,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Mini Kamp Bıçağı B.C. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Mini Kamp Bıçağı B.C. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4812",
@@ -2403,7 +2403,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "Klipsli El Yapımı Çakı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Klipsli El Yapımı Çakı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4807",
@@ -2415,7 +2415,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı (0486) (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı (0486) (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4801",
@@ -2427,7 +2427,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kilitli Çakı (AA). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kilitli Çakı (AA). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4799",
@@ -2439,7 +2439,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "Ayyıldız işleme El Yapımı Kiliti Çakı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Ayyıldız işleme El Yapımı Kiliti Çakı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4791",
@@ -2451,7 +2451,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Mini Çift Ağızlı Bıçak (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Çift Ağızlı Bıçak (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4790",
@@ -2463,7 +2463,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı N695 Cep Çakısı (HM3). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı N695 Cep Çakısı (HM3). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4789",
@@ -2475,7 +2475,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Cep Çakısı (Kök Ceviz) HM1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Cep Çakısı (Kök Ceviz) HM1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4788",
@@ -2487,7 +2487,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4786",
@@ -2499,7 +2499,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El yapımı Fatih Sultan Mehmet Han Kılıcı (50 cm). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El yapımı Fatih Sultan Mehmet Han Kılıcı (50 cm). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4785",
@@ -2511,7 +2511,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Yavuz Sultan Selim Kılıcı ( 50cm). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Yavuz Sultan Selim Kılıcı ( 50cm). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4784",
@@ -2523,7 +2523,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Zülfikar Kılıcı (50 cm). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Zülfikar Kılıcı (50 cm). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4783",
@@ -2535,7 +2535,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı (0462). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı (0462). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4782",
@@ -2547,7 +2547,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı (0461). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı (0461). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4779",
@@ -2559,7 +2559,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Yeni N695 Kamp Baltası Sallama. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni N695 Kamp Baltası Sallama. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4771",
@@ -2571,7 +2571,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "4lü Mutfak Bıçağı Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "4lü Mutfak Bıçağı Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4759",
@@ -2583,7 +2583,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El yağımı kamp bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El yağımı kamp bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4758",
@@ -2595,7 +2595,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini kamp bıçağı (0437). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini kamp bıçağı (0437). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "4754",
@@ -2607,7 +2607,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Yeni Bushcraft Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Bushcraft Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3752",
@@ -2619,7 +2619,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "EL Yapımı Çift Ağız Kamp Baltası. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "EL Yapımı Çift Ağız Kamp Baltası. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3745",
@@ -2631,7 +2631,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "8 Parça Bıçak Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "8 Parça Bıçak Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3744",
@@ -2643,7 +2643,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "5li Kurban Bıçağı Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "5li Kurban Bıçağı Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3743",
@@ -2655,7 +2655,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "3 lü Mutfak Bıçağı Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "3 lü Mutfak Bıçağı Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3739",
@@ -2667,7 +2667,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Cep Çakısı (Kök Ceviz) HM2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Cep Çakısı (Kök Ceviz) HM2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3738",
@@ -2679,7 +2679,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Bushcraft Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Bushcraft Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3736",
@@ -2691,7 +2691,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Bushcraft Avcı Kamp Bıçağı N04. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Bushcraft Avcı Kamp Bıçağı N04. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3735",
@@ -2703,7 +2703,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Sallama Kampçı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Sallama Kampçı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3733",
@@ -2715,7 +2715,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": true,
-        "description": "Yeni Avcı Kamp Bıçağı N695. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Yeni Avcı Kamp Bıçağı N695. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3725",
@@ -2727,7 +2727,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini kamp bıçağı (0401). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini kamp bıçağı (0401). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3722",
@@ -2739,7 +2739,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı (0397) Geyik Boynuz. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı (0397) Geyik Boynuz. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3718",
@@ -2751,7 +2751,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Bushcraft N695 Av Ve Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Bushcraft N695 Av Ve Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3716",
@@ -2763,7 +2763,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Avcı Kamp Bıçağı Büyük (B.C) Geyik Boynuz. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Avcı Kamp Bıçağı Büyük (B.C) Geyik Boynuz. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3715",
@@ -2775,7 +2775,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Bushcraft  Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Bushcraft  Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3714",
@@ -2787,7 +2787,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "N695 Sallama avcı kamp bıçağı BC. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "N695 Sallama avcı kamp bıçağı BC. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3711",
@@ -2799,7 +2799,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "N695 Avcı Kamp Bıçağı Kambur. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "N695 Avcı Kamp Bıçağı Kambur. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. N695 Böhler kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3710",
@@ -2811,7 +2811,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Mini Kamp Bıçağı S.Y. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Mini Kamp Bıçağı S.Y. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3709",
@@ -2823,7 +2823,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Mini Bushcraft Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Mini Bushcraft Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3708",
@@ -2835,7 +2835,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Bushcraft Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Bushcraft Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3707",
@@ -2847,7 +2847,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Çift Ağızlı Mini  Bıçak BC. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağızlı Mini  Bıçak BC. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3706",
@@ -2859,7 +2859,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Sivri Kamp Bıçağı BC. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Sivri Kamp Bıçağı BC. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3705",
@@ -2871,7 +2871,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı (0379). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı (0379). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3703",
@@ -2883,7 +2883,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Prinç Örgülü Mini Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Prinç Örgülü Mini Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3699",
@@ -2895,7 +2895,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Kurt Başlı El Yapımı Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kurt Başlı El Yapımı Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3698",
@@ -2907,7 +2907,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Bushcraft Kampçı Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Bushcraft Kampçı Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3692",
@@ -2919,7 +2919,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Bushcraft Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Bushcraft Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3690",
@@ -2931,7 +2931,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Mini Bushcraft Camp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Mini Bushcraft Camp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3687",
@@ -2943,7 +2943,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Bushcraft Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Bushcraft Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3684",
@@ -2955,7 +2955,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Geyik Boynuz Prinç Örgülü Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Geyik Boynuz Prinç Örgülü Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3677",
@@ -2967,7 +2967,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Çift Ağız Kamp Bıçağı Kama (Geyik boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağız Kamp Bıçağı Kama (Geyik boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3676",
@@ -2979,7 +2979,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Çift Ağız Kamp Bıçağı Kama (Ceviz Kabze). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağız Kamp Bıçağı Kama (Ceviz Kabze). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3672",
@@ -2991,7 +2991,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "İkili bushcraft kamp bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "İkili bushcraft kamp bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3665",
@@ -3003,7 +3003,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı (Bileklik). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı (Bileklik). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3659",
@@ -3015,7 +3015,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "20cm Fatih Sultan Mehmet Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "20cm Fatih Sultan Mehmet Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3650",
@@ -3027,7 +3027,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kampçı Cep Çakısı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kampçı Cep Çakısı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3649",
@@ -3039,7 +3039,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Nusret Model Doğrama Bıçağı 40cm. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Nusret Model Doğrama Bıçağı 40cm. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3648",
@@ -3051,7 +3051,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Nusret Model Doğrama Bıçağı 35cm. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Nusret Model Doğrama Bıçağı 35cm. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3635",
@@ -3063,7 +3063,7 @@ export const products: Product[] = [
         "handle": "Gül Ağacı",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Prinç Örgülü Av ve Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Prinç Örgülü Av ve Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3632",
@@ -3075,7 +3075,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Çift Ağız Kampçı Bıçağı No:3 ( Geyik Boynuz ). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağız Kampçı Bıçağı No:3 ( Geyik Boynuz ). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3631",
@@ -3087,7 +3087,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Çift Ağız Kampçı Bıçağı No:4 ( Geyik Boynuz ). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çift Ağız Kampçı Bıçağı No:4 ( Geyik Boynuz ). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3622",
@@ -3099,7 +3099,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Bushcraft Prinç Örgülü Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Bushcraft Prinç Örgülü Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3620",
@@ -3111,7 +3111,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı Bel Bıçağı No2 (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Bel Bıçağı No2 (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3619",
@@ -3123,7 +3123,7 @@ export const products: Product[] = [
         "handle": "Gül Ağacı",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Prinç Örgülü Kampçı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Prinç Örgülü Kampçı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gül Ağacı detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3614",
@@ -3135,7 +3135,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Prinç Örgülü Geyik Boynuz Kamp Bıçağı (0286). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Prinç Örgülü Geyik Boynuz Kamp Bıçağı (0286). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3613",
@@ -3147,7 +3147,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "A.K. Geyik Boynuz Kabze Küçük Avcı Prinç Önlüklü. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "A.K. Geyik Boynuz Kabze Küçük Avcı Prinç Önlüklü. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3612",
@@ -3159,7 +3159,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Ceviz Kabze Prinç Örgülü Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Ceviz Kabze Prinç Örgülü Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3609",
@@ -3171,7 +3171,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "BıçakMarket Şef Bıçağı No 2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "BıçakMarket Şef Bıçağı No 2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3608",
@@ -3183,7 +3183,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Şef Bıçağı No 1 Bıçak Market. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Şef Bıçağı No 1 Ay Bıçak. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3607",
@@ -3195,7 +3195,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "Ocakoğlu 6 Bıçak 1 Masat Kurban Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Ocakoğlu 6 Bıçak 1 Masat Kurban Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3606",
@@ -3207,7 +3207,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Mahnezyum Çubuklu Bushcraf Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Mahnezyum Çubuklu Bushcraf Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3601",
@@ -3219,7 +3219,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Mini Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Mini Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3599",
@@ -3231,7 +3231,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "İkili Bushcraft Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "İkili Bushcraft Kamp Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3596",
@@ -3243,7 +3243,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Türk Bayrağı İşlemeli Kurt Başlık Mika Kabze Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Türk Bayrağı İşlemeli Kurt Başlık Mika Kabze Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3566",
@@ -3255,7 +3255,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "OCAKOĞLU Doğrama (KESİM) Bıçağı NO 3. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "OCAKOĞLU Doğrama (KESİM) Bıçağı NO 3. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3565",
@@ -3267,7 +3267,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "OCAKOĞLU Doğrama Bıçağı NO 2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "OCAKOĞLU Doğrama Bıçağı NO 2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3564",
@@ -3279,7 +3279,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "OCAKOĞLU Doğrama Bıçağı NO 1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "OCAKOĞLU Doğrama Bıçağı NO 1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3563",
@@ -3291,7 +3291,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "OCAKOĞLU Doğrama Bıçağı NO 0. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "OCAKOĞLU Doğrama Bıçağı NO 0. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3515",
@@ -3303,7 +3303,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Fatih Sultan Mehmet Han Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Fatih Sultan Mehmet Han Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3513",
@@ -3315,7 +3315,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapımı kurt başlı  Simbat Kılıcı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı kurt başlı  Simbat Kılıcı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3512",
@@ -3327,11 +3327,11 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Zülfikar Kılıcı 90 cm. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Zülfikar Kılıcı 90 cm. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3511",
-        "name": "Bıçak Market 5 Li Bıçak Seti",
+        "name": "Ay Bıçak 5 Li Bıçak Seti",
         "price": 1850,
         "imageUrl": "https://www.bicakmarket.com/Images/urun/b07112017144747.jpeg",
         "steel": "Paslanmaz Çelik",
@@ -3339,7 +3339,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "Bıçak Market 5 Li Bıçak Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Ay Bıçak 5 Li Bıçak Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3500",
@@ -3351,7 +3351,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Döner Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Döner Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3491",
@@ -3363,7 +3363,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Geyik Boynuz Bel Bıçağı No:2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Geyik Boynuz Bel Bıçağı No:2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3484",
@@ -3375,7 +3375,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "Ocakoğlu Kurban Seti 3 Lü. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Ocakoğlu Kurban Seti 3 Lü. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3483",
@@ -3402,7 +3402,7 @@ export const products: Product[] = [
         "handle": "Geyik Boynuzu",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "Bushcraft Av Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Bushcraft Av Bıçağı (Geyik Boynuz). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Geyik Boynuzu detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3471",
@@ -3414,7 +3414,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Buscraft Avcı Kampçı Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Buscraft Avcı Kampçı Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3425",
@@ -3426,7 +3426,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El yapımı Ceviz kabze Bel bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El yapımı Ceviz kabze Bel bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3398",
@@ -3453,7 +3453,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "Kök Ceviz Av Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Kök Ceviz Av Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3376",
@@ -3465,7 +3465,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Prinç Örgülü Kurt Başlık Kök Ceviz Avcı Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Prinç Örgülü Kurt Başlık Kök Ceviz Avcı Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3374",
@@ -3477,7 +3477,7 @@ export const products: Product[] = [
         "handle": "Kök Ceviz",
         "category": "Kamp Bıçağı",
         "isNew": false,
-        "description": "Prinç Örgülü Kök Ceviz Kamp Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Prinç Örgülü Kök Ceviz Kamp Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Kök Ceviz detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3248",
@@ -3489,7 +3489,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Çakı Yatağan Metal no:1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Çakı Yatağan Metal no:1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3227",
@@ -3501,7 +3501,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El Yapamı Foça Komando Bıçağı. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapamı Foça Komando Bıçağı. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3225",
@@ -3513,7 +3513,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "El yapımı masat. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El yapımı masat. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "3196",
@@ -3525,7 +3525,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Av Bıçağı",
         "isNew": false,
-        "description": "El Yapımı Kurt Başlı İşlemeli Av Bıçağı No:2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kurt Başlı İşlemeli Av Bıçağı No:2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1211",
@@ -3537,7 +3537,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kilitli Kemik Çakı No:3. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kilitli Kemik Çakı No:3. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1210",
@@ -3549,7 +3549,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kilitli Kemik Çakı No:2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kilitli Kemik Çakı No:2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1209",
@@ -3561,7 +3561,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kilitli Kemik Çakı No:1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kilitli Kemik Çakı No:1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1202",
@@ -3573,7 +3573,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Tek Saplı Paslanmaz Küçük Zırh Bıçak No 3. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Tek Saplı Paslanmaz Küçük Zırh Bıçak No 3. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1201",
@@ -3585,7 +3585,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Tek Saplı Paslanmaz Bıçak Satır  Zırh No 2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Tek Saplı Paslanmaz Bıçak Satır  Zırh No 2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1200",
@@ -3597,7 +3597,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Bıçak",
         "isNew": false,
-        "description": "Tek Saplı Paslanmaz Zırh Bıçağı No 1 (Soğan Salata Bıçağı). Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "Tek Saplı Paslanmaz Zırh Bıçağı No 1 (Soğan Salata Bıçağı). Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1136",
@@ -3609,7 +3609,7 @@ export const products: Product[] = [
         "handle": "Standart",
         "category": "Set/Mutfak",
         "isNew": false,
-        "description": "6 Lı Meyve Bıçağı Seti. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "6 Lı Meyve Bıçağı Seti. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Standart detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1127",
@@ -3621,7 +3621,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kemik Kilitli Çoban Çakı Serik No:3. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kemik Kilitli Çoban Çakı Serik No:3. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1126",
@@ -3633,7 +3633,7 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kemik Kilitli Çoban Çakı Serik No:2. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kemik Kilitli Çoban Çakı Serik No:2. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     },
     {
         "id": "1125",
@@ -3645,6 +3645,6 @@ export const products: Product[] = [
         "handle": "Gerçek Kemik",
         "category": "Çakı",
         "isNew": false,
-        "description": "El Yapımı Kemik Kilitli Çoban Çakı Serik No:1. Bu özel üretim ürün, Bıçak Market kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
+        "description": "El Yapımı Kemik Kilitli Çoban Çakı Serik No:1. Bu özel üretim ürün, Ay Bıçak kalitesiyle sunulmaktadır. Paslanmaz Çelik kullanılarak üretilmiş olup, Gerçek Kemik detaylarıyla zenginleştirilmiştir. Uzun ömürlü ve dayanıklı yapısıyla her türlü kullanım için uygundur."
     }
 ];

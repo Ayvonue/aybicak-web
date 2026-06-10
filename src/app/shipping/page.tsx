@@ -4,7 +4,10 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
     title: "Kargo ve Teslimat",
-    description: "Ay Bıçak kargo süreleri, ücretsiz kargo koşulları ve teslimat bilgileri.",
+    description: "Ay Bıçak kargo süreleri, ücretsiz kargo koşulları ve teslimat bilgileri. Türkiye geneli ücretsiz kargo, 1-3 iş gününde teslimat.",
+    alternates: {
+        canonical: "https://aybicak.com/shipping",
+    },
 };
 
 export default function ShippingPage() {

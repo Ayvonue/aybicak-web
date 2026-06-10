@@ -11,6 +11,7 @@ const SLIDES = [
     {
         id: 1,
         image: "/hero-v2.png",
+        alt: "El yapımı premium bıçak koleksiyonu - Ay Bıçak",
         title: <>Kaliteli Bıçak, <br /><span className="text-slate-400">Uygun Fiyat.</span></>,
         subtitle: "Fabrika değil, usta eli. 30 yıllık tecrübe ile üretilen el yapımı bıçaklar. ₺500'den başlayan fiyatlar.",
         buttonText: "Koleksiyonu Gör",
@@ -20,6 +21,7 @@ const SLIDES = [
     {
         id: 2,
         image: "/slide-kurban.png", // New HQ generated image
+        alt: "Profesyonel kasap ve kurban bıçak setleri - Ay Bıçak",
         title: <>Kurban Bayramına <br /><span className="text-yellow-500">Hazır Mısınız?</span></>,
         subtitle: "Profesyonel kasap ve mutfak bıçakları ile işinizi şansa bırakmayın. En keskin setler şimdi stokta.",
         buttonText: "Kurban Bıçakları",
@@ -29,6 +31,7 @@ const SLIDES = [
     {
         id: 3,
         image: "/slide-hunting.png", // New HQ generated image
+        alt: "El yapımı av ve kamp bıçakları - Ay Bıçak",
         title: <>Doğadaki En Güçlü <br /><span className="text-emerald-500">Dostunuz.</span></>,
         subtitle: "Zorlu şartlara dayanıklı, el yapımı av ve kamp bıçakları. Doğada sizi asla yarı yolda bırakmaz.",
         buttonText: "Av Bıçakları",
@@ -68,7 +71,7 @@ export default function Hero() {
 
                         <Image
                             src={SLIDES[currentSlide].image}
-                            alt="Hero Slide"
+                            alt={SLIDES[currentSlide].alt}
                             fill
                             priority={true}
                             quality={90}

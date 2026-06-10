@@ -5,6 +5,9 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
     title: "Mesafeli Satış Sözleşmesi",
     description: "Ay Bıçak mesafeli satış sözleşmesi: sipariş, teslimat, cayma hakkı ve iade koşulları.",
+    alternates: {
+        canonical: "https://aybicak.com/legal/dist-sales",
+    },
 };
 
 export default function DistSalesPage() {

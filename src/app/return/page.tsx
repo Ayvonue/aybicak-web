@@ -4,7 +4,10 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
     title: "İade ve Değişim",
-    description: "Ay Bıçak iade ve değişim koşulları: 14 gün cayma hakkı, iade süreci ve istisnalar.",
+    description: "Ay Bıçak iade ve değişim koşulları: 14 gün cayma hakkı, ücretsiz iade kargosu, iade süreci ve 1 yıl garanti kapsamı.",
+    alternates: {
+        canonical: "https://aybicak.com/return",
+    },
 };
 
 export default function ReturnPage() {

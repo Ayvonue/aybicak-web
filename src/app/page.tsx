@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/shared/Navbar";
 import Hero from "@/components/shared/Hero";
 import Footer from "@/components/shared/Footer";
@@ -7,6 +8,12 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://aybicak.com",
+  },
+};
+
 export default function Home() {
   // Filter Logic
   const newArrivals = products.filter(p => p.isNew).slice(0, 15); // Top 15 new items
@@ -14,8 +21,26 @@ export default function Home() {
   // Or simply slice the main list to avoid showing 300+ items at once.
   const featuredProducts = products.slice(0, 20);
 
+  // Yeni gelen ürünler için ItemList şeması — arama motorlarının vitrindeki
+  // ürünleri keşfetmesini hızlandırır
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Yeni Gelen El Yapımı Bıçaklar",
+    "itemListElement": newArrivals.map((product, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": product.name.trim(),
+      "url": `https://aybicak.com/product/${product.id}`,
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <Navbar />
       <Hero />
 

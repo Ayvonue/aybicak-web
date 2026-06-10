@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
-import { cn, formatPrice, normalizeTR } from "@/lib/utils";
+import { cn, formatPrice } from "@/lib/utils";
 import { useFavorites } from "@/context/FavoritesContext";
 
 interface KnifeCardProps {
@@ -48,7 +48,7 @@ export default function KnifeCard({ id, name, price, imageUrl, steel, isNew, opt
                     <div className="relative w-full h-full p-6">
                         <Image
                             src={imgSrc}
-                            alt={name}
+                            alt={`${name.trim()} - ${steel} el yapımı bıçak - Ay Bıçak`}
                             fill
                             sizes={optimized ? "500px" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
                             quality={100}
@@ -132,7 +132,7 @@ export default function KnifeCard({ id, name, price, imageUrl, steel, isNew, opt
                 "bg-transparent" // Fully transparent to show same metal layout as top
             )}>
                 <h3 className="text-zinc-900 font-bold text-base leading-snug line-clamp-2 min-h-[3rem]" title={name}>
-                    {normalizeTR(name)}
+                    {name.trim()}
                 </h3>
 
                 <div className="flex items-center justify-between pt-2 border-t border-zinc-200/50">

@@ -57,14 +57,15 @@ export function getProductSchema(productId: string) {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": product.name,
+        "sku": product.id,
         "description": product.description || `${product.name} - El yapımı premium bıçak`,
-        "image": product.images?.[0]?.startsWith('http') ? product.images[0] : `https://aybicak.com${product.images?.[0] || '/placeholder-knife.png'}`,
+        "image": product.imageUrl,
         "brand": {
             "@type": "Brand",
             "name": "Ay Bıçak"
         },
         "category": product.category,
-        "material": "Paslanmaz Çelik",
+        "material": product.steel,
         "offers": {
             "@type": "Offer",
             "url": `https://aybicak.com/product/${product.id}`,
@@ -72,15 +73,23 @@ export function getProductSchema(productId: string) {
             "price": product.price,
             "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
             "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": 0,
+                    "currency": "TRY"
+                },
+                "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": "TR"
+                }
+            },
             "seller": {
                 "@type": "Organization",
                 "name": "Ay Bıçak"
             }
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "127"
         }
     };
 }

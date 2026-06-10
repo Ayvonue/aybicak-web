@@ -3,15 +3,33 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site";
+import { getLocalBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "İletişim | Ay Bıçak",
-    description: "Bizimle iletişime geçin. Özel sipariş, toptan alım ve teknik destek için WhatsApp, telefon veya adres bilgilerimiz.",
+    title: "İletişim",
+    description: "Ay Bıçak ile iletişime geçin. Özel sipariş, toptan alım ve teknik destek için WhatsApp, telefon veya Serinhisar/Denizli atölye adresimiz.",
+    alternates: {
+        canonical: "https://aybicak.com/contact",
+    },
+    openGraph: {
+        title: "İletişim | Ay Bıçak",
+        description: "Özel sipariş, toptan alım ve destek için bize ulaşın.",
+        url: "https://aybicak.com/contact",
+        type: "website",
+        locale: "tr_TR",
+    },
 };
 
 export default function ContactPage() {
+    // Yerel işletme şeması — Google Haritalar ve yerel aramalarda görünürlük
+    const localBusinessSchema = getLocalBusinessSchema();
+
     return (
         <main className="min-h-screen bg-background text-foreground">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+            />
             <Navbar />
             <div className="pt-32 pb-20 px-6 max-w-4xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">İletişim</h1>

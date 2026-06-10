@@ -5,6 +5,9 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
     title: "Gizlilik Politikası ve KVKK Aydınlatma Metni",
     description: "Ay Bıçak kişisel verilerin korunması (KVKK) aydınlatma metni ve gizlilik politikası.",
+    alternates: {
+        canonical: "https://aybicak.com/legal/privacy",
+    },
 };
 
 export default function PrivacyPage() {

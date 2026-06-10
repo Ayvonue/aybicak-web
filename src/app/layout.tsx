@@ -4,6 +4,7 @@ import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { getOrganizationSchema, getWebsiteSchema } from "@/lib/schema";
 
 import SmoothScroll from "@/components/shared/SmoothScroll";
 import ScrollToTop from "@/components/shared/ScrollToTop";
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "tr_TR",
+    url: "https://aybicak.com",
     siteName: "Ay Bıçak",
     title: "Ay Bıçak | El Yapımı Premium Bıçaklar",
     description: "30 yıllık ustalıkla üretilen el yapımı bıçaklar. Av, kamp, mutfak bıçakları. Ücretsiz kargo ve garanti.",
@@ -76,22 +78,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Ay Bıçak",
-    "url": "https://aybicak.com",
-    "logo": "https://aybicak.com/logo-full.png",
-    "description": "30 yıllık ustalıkla üretilen el yapımı premium bıçaklar",
-    "sameAs": ["https://www.instagram.com/aybicak"]
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Ay Bıçak",
-    "url": "https://aybicak.com"
-  };
+  // Organization + WebSite (SearchAction'lı) şemaları tek kaynaktan gelir
+  const organizationSchema = getOrganizationSchema();
+  const websiteSchema = getWebsiteSchema();
 
   return (
     <html lang="tr" className={`${playfair.variable} ${inter.variable}`}>

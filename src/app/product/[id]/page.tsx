@@ -2,7 +2,28 @@ import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 import ProductDetailClient from "@/components/shop/ProductDetailClient";
 import { Metadata } from "next";
-import { normalizeTR } from "@/lib/utils";
+import { formatPrice } from "@/lib/utils";
+import { getProductSchema, getBreadcrumbSchema } from "@/lib/schema";
+
+// Tüm ürün sayfaları build sırasında statik üretilir (SSG) — daha hızlı
+// yükleme ve daha iyi tarama bütçesi kullanımı sağlar.
+export function generateStaticParams() {
+    return products.map((product) => ({ id: product.id }));
+}
+
+export const dynamicParams = false;
+
+// Ürün özelliklerinden benzersiz meta açıklama üretir; katalogdaki şablon
+// açıklamaların yarattığı yinelenen içerik (duplicate content) sorununu çözer.
+function buildMetaDescription(product: (typeof products)[number]): string {
+    const parts = [
+        `${product.name.trim()}`,
+        `${product.steel} çelik, ${product.hardness} sertlik, ${product.handle} kabze`,
+    ];
+    if (product.fullLength) parts.push(`${product.fullLength} toplam uzunluk`);
+    parts.push(`${formatPrice(product.price)} — ücretsiz kargo, 1 yıl garanti, %100 el yapımı.`);
+    return parts.join(". ").slice(0, 160);
+}
 
 // Generate SEO Metadata
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -11,27 +32,50 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
     if (!product) {
         return {
-            title: "Ürün Bulunamadı | Ay Bıçak",
+            title: "Ürün Bulunamadı",
         };
     }
 
-    const cleanName = normalizeTR(product.name);
-    const description = normalizeTR(product.description || "").slice(0, 160);
+    const cleanName = product.name.trim();
+    const description = buildMetaDescription(product);
+    const url = `https://aybicak.com/product/${product.id}`;
 
     return {
-        title: `${cleanName} | Ay Bıçak`,
-        description: description,
+        // Kök layout'taki "%s | Ay Bıçak" şablonu marka ekini otomatik ekler
+        title: `${cleanName} - ${product.category}`,
+        description,
+        keywords: [
+            cleanName,
+            product.category,
+            `${product.steel} bıçak`,
+            `${product.handle} kabze`,
+            "el yapımı bıçak",
+            "ay bıçak",
+        ],
+        alternates: {
+            canonical: url,
+        },
         openGraph: {
+            type: "website",
+            url,
+            siteName: "Ay Bıçak",
+            locale: "tr_TR",
             title: `${cleanName} | Ay Bıçak`,
-            description: description,
+            description,
             images: [
                 {
                     url: product.imageUrl,
                     width: 800,
                     height: 800,
-                    alt: cleanName,
+                    alt: `${cleanName} - ${product.category} - Ay Bıçak`,
                 },
             ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${cleanName} | Ay Bıçak`,
+            description,
+            images: [product.imageUrl],
         },
     };
 }
@@ -49,31 +93,22 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         (p) => p.category === product.category && p.id !== product.id
     );
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": product.name,
-        "image": product.imageUrl,
-        "description": product.description || product.name,
-        "brand": {
-            "@type": "Brand",
-            "name": "Ay Bıçak"
-        },
-        "offers": {
-            "@type": "Offer",
-            "url": `https://aybicak.com/product/${product.id}`,
-            "priceCurrency": "TRY",
-            "price": product.price,
-            "availability": "https://schema.org/InStock",
-            "condition": "https://schema.org/NewCondition"
-        }
-    };
+    const productSchema = getProductSchema(product.id);
+    const breadcrumbSchema = getBreadcrumbSchema([
+        { name: "Ana Sayfa", url: "https://aybicak.com" },
+        { name: "Mağaza", url: "https://aybicak.com/shop" },
+        { name: product.name.trim(), url: `https://aybicak.com/product/${product.id}` },
+    ]);
 
     return (
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             <ProductDetailClient product={product} relatedProducts={relatedProducts} />
         </>

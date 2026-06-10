@@ -6,7 +6,7 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/Button";
 import { useCart } from "@/context/CartContext";
-import { formatPrice, normalizeTR, getSizesFromDescription } from "@/lib/utils";
+import { formatPrice, getSizesFromDescription } from "@/lib/utils";
 import { Check, Shield, Truck, PenTool } from "lucide-react";
 import { motion } from "framer-motion";
 import ProductMarquee from "@/components/shared/ProductMarquee";
@@ -68,7 +68,7 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                         >
                             <Image
                                 src={imageError ? "/placeholder-knife.png" : (hoveredImage || selectedImage)}
-                                alt={product.name}
+                                alt={`${product.name.trim()} - ${product.steel} ${product.category} - Ay Bıçak`}
                                 fill
                                 className="object-contain object-center transition-transform duration-500 group-hover:scale-105 mix-blend-multiply"
                                 priority
@@ -92,7 +92,7 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                                     >
                                         <Image
                                             src={img}
-                                            alt={`Görsel ${idx + 1}`}
+                                            alt={`${product.name.trim()} görsel ${idx + 1}`}
                                             fill
                                             className="object-cover mix-blend-multiply"
                                         />
@@ -109,7 +109,7 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                         className="space-y-5"
                     >
                         <div className="border-b border-border pb-4">
-                            <h1 className="text-3xl md:text-4xl font-extrabold mb-2 font-sans tracking-tight text-foreground leading-tight">{normalizeTR(product.name)}</h1>
+                            <h1 className="text-3xl md:text-4xl font-extrabold mb-2 font-sans tracking-tight text-foreground leading-tight">{product.name.trim()}</h1>
                             <div className="flex items-center gap-4 mb-3">
                                 <span className="text-2xl font-bold text-foreground font-sans">{formatPrice(product.price)}</span>
                                 {product.isNew && <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">YENİ</span>}
@@ -117,7 +117,7 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
 
                             {/* Product Description (Compact) */}
                             <p className="text-zinc-300 text-sm md:text-base leading-snug line-clamp-4">
-                                {normalizeTR(product.description || `Geleneksel el işçiliği ile %100 yerli üretim. ${product.steel} çeliğin gücü ve ${product.handle} sap malzemesinin zarafeti bir arada. Uzun yıllar güvenle kullanabileceğiniz bir üründür.`)}
+                                {(product.description || `Geleneksel el işçiliği ile %100 yerli üretim. ${product.steel} çeliğin gücü ve ${product.handle} sap malzemesinin zarafeti bir arada. Uzun yıllar güvenle kullanabileceğiniz bir üründür.`)}
                             </p>
                         </div>
 
