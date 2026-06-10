@@ -19,28 +19,15 @@ export default function OrdersPage() {
 
     if (!user) return null;
 
-    // Mock Orders Data
-    const orders = [
-        {
-            id: "TR-829102",
-            date: "30 Ocak 2026",
-            status: "processing", // processing, shipped, delivered, cancelled
-            total: 4250,
-            items: [
-                { name: "Sürmene El Yapımı Şef Bıçağı", variant: "Ceviz Kabza" },
-                { name: "Deri Bıçak Kılıfı", variant: "Kahverengi" }
-            ]
-        },
-        {
-            id: "TR-772101",
-            date: "15 Aralık 2025",
-            status: "delivered",
-            total: 1850,
-            items: [
-                { name: "Kamp ve Av Bıçağı", variant: "Geyik Boynuzu" }
-            ]
-        }
-    ];
+    // Sipariş geçmişi henüz sunucuda tutulmuyor; kalıcı sipariş altyapısı
+    // eklenene kadar boş liste gösterilir.
+    const orders: {
+        id: string;
+        date: string;
+        status: string; // processing, shipped, delivered, cancelled
+        total: number;
+        items: { name: string; variant: string }[];
+    }[] = [];
 
     const getStatusConfig = (status: string) => {
         switch (status) {
@@ -98,6 +85,16 @@ export default function OrdersPage() {
                             <h1 className="text-3xl font-bold text-white mb-2">Siparişlerim</h1>
                             <p className="text-zinc-400">Verdiğiniz tüm siparişleri buradan takip edebilirsiniz.</p>
                         </div>
+
+                        {orders.length === 0 && (
+                            <div className="bg-[#18181B] border border-white/10 rounded-2xl p-12 text-center space-y-4">
+                                <Package className="w-12 h-12 mx-auto text-zinc-600" />
+                                <p className="text-zinc-400">Henüz siparişiniz bulunmuyor.</p>
+                                <Link href="/shop" className="inline-block text-sm text-yellow-500 hover:text-yellow-400 font-medium">
+                                    Koleksiyonu Keşfet →
+                                </Link>
+                            </div>
+                        )}
 
                         <div className="space-y-4">
                             {orders.map((order) => {

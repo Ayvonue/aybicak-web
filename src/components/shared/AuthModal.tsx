@@ -347,7 +347,7 @@ export default function AuthModal({ isOpen, onClose, initialTab = "login" }: Aut
                                                         <input type="checkbox" className="rounded border-zinc-700 bg-black/40" />
                                                         Beni Hatırla
                                                     </label>
-                                                    <a href="#" className="hover:text-yellow-500 transition-colors">Şifremi Unuttum</a>
+                                                    <a href="/contact" className="hover:text-yellow-500 transition-colors">Şifremi Unuttum</a>
                                                 </div>
 
                                                 <Button size="lg" className="w-full font-bold h-12 rounded-xl bg-white text-black hover:bg-zinc-200 mt-2">
@@ -477,7 +477,7 @@ export default function AuthModal({ isOpen, onClose, initialTab = "login" }: Aut
                                                         />
                                                     </div>
                                                     <p className="text-[10px] text-zinc-400 leading-tight">
-                                                        <a href="#" className="underline hover:text-white">Üyelik Sözleşmesi</a>'ni ve <a href="#" className="underline hover:text-white">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.
+                                                        <a href="/legal/dist-sales" target="_blank" className="underline hover:text-white">Üyelik Sözleşmesi</a>'ni ve <a href="/legal/privacy" target="_blank" className="underline hover:text-white">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.
                                                     </p>
                                                 </div>
 

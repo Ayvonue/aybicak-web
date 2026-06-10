@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
     title: "İletişim | Ay Bıçak",
@@ -22,7 +23,9 @@ export default function ContactPage() {
                             <Phone className="w-6 h-6" />
                         </div>
                         <h3 className="text-xl font-bold mb-2 text-white">Telefon</h3>
-                        <p className="text-zinc-400">+90 555 555 55 55</p>
+                        <p className="text-zinc-400">
+                            <a href={siteConfig.phoneHref} className="hover:text-white transition-colors">{siteConfig.phone}</a>
+                        </p>
                         <p className="text-zinc-500 text-sm mt-1">Hafta içi: 09:00 - 18:00</p>
                     </div>
 

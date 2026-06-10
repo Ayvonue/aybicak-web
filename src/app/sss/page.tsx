@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle, Truck, Shield, CreditCard, Package, Phone, Mail } from "lucide-react";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import { siteConfig } from "@/lib/site";
 
 const faqCategories = [
     {
@@ -208,7 +209,7 @@ export default function SSKPage() {
                         <p className="text-zinc-400 mb-6">Aradığınız cevabı bulamadınız mı?</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href="tel:+905551234567"
+                                href={siteConfig.phoneHref}
                                 className="inline-flex items-center justify-center gap-2 bg-white text-black font-bold px-6 py-3 rounded-xl hover:bg-zinc-200 transition-colors"
                             >
                                 <Phone className="w-5 h-5" />

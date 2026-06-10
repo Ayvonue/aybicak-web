@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/Button";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter, CreditCard, Landmark } from "lucide-react";
 import Link from "next/link";
+import NewsletterForm from "@/components/shared/NewsletterForm";
+import { siteConfig } from "@/lib/site";
 
 export default function Footer() {
     return (
@@ -19,12 +19,12 @@ export default function Footer() {
                             </h3>
                         </Link>
                         <p className="text-zinc-400 font-light text-sm leading-relaxed max-w-xs">
-                            Anadolu'nun çelik işleme geleneğini modern tasarımla buluşturuyoruz. %100 el yapımı, ömürlük bıçaklar.
+                            Anadolu&apos;nun çelik işleme geleneğini modern tasarımla buluşturuyoruz. %100 el yapımı, ömürlük bıçaklar.
                         </p>
                         <div className="flex items-center gap-4 pt-2">
-                            <SocialLink icon={Instagram} href="#" />
-                            <SocialLink icon={Twitter} href="#" />
-                            <SocialLink icon={Facebook} href="#" />
+                            <SocialLink icon={Instagram} href={siteConfig.social.instagram} label="Instagram" />
+                            <SocialLink icon={Twitter} href={siteConfig.social.twitter} label="Twitter" />
+                            <SocialLink icon={Facebook} href={siteConfig.social.facebook} label="Facebook" />
                         </div>
                     </div>
 
@@ -56,35 +56,22 @@ export default function Footer() {
                         <p className="text-sm text-zinc-400 leading-relaxed">
                             Yeni koleksiyonlardan ve <span className="text-white font-medium">sadece üyelere özel</span> indirimlerden haberdar olun.
                         </p>
-                        <div className="flex flex-col gap-3">
-                            <div className="relative group">
-                                <input
-                                    type="email"
-                                    placeholder="E-posta adresiniz"
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-yellow-600/50 transition-colors"
-                                />
-                                <div className="absolute inset-0 rounded-lg bg-yellow-600/20 opacity-0 group-hover:opacity-100 blur transition-opacity -z-10" />
-                            </div>
-                            <Button variant="premium" className="w-full font-bold text-white">
-                                Abone Ol
-                            </Button>
-                        </div>
+                        <NewsletterForm />
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
                     <p className="text-xs text-zinc-500 font-medium tracking-wide">
-                        © 2026 Ay Bıçak. Tüm hakları saklıdır.
+                        © {new Date().getFullYear()} Ay Bıçak. Tüm hakları saklıdır.
                     </p>
                     <div className="flex items-center gap-6">
-                        {/* Payment Icons Placeholder */}
-                        <div className="flex gap-2 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                            <div className="h-6 w-10 bg-white/10 rounded overflow-hidden relative"><Image src="/visa.png" alt="Visa" fill className="object-cover" /></div>
-                            <div className="h-6 w-10 bg-white/10 rounded overflow-hidden relative"><Image src="/mastercard.png" alt="Mastercard" fill className="object-cover" /></div>
+                        <div className="flex items-center gap-4 text-zinc-500 text-xs">
+                            <span className="flex items-center gap-1.5"><CreditCard className="w-4 h-4" /> Kapıda Ödeme</span>
+                            <span className="flex items-center gap-1.5"><Landmark className="w-4 h-4" /> Havale / EFT</span>
                         </div>
                         <div className="h-4 w-px bg-white/10" />
-                        <Link href="#" className="text-xs text-zinc-500 hover:text-white transition-colors">Site Haritası</Link>
+                        <a href="/sitemap.xml" className="text-xs text-zinc-500 hover:text-white transition-colors">Site Haritası</a>
                     </div>
                 </div>
             </div>
@@ -92,14 +79,17 @@ export default function Footer() {
     );
 }
 
-function SocialLink({ icon: Icon, href }: { icon: any, href: string }) {
+function SocialLink({ icon: Icon, href, label }: { icon: React.ComponentType<{ className?: string }>, href: string, label: string }) {
     return (
-        <Link
+        <a
             href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
             className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 hover:bg-yellow-600 hover:text-white hover:scale-110 transition-all duration-300"
         >
             <Icon className="w-5 h-5" />
-        </Link>
+        </a>
     );
 }
 

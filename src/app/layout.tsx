@@ -58,12 +58,8 @@ export const metadata: Metadata = {
     description: "30 yıllık ustalıkla üretilen el yapımı bıçaklar.",
     images: ["/hero.png"],
   },
-  verification: {
-    google: "google-site-verification-code", // TODO: Add actual verification code
-  },
-  alternates: {
-    canonical: "https://aybicak.com",
-  },
+  // Not: Google Search Console doğrulama kodu alındığında buraya
+  // verification: { google: "..." } eklenmelidir.
   icons: {
     icon: "/logo-icon.png", // Standart Favicon
     shortcut: "/logo-icon.png",

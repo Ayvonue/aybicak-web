@@ -5,6 +5,7 @@ import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/Button";
 import { Send, PenTool, Hammer, Crown, Sparkles, Gem, Leaf, Flame, Shield, ArrowRight, CreditCard, MessageCircle, Tag } from "lucide-react";
 import { motion } from "framer-motion";
+import { whatsappLink } from "@/lib/site";
 
 export default function CustomPage() {
     return (
@@ -152,9 +153,6 @@ export default function CustomPage() {
 
             {/* Corporate / Wholesale Section */}
             <section className="py-32 px-6 bg-stone-900 text-white relative overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10 bg-[url('/pattern-dark.png')] bg-repeat" />
-
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-20">
                         <div className="space-y-6 max-w-2xl">
@@ -219,13 +217,27 @@ export default function CustomPage() {
                         size en uygun seçenekleri <strong className="text-white">ücretsiz olarak</strong> sunalım.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Button size="lg" className="h-16 px-10 text-lg bg-[#25D366] hover:bg-[#128C7E] text-white gap-3 shadow-xl rounded-full w-full sm:w-auto transition-transform hover:-translate-y-1">
-                            <Send className="w-6 h-6" />
-                            WhatsApp'tan Yazın
-                        </Button>
-                        <Button size="lg" variant="outline" className="h-16 px-10 text-lg rounded-full border-2 border-zinc-600 w-full sm:w-auto hover:bg-zinc-800 hover:border-zinc-500 text-white font-medium">
-                            Fiyat Listesi İste <ArrowRight className="ml-2 w-5 h-5" />
-                        </Button>
+                        <a
+                            href={whatsappLink("Merhaba, özel tasarım bıçak yaptırmak istiyorum.")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto"
+                        >
+                            <Button size="lg" className="h-16 px-10 text-lg bg-[#25D366] hover:bg-[#128C7E] text-white gap-3 shadow-xl rounded-full w-full transition-transform hover:-translate-y-1">
+                                <Send className="w-6 h-6" />
+                                WhatsApp&apos;tan Yazın
+                            </Button>
+                        </a>
+                        <a
+                            href={whatsappLink("Merhaba, özel tasarım bıçaklar için fiyat listesi rica ediyorum.")}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto"
+                        >
+                            <Button size="lg" variant="outline" className="h-16 px-10 text-lg rounded-full border-2 border-zinc-600 w-full hover:bg-zinc-800 hover:border-zinc-500 text-white font-medium">
+                                Fiyat Listesi İste <ArrowRight className="ml-2 w-5 h-5" />
+                            </Button>
+                        </a>
                     </div>
                     <p className="text-sm text-zinc-500">
                         ✓ Zorlama yok &nbsp; ✓ Ücretsiz fiyat teklifi &nbsp; ✓ Hızlı yanıt

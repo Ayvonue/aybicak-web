@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { pendingRegistrations } from '../register/route';
+import { rateLimit } from '@/lib/auth';
 
 // In-memory store for verified users (in production, use a database)
 export const verifiedUsers = new Map<string, {
@@ -23,6 +24,14 @@ export async function POST(request: Request) {
             return NextResponse.json(
                 { error: 'E-posta ve doğrulama kodu zorunludur.' },
                 { status: 400 }
+            );
+        }
+
+        // 6 haneli kodun denenerek bulunmasını engelle
+        if (!rateLimit(`verify:${email}`, 5, 10 * 60 * 1000)) {
+            return NextResponse.json(
+                { error: 'Çok fazla hatalı deneme. Lütfen daha sonra tekrar deneyin.' },
+                { status: 429 }
             );
         }
 

@@ -8,3 +8,6 @@ Sitemap: https://aybicak.com/sitemap.xml
 # Disallow admin/private areas
 Disallow: /api/
 Disallow: /_next/
+Disallow: /account/
+Disallow: /checkout
+Disallow: /favorites

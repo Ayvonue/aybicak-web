@@ -1,15 +1,25 @@
 "use client";
 
 import { useAuth } from "@/context/AuthContext";
+import { useFavorites } from "@/context/FavoritesContext";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { User, Package, MapPin, LogOut, Settings, CreditCard } from "lucide-react";
+import { User, Package, MapPin, LogOut, CreditCard, Heart } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export default function AccountPage() {
     const { user, logout } = useAuth();
+    const { state: favoritesState } = useFavorites();
     const router = useRouter();
+    const [addressCount] = useState(() => {
+        if (typeof window === "undefined") return 0;
+        try {
+            return JSON.parse(localStorage.getItem("aybicak-addresses") || "[]").length;
+        } catch {
+            return 0;
+        }
+    });
 
     useEffect(() => {
         if (!user) {
@@ -67,10 +77,10 @@ export default function AccountPage() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             <div className="bg-[#18181B] border border-white/10 rounded-2xl p-6">
                                 <div className="w-10 h-10 rounded-full bg-yellow-600/20 text-yellow-500 flex items-center justify-center mb-4">
-                                    <Package className="w-5 h-5" />
+                                    <Heart className="w-5 h-5" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">2</h3>
-                                <p className="text-sm text-zinc-500">Aktif Sipariş</p>
+                                <h3 className="text-2xl font-bold text-white">{favoritesState.items.length}</h3>
+                                <p className="text-sm text-zinc-500">Favori Ürün</p>
                             </div>
                             <div className="bg-[#18181B] border border-white/10 rounded-2xl p-6">
                                 <div className="w-10 h-10 rounded-full bg-blue-500/20 text-blue-500 flex items-center justify-center mb-4">
@@ -83,7 +93,7 @@ export default function AccountPage() {
                                 <div className="w-10 h-10 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center mb-4">
                                     <MapPin className="w-5 h-5" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">1</h3>
+                                <h3 className="text-2xl font-bold text-white">{addressCount}</h3>
                                 <p className="text-sm text-zinc-500">Kayıtlı Adres</p>
                             </div>
                         </div>
@@ -92,29 +102,15 @@ export default function AccountPage() {
                         <div className="bg-[#18181B] border border-white/10 rounded-2xl p-6 space-y-6">
                             <div className="flex items-center justify-between">
                                 <h3 className="text-lg font-bold text-white">Son Siparişler</h3>
-                                <Link href="/account/orders" className="text-sm text-yellow-500 hover:text-yellow-400">Tühünü Gör</Link>
+                                <Link href="/account/orders" className="text-sm text-yellow-500 hover:text-yellow-400">Tümünü Gör</Link>
                             </div>
 
-                            <div className="space-y-4">
-                                <div className="flex items-start justify-between p-4 rounded-xl bg-white/5 border border-white/5">
-                                    <div className="flex gap-4">
-                                        <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
-                                            {/* Placeholder for order item image */}
-                                            <Package className="text-black opacity-20" />
-                                        </div>
-                                        <div>
-                                            <p className="font-medium text-white">#TR-829102</p>
-                                            <p className="text-sm text-zinc-500">30 Ocak 2026</p>
-                                            <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] bg-yellow-600/20 text-yellow-500 border border-yellow-600/30 uppercase font-bold">
-                                                Hazırlanıyor
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div className="text-right">
-                                        <p className="font-bold text-white">₺4.250,00</p>
-                                        <p className="text-xs text-zinc-500">2 Ürün</p>
-                                    </div>
-                                </div>
+                            <div className="p-8 rounded-xl bg-white/5 border border-white/5 text-center space-y-2">
+                                <Package className="w-10 h-10 mx-auto text-zinc-600" />
+                                <p className="text-zinc-400 text-sm">Henüz siparişiniz bulunmuyor.</p>
+                                <Link href="/shop" className="inline-block text-sm text-yellow-500 hover:text-yellow-400 font-medium">
+                                    Koleksiyonu Keşfet →
+                                </Link>
                             </div>
                         </div>
 

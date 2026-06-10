@@ -11,6 +11,7 @@ import { Check, Shield, Truck, PenTool } from "lucide-react";
 import { motion } from "framer-motion";
 import ProductMarquee from "@/components/shared/ProductMarquee";
 import { Product } from "@/types";
+import { whatsappLink } from "@/lib/site";
 
 interface ProductDetailClientProps {
     product: Product;
@@ -185,7 +186,7 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                             </Button>
 
                             <a
-                                href={`https://wa.me/905555555555?text=Merhaba, şu ürünü sipariş etmek istiyorum: ${product.name} (${typeof window !== 'undefined' ? window.location.href : ''})`}
+                                href={whatsappLink(`Merhaba, şu ürünü sipariş etmek istiyorum: ${product.name} (${typeof window !== 'undefined' ? window.location.href : ''})`)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full"

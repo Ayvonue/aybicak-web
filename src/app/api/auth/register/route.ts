@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { sendVerificationEmail, generateVerificationCode } from '@/lib/email';
+import { hashPassword, rateLimit } from '@/lib/auth';
 
 // In-memory store for pending registrations (in production, use a database)
 // This is exported so verify route can access it
@@ -19,6 +20,14 @@ export const pendingRegistrations = new Map<string, {
 
 export async function POST(request: Request) {
     try {
+        const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+        if (!rateLimit(`register:${ip}`, 5, 15 * 60 * 1000)) {
+            return NextResponse.json(
+                { error: 'Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin.' },
+                { status: 429 }
+            );
+        }
+
         const body = await request.json();
         const { name, surname, email, phone, password, birthDate, gender } = body;
 
@@ -26,6 +35,20 @@ export async function POST(request: Request) {
         if (!name || !surname || !email || !password) {
             return NextResponse.json(
                 { error: 'Ad, soyad, e-posta ve şifre zorunludur.' },
+                { status: 400 }
+            );
+        }
+
+        if (typeof password !== 'string' || password.length < 6) {
+            return NextResponse.json(
+                { error: 'Şifre en az 6 karakter olmalıdır.' },
+                { status: 400 }
+            );
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            return NextResponse.json(
+                { error: 'Geçerli bir e-posta adresi girin.' },
                 { status: 400 }
             );
         }
@@ -47,11 +70,11 @@ export async function POST(request: Request) {
         const code = generateVerificationCode();
         const expires = Date.now() + 10 * 60 * 1000; // 10 minutes
 
-        // Store pending registration
+        // Store pending registration (şifre hash'lenerek saklanır)
         pendingRegistrations.set(email, {
             code,
             expires,
-            userData: { name, surname, email, phone, password, birthDate, gender }
+            userData: { name, surname, email, phone, password: hashPassword(password), birthDate, gender }
         });
 
         // Send verification email

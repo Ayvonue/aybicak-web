@@ -43,10 +43,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.6,
         },
         {
-            url: `${baseUrl}/favorites`,
+            url: `${baseUrl}/shipping`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: 'monthly',
             priority: 0.5,
+        },
+        {
+            url: `${baseUrl}/return`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.5,
+        },
+        {
+            url: `${baseUrl}/legal/dist-sales`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.3,
+        },
+        {
+            url: `${baseUrl}/legal/privacy`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.3,
         },
     ];
 

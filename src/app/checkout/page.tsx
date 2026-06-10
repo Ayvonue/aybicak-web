@@ -8,7 +8,8 @@ import { useCart } from "@/context/CartContext";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { formatPrice } from "@/lib/utils";
-import { ChevronRight, CreditCard, Lock, CheckCircle, Loader2, Package, Truck, Landmark, Wallet } from "lucide-react";
+import { siteConfig } from "@/lib/site";
+import { ChevronRight, Lock, CheckCircle, Loader2, Package, Truck, Landmark, Wallet } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface FormData {
@@ -107,7 +108,7 @@ export default function CheckoutPage() {
                         price: item.price,
                         quantity: item.quantity
                     })),
-                    totalPrice: state.total,
+                    totalPrice: state.finalTotal,
                     paymentMethod,
                     callbackUrl: `${window.location.origin}/checkout/callback`
                 })
@@ -177,12 +178,12 @@ export default function CheckoutPage() {
                                     <h3 className="font-bold text-sm uppercase tracking-wide">Havale / EFT Bilgileri</h3>
                                 </div>
                                 <div className="space-y-1 text-sm">
-                                    <p className="text-zinc-400">Banka: <span className="text-white font-medium">Ziraat Bankası</span></p>
-                                    <p className="text-zinc-400">Alıcı: <span className="text-white font-medium">Mehmet Yılmaz (Ay Bıçak)</span></p>
+                                    <p className="text-zinc-400">Banka: <span className="text-white font-medium">{siteConfig.bank.name}</span></p>
+                                    <p className="text-zinc-400">Alıcı: <span className="text-white font-medium">{siteConfig.bank.owner}</span></p>
                                     <div className="pt-2">
                                         <p className="text-zinc-500 text-xs mb-1">IBAN:</p>
                                         <p className="font-mono text-white text-base font-bold tracking-wider break-all bg-black/20 p-2 rounded border border-white/5 select-all">
-                                            TR12 0001 0002 0003 0004 0005 06
+                                            {siteConfig.bank.iban}
                                         </p>
                                     </div>
                                     <p className="text-xs text-yellow-500/80 pt-2 italic">
@@ -403,6 +404,12 @@ export default function CheckoutPage() {
                                         <span>Ara Toplam</span>
                                         <span className="text-white">{formatPrice(state.total)}</span>
                                     </div>
+                                    {state.discount > 0 && (
+                                        <div className="flex justify-between text-zinc-400">
+                                            <span>Üye İndirimi (%5)</span>
+                                            <span className="text-green-400 font-medium">-{formatPrice(state.discount)}</span>
+                                        </div>
+                                    )}
                                     <div className="flex justify-between text-zinc-400">
                                         <span className="flex items-center gap-2">
                                             <Truck className="w-4 h-4" />
@@ -412,7 +419,7 @@ export default function CheckoutPage() {
                                     </div>
                                     <div className="flex justify-between text-xl font-bold text-white pt-2 border-t border-zinc-800">
                                         <span>Toplam</span>
-                                        <span>{formatPrice(state.total)}</span>
+                                        <span>{formatPrice(state.finalTotal)}</span>
                                     </div>
                                 </div>
                             </div>

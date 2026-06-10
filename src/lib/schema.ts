@@ -1,4 +1,5 @@
 import { products } from '@/data/products';
+import { siteConfig } from '@/lib/site';
 
 // Organization Schema
 export function getOrganizationSchema() {
@@ -14,11 +15,11 @@ export function getOrganizationSchema() {
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "TR",
-            "addressLocality": "İstanbul"
+            "addressLocality": siteConfig.address.city
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+90-555-123-4567",
+            "telephone": siteConfig.phone,
             "contactType": "customer service",
             "availableLanguage": ["Turkish", "English"]
         },
@@ -108,16 +109,11 @@ export function getLocalBusinessSchema() {
         "priceRange": "₺₺₺",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Bıçakçılar Çarşısı",
-            "addressLocality": "İstanbul",
+            "streetAddress": siteConfig.address.street,
+            "addressLocality": `${siteConfig.address.district} / ${siteConfig.address.city}`,
             "addressCountry": "TR"
         },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "41.0082",
-            "longitude": "28.9784"
-        },
-        "telephone": "+90-555-123-4567",
+        "telephone": siteConfig.phone,
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",

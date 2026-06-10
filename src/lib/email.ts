@@ -1,11 +1,29 @@
+import crypto from 'node:crypto';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Resend istemcisi istek anında oluşturulur; modül yüklenirken API anahtarı
+// yoksa build/başlatma çökmesin diye burada new Resend() çağrılmaz.
+let resendClient: Resend | null = null;
+
+function getResendClient(): Resend | null {
+    if (!process.env.RESEND_API_KEY) return null;
+    if (!resendClient) {
+        resendClient = new Resend(process.env.RESEND_API_KEY);
+    }
+    return resendClient;
+}
 
 export async function sendVerificationEmail(email: string, code: string, name: string) {
+    const resend = getResendClient();
+    if (!resend) {
+        console.error('RESEND_API_KEY tanımlı değil; doğrulama e-postası gönderilemiyor.');
+        return { success: false, error: 'E-posta servisi yapılandırılmamış.' };
+    }
+
     try {
         const { data, error } = await resend.emails.send({
-            from: 'AYBIÇAK <onboarding@resend.dev>', // Resend varsayılan domain'i (test için)
+            // EMAIL_FROM tanımlanana kadar Resend test domaini kullanılır
+            from: process.env.EMAIL_FROM || 'AYBIÇAK <onboarding@resend.dev>',
             to: email,
             subject: 'AYBIÇAK - E-posta Doğrulama Kodu',
             html: `
@@ -52,5 +70,6 @@ export async function sendVerificationEmail(email: string, code: string, name: s
 }
 
 export function generateVerificationCode(): string {
-    return Math.floor(100000 + Math.random() * 900000).toString();
+    // Math.random tahmin edilebilir olduğu için kriptografik rastgelelik kullanılır
+    return crypto.randomInt(100000, 1000000).toString();
 }
