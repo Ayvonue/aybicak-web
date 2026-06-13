@@ -16,9 +16,11 @@ import { whatsappLink } from "@/lib/site";
 interface ProductDetailClientProps {
     product: Product;
     relatedProducts: Product[];
+    // Sunucudan gelen kategoriye özel SEO içerik bloğu (bakım rehberi vb.)
+    categoryContent?: React.ReactNode;
 }
 
-export default function ProductDetailClient({ product, relatedProducts }: ProductDetailClientProps) {
+export default function ProductDetailClient({ product, relatedProducts, categoryContent }: ProductDetailClientProps) {
     const { dispatch } = useCart();
     const [customText, setCustomText] = useState("");
     const [selectedImage, setSelectedImage] = useState(product?.imageUrl || "");
@@ -221,6 +223,8 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                     </section>
                 )}
             </div>
+
+            {categoryContent}
 
             <Footer />
         </main>

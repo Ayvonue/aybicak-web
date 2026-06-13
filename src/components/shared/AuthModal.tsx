@@ -160,18 +160,44 @@ export default function AuthModal({ isOpen, onClose, initialTab = "login" }: Aut
         }
     };
 
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Mock login logic - in real app, validate against backend
-        const demoUser: UserType = {
-            name: "Misafir",
-            surname: "Kullanıcı",
-            email: loginData.email,
-            phone: "",
-            registeredAt: new Date().toISOString()
-        };
-        login(demoUser);
-        onClose();
+        setError("");
+        setLoading(true);
+
+        try {
+            const response = await fetch("/api/auth/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    email: loginData.email,
+                    password: loginData.password
+                })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                setError(data.error || "Giriş yapılamadı.");
+                return;
+            }
+
+            const user: UserType = {
+                name: data.user.name,
+                surname: data.user.surname,
+                email: data.user.email,
+                phone: data.user.phone || "",
+                birthDate: data.user.birthDate,
+                gender: data.user.gender,
+                registeredAt: new Date(data.user.createdAt || Date.now()).toISOString()
+            };
+            login(user);
+            onClose();
+        } catch {
+            setError("Bağlantı hatası. Lütfen tekrar deneyin.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -350,8 +376,8 @@ export default function AuthModal({ isOpen, onClose, initialTab = "login" }: Aut
                                                     <a href="/contact" className="hover:text-yellow-500 transition-colors">Şifremi Unuttum</a>
                                                 </div>
 
-                                                <Button size="lg" className="w-full font-bold h-12 rounded-xl bg-white text-black hover:bg-zinc-200 mt-2">
-                                                    Giriş Yap
+                                                <Button size="lg" disabled={loading} className="w-full font-bold h-12 rounded-xl bg-white text-black hover:bg-zinc-200 mt-2 disabled:opacity-50">
+                                                    {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "Giriş Yap"}
                                                 </Button>
                                             </form>
                                         ) : (

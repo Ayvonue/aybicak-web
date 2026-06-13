@@ -2,8 +2,10 @@ import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 import ProductDetailClient from "@/components/shop/ProductDetailClient";
 import { Metadata } from "next";
+import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
 import { getProductSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { getCategoryByName } from "@/data/categories";
 
 // Tüm ürün sayfaları build sırasında statik üretilir (SSG) — daha hızlı
 // yükleme ve daha iyi tarama bütçesi kullanımı sağlar.
@@ -94,11 +96,33 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     );
 
     const productSchema = getProductSchema(product.id);
+    const categoryConfig = getCategoryByName(product.category);
     const breadcrumbSchema = getBreadcrumbSchema([
         { name: "Ana Sayfa", url: "https://aybicak.com" },
-        { name: "Mağaza", url: "https://aybicak.com/shop" },
+        ...(categoryConfig
+            ? [{ name: categoryConfig.h1, url: `https://aybicak.com/category/${categoryConfig.slug}` }]
+            : [{ name: "Mağaza", url: "https://aybicak.com/shop" }]),
         { name: product.name.trim(), url: `https://aybicak.com/product/${product.id}` },
     ]);
+
+    // Kategoriye özel bakım rehberi — içerik derinliği ve kategori sayfasına
+    // iç linkleme sağlar
+    const categoryContent = categoryConfig ? (
+        <section className="pb-16 px-6">
+            <div className="max-w-7xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 space-y-4">
+                <h2 className="text-xl font-bold text-white">{categoryConfig.careTitle}</h2>
+                {categoryConfig.careContent.map((paragraph, idx) => (
+                    <p key={idx} className="text-sm text-zinc-400 leading-relaxed">{paragraph}</p>
+                ))}
+                <Link
+                    href={`/category/${categoryConfig.slug}`}
+                    className="inline-block text-sm text-yellow-500 hover:text-yellow-400 font-medium pt-2"
+                >
+                    Tüm {categoryConfig.h1} →
+                </Link>
+            </div>
+        </section>
+    ) : undefined;
 
     return (
         <>
@@ -110,7 +134,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
-            <ProductDetailClient product={product} relatedProducts={relatedProducts} />
+            <ProductDetailClient
+                product={product}
+                relatedProducts={relatedProducts}
+                categoryContent={categoryContent}
+            />
         </>
     );
 }

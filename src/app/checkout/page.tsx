@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { formatPrice } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
-import { ChevronRight, Lock, CheckCircle, Loader2, Package, Truck, Landmark, Wallet } from "lucide-react";
+import { ChevronRight, Lock, CheckCircle, CreditCard, Loader2, Package, Truck, Landmark, Wallet } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface FormData {
@@ -27,7 +27,11 @@ interface FormErrors {
     [key: string]: string;
 }
 
-type PaymentMethod = "cod" | "transfer";
+type PaymentMethod = "cod" | "transfer" | "card";
+
+// Kart ödemesi İyzico anahtarları eklendiğinde NEXT_PUBLIC_IYZICO_ENABLED=true
+// ile açılır; aksi halde seçenek gösterilmez.
+const cardPaymentEnabled = process.env.NEXT_PUBLIC_IYZICO_ENABLED === "true";
 
 export default function CheckoutPage() {
     const router = useRouter();
@@ -110,13 +114,17 @@ export default function CheckoutPage() {
                     })),
                     totalPrice: state.finalTotal,
                     paymentMethod,
+                    notes: formData.notes,
                     callbackUrl: `${window.location.origin}/checkout/callback`
                 })
             });
 
             const result = await response.json();
 
-            if (result.success) {
+            if (result.success && result.paymentPageUrl) {
+                // Kart ödemesi: İyzico ödeme sayfasına yönlendir
+                window.location.href = result.paymentPageUrl;
+            } else if (result.success) {
                 setOrderId(result.orderId);
                 setOrderSuccess(true);
                 // Clear cart after successful order
@@ -314,6 +322,28 @@ export default function CheckoutPage() {
                                 </h2>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {/* Card Option (İyzico) */}
+                                    {cardPaymentEnabled && (
+                                        <div
+                                            onClick={() => setPaymentMethod("card")}
+                                            className={`cursor-pointer rounded-xl p-4 border-2 transition-all flex items-start gap-4 md:col-span-2 ${paymentMethod === "card" ? "border-white bg-zinc-800" : "border-zinc-700 bg-zinc-900 hover:border-zinc-600"}`}
+                                        >
+                                            <div className={`mt-1 w-5 h-5 rounded-full border flex items-center justify-center ${paymentMethod === "card" ? "border-white" : "border-zinc-500"}`}>
+                                                {paymentMethod === "card" && <div className="w-2.5 h-2.5 rounded-full bg-white" />}
+                                            </div>
+                                            <div>
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <CreditCard className="w-4 h-4 text-zinc-300" />
+                                                    <span className="font-bold text-white">Kredi / Banka Kartı</span>
+                                                    <span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-bold uppercase">Anında Onay</span>
+                                                </div>
+                                                <p className="text-xs text-zinc-400 leading-snug">
+                                                    İyzico güvencesiyle 3D Secure kart ödemesi. Taksit seçenekleri ödeme sayfasında sunulur.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    )}
+
                                     {/* COD Option */}
                                     <div
                                         onClick={() => setPaymentMethod("cod")}

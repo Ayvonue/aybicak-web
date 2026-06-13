@@ -51,8 +51,7 @@ export default function KnifeCard({ id, name, price, imageUrl, steel, isNew, opt
                             alt={`${name.trim()} - ${steel} el yapımı bıçak - Ay Bıçak`}
                             fill
                             sizes={optimized ? "500px" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
-                            quality={100}
-                            unoptimized
+                            quality={85}
                             priority={priority}
                             className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-110 mix-blend-multiply"
                             onError={() => setImgSrc("/placeholder-knife.png")}

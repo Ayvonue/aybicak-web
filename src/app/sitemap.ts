@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { products } from '@/data/products';
+import { categories } from '@/data/categories';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://aybicak.com';
@@ -68,6 +69,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
     ];
 
+    // Category landing pages
+    const categoryPages: MetadataRoute.Sitemap = categories.map((category) => ({
+        url: `${baseUrl}/category/${category.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.85,
+    }));
+
     // Product pages
     const productPages: MetadataRoute.Sitemap = products.map((product) => ({
         url: `${baseUrl}/product/${product.id}`,
@@ -76,5 +85,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    return [...staticPages, ...productPages];
+    return [...staticPages, ...categoryPages, ...productPages];
 }

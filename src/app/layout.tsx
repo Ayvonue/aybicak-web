@@ -5,6 +5,7 @@ import { CartProvider } from "@/context/CartContext";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 import { AuthProvider } from "@/context/AuthContext";
 import { getOrganizationSchema, getWebsiteSchema } from "@/lib/schema";
+import { Analytics } from "@vercel/analytics/react";
 
 import SmoothScroll from "@/components/shared/SmoothScroll";
 import ScrollToTop from "@/components/shared/ScrollToTop";
@@ -107,6 +108,7 @@ export default function RootLayout({
             </CartProvider>
           </AuthProvider>
         </FavoritesProvider>
+        <Analytics />
       </body>
     </html>
   );

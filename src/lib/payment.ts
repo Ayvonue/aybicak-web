@@ -31,7 +31,7 @@ export interface CreatePaymentRequest {
     items: OrderItem[];
     totalPrice: number;
     callbackUrl: string;
-    paymentMethod?: "cod" | "transfer";
+    paymentMethod?: "cod" | "transfer" | "card";
 }
 
 export interface PaymentResult {
@@ -42,13 +42,12 @@ export interface PaymentResult {
     errorCode?: string;
 }
 
-// Configuration - Set your credentials here or use environment variables
+// Configuration - anahtarlar yalnızca ortam değişkenlerinden okunur;
+// sahte fallback değerleri sessiz hatalara yol açtığı için kaldırıldı.
 export const iyzicoConfig: IyzicoConfig = {
-    apiKey: process.env.IYZICO_API_KEY || "sandbox-api-key",
-    secretKey: process.env.IYZICO_SECRET_KEY || "sandbox-secret-key",
-    baseUrl: process.env.NODE_ENV === "production"
-        ? "https://api.iyzipay.com"
-        : "https://sandbox-api.iyzipay.com"
+    apiKey: process.env.IYZICO_API_KEY || "",
+    secretKey: process.env.IYZICO_SECRET_KEY || "",
+    baseUrl: process.env.IYZICO_BASE_URL || "https://api.iyzipay.com"
 };
 
 // Generate random conversation ID for İyzico

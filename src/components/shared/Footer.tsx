@@ -2,6 +2,7 @@ import { Facebook, Instagram, Twitter, CreditCard, Landmark } from "lucide-react
 import Link from "next/link";
 import NewsletterForm from "@/components/shared/NewsletterForm";
 import { siteConfig } from "@/lib/site";
+import { categories } from "@/data/categories";
 
 export default function Footer() {
     return (
@@ -10,7 +11,7 @@ export default function Footer() {
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-600/5 rounded-full blur-[128px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-20 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-12 mb-20">
                     {/* Brand */}
                     <div className="space-y-6">
                         <Link href="/" className="block">
@@ -26,6 +27,18 @@ export default function Footer() {
                             <SocialLink icon={Twitter} href={siteConfig.social.twitter} label="Twitter" />
                             <SocialLink icon={Facebook} href={siteConfig.social.facebook} label="Facebook" />
                         </div>
+                    </div>
+
+                    {/* Categories */}
+                    <div className="space-y-6">
+                        <h4 className="text-sm font-bold text-white uppercase tracking-widest border-l-2 border-yellow-600 pl-3">Koleksiyon</h4>
+                        <ul className="space-y-3 text-sm text-zinc-400">
+                            {categories.map((category) => (
+                                <li key={category.slug}>
+                                    <FooterLink href={`/category/${category.slug}`}>{category.h1}</FooterLink>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
 
                     {/* Links */}

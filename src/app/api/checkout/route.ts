@@ -1,22 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
-import {
-    iyzicoConfig,
-    generateConversationId,
-    formatPriceForIyzico,
-    formatPhoneForIyzico,
-    CreatePaymentRequest
-} from "@/lib/payment";
-
-// This is a placeholder API route for İyzico payment integration
-// You need to install the iyzipay package: npm install iyzipay
+import { generateConversationId, CreatePaymentRequest } from "@/lib/payment";
+import { initializeCheckoutForm, isIyzicoConfigured } from "@/lib/iyzico";
+import { sendOrderEmails } from "@/lib/email";
+import { rateLimit } from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
     try {
-        const body: CreatePaymentRequest = await request.json();
-        const { customer, items, totalPrice, callbackUrl } = body;
+        const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+        if (!rateLimit(`checkout:${ip}`, 10, 10 * 60 * 1000)) {
+            return NextResponse.json(
+                { success: false, error: "Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin." },
+                { status: 429 }
+            );
+        }
+
+        const body: CreatePaymentRequest & { notes?: string } = await request.json();
+        const { customer, items, totalPrice, callbackUrl, paymentMethod, notes } = body;
 
         // Validate required fields
-        if (!customer.firstName || !customer.lastName || !customer.email || !customer.phone) {
+        if (!customer?.firstName || !customer?.lastName || !customer?.email || !customer?.phone) {
             return NextResponse.json(
                 { success: false, error: "Eksik müşteri bilgileri" },
                 { status: 400 }
@@ -30,106 +32,79 @@ export async function POST(request: NextRequest) {
             );
         }
 
+        if (typeof totalPrice !== "number" || totalPrice <= 0) {
+            return NextResponse.json(
+                { success: false, error: "Geçersiz sipariş tutarı" },
+                { status: 400 }
+            );
+        }
+
         const conversationId = generateConversationId();
 
-        // ============================================================
-        // İYZİCO ENTEGRASYONU - AŞAĞIDAKİ KODU AKTİF EDİN
-        // ============================================================
-        // 
-        // 1. İyzico paketini yükleyin: npm install iyzipay
-        // 2. .env.local dosyasına ekleyin:
-        //    IYZICO_API_KEY=your_api_key
-        //    IYZICO_SECRET_KEY=your_secret_key
-        // 3. Aşağıdaki kodu aktif edin:
-        //
-        // const Iyzipay = require("iyzipay");
-        // 
-        // const iyzipay = new Iyzipay({
-        //     apiKey: iyzicoConfig.apiKey,
-        //     secretKey: iyzicoConfig.secretKey,
-        //     uri: iyzicoConfig.baseUrl
-        // });
-        //
-        // const paymentRequest = {
-        //     locale: Iyzipay.LOCALE.TR,
-        //     conversationId: conversationId,
-        //     price: formatPriceForIyzico(totalPrice),
-        //     paidPrice: formatPriceForIyzico(totalPrice),
-        //     currency: Iyzipay.CURRENCY.TRY,
-        //     installment: "1",
-        //     basketId: conversationId,
-        //     paymentChannel: Iyzipay.PAYMENT_CHANNEL.WEB,
-        //     paymentGroup: Iyzipay.PAYMENT_GROUP.PRODUCT,
-        //     callbackUrl: callbackUrl,
-        //     buyer: {
-        //         id: `BUYER-${Date.now()}`,
-        //         name: customer.firstName,
-        //         surname: customer.lastName,
-        //         email: customer.email,
-        //         gsmNumber: formatPhoneForIyzico(customer.phone),
-        //         identityNumber: customer.identityNumber || "11111111111",
-        //         registrationAddress: customer.address,
-        //         city: customer.city,
-        //         country: "Turkey",
-        //         zipCode: customer.zipCode || "34000"
-        //     },
-        //     shippingAddress: {
-        //         contactName: `${customer.firstName} ${customer.lastName}`,
-        //         city: customer.city,
-        //         country: "Turkey",
-        //         address: customer.address,
-        //         zipCode: customer.zipCode || "34000"
-        //     },
-        //     billingAddress: {
-        //         contactName: `${customer.firstName} ${customer.lastName}`,
-        //         city: customer.city,
-        //         country: "Turkey",
-        //         address: customer.address,
-        //         zipCode: customer.zipCode || "34000"
-        //     },
-        //     basketItems: items.map((item, index) => ({
-        //         id: item.id,
-        //         name: item.name,
-        //         category1: item.category || "Bıçak",
-        //         itemType: Iyzipay.BASKET_ITEM_TYPE.PHYSICAL,
-        //         price: formatPriceForIyzico(item.price * item.quantity)
-        //     }))
-        // };
-        //
-        // return new Promise((resolve) => {
-        //     iyzipay.checkoutFormInitialize.create(paymentRequest, (err, result) => {
-        //         if (err || result.status !== "success") {
-        //             resolve(NextResponse.json({
-        //                 success: false,
-        //                 error: result?.errorMessage || "Ödeme başlatılamadı"
-        //             }, { status: 400 }));
-        //         } else {
-        //             resolve(NextResponse.json({
-        //                 success: true,
-        //                 paymentPageUrl: result.paymentPageUrl,
-        //                 token: result.token
-        //             }));
-        //         }
-        //     });
-        // });
-        // ============================================================
+        // Kredi kartı: İyzico Ödeme Formu başlatılır, müşteri ödeme sayfasına yönlendirilir
+        if (paymentMethod === "card") {
+            if (!isIyzicoConfigured()) {
+                return NextResponse.json(
+                    { success: false, error: "Kart ile ödeme şu an aktif değil. Lütfen başka bir ödeme yöntemi seçin." },
+                    { status: 503 }
+                );
+            }
 
-        // DEMO MODE: Return success with simulated order
+            const result = await initializeCheckoutForm({
+                conversationId,
+                customer,
+                items,
+                totalPrice,
+                callbackUrl,
+            });
+
+            if (!result.success) {
+                return NextResponse.json(
+                    { success: false, error: result.errorMessage },
+                    { status: 400 }
+                );
+            }
+
+            return NextResponse.json({
+                success: true,
+                orderId: conversationId,
+                paymentPageUrl: result.paymentPageUrl,
+                token: result.token,
+            });
+        }
+
+        // Kapıda ödeme / Havale: sipariş onay e-postaları gönderilir.
+        // E-posta gönderimi başarısız olsa bile sipariş reddedilmez (loglanır).
+        await sendOrderEmails({
+            orderId: conversationId,
+            customerName: `${customer.firstName} ${customer.lastName}`,
+            customerEmail: customer.email,
+            customerPhone: customer.phone,
+            address: customer.address,
+            city: customer.city,
+            items: items.map((item) => ({
+                name: item.name,
+                quantity: item.quantity,
+                price: item.price,
+            })),
+            totalPrice,
+            paymentMethod: paymentMethod || "cod",
+            notes,
+        });
+
         console.log("📦 Order received:", {
             conversationId,
             customer: `${customer.firstName} ${customer.lastName}`,
             email: customer.email,
             items: items.length,
             total: totalPrice,
-            paymentMethod: body.paymentMethod || "unknown"
+            paymentMethod: paymentMethod || "unknown",
         });
 
-        // Simulate order creation
         return NextResponse.json({
             success: true,
             orderId: conversationId,
             message: "Sipariş alındı!",
-            demo: true
         });
 
     } catch (error) {
