@@ -39,6 +39,14 @@ export async function POST(request: Request) {
             );
         }
 
+        // IP rotasyonuyla aynı e-postaya doğrulama maili spam'ini engelle
+        if (!rateLimit(`register-email:${email}`, 3, 60 * 60 * 1000)) {
+            return NextResponse.json(
+                { error: 'Bu e-posta için çok fazla kayıt denemesi yapıldı. Lütfen daha sonra tekrar deneyin.' },
+                { status: 429 }
+            );
+        }
+
         if (typeof password !== 'string' || password.length < 6) {
             return NextResponse.json(
                 { error: 'Şifre en az 6 karakter olmalıdır.' },

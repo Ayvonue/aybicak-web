@@ -3,6 +3,12 @@ import { generateConversationId, CreatePaymentRequest } from "@/lib/payment";
 import { initializeCheckoutForm, isIyzicoConfigured } from "@/lib/iyzico";
 import { sendOrderEmails } from "@/lib/email";
 import { rateLimit } from "@/lib/auth";
+import { products } from "@/data/products";
+
+// İstemciden gelen fiyatlara ASLA güvenilmez; her ürün ve toplam tutar
+// sunucu tarafında products.ts (tek doğru kaynak) ile yeniden hesaplanır.
+// Bu, "price: 1 gönderip ürünü 1₺'ye alma" saldırısını engeller.
+const MAX_MEMBER_DISCOUNT = 0.05; // Üye indirimi tavanı
 
 export async function POST(request: NextRequest) {
     try {
@@ -32,12 +38,41 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        if (typeof totalPrice !== "number" || totalPrice <= 0) {
-            return NextResponse.json(
-                { success: false, error: "Geçersiz sipariş tutarı" },
-                { status: 400 }
-            );
+        // Her kalemi gerçek ürün verisiyle doğrula ve fiyatı sunucudan al
+        const validatedItems: { id: string; name: string; category: string; price: number; quantity: number }[] = [];
+        for (const item of items) {
+            const product = products.find((p) => p.id === item.id);
+            if (!product) {
+                return NextResponse.json(
+                    { success: false, error: `Ürün bulunamadı: ${item.id}` },
+                    { status: 400 }
+                );
+            }
+            const quantity = Math.floor(Number(item.quantity));
+            if (!Number.isFinite(quantity) || quantity < 1 || quantity > 99) {
+                return NextResponse.json(
+                    { success: false, error: "Geçersiz ürün adedi" },
+                    { status: 400 }
+                );
+            }
+            validatedItems.push({
+                id: product.id,
+                name: product.name,
+                category: product.category || "Bıçak",
+                price: product.price, // İstemci fiyatı yok sayılır
+                quantity,
+            });
         }
+
+        // Toplam tutar sunucuda hesaplanır; istemci değeri yalnızca üye
+        // indirimi (en fazla %5) sınırları içinde kabul edilir.
+        const subtotal = validatedItems.reduce((acc, it) => acc + it.price * it.quantity, 0);
+        const minAcceptable = subtotal * (1 - MAX_MEMBER_DISCOUNT);
+        const clientTotal = Number(totalPrice);
+        const finalTotal =
+            Number.isFinite(clientTotal) && clientTotal >= minAcceptable && clientTotal <= subtotal
+                ? clientTotal
+                : subtotal;
 
         const conversationId = generateConversationId();
 
@@ -53,8 +88,8 @@ export async function POST(request: NextRequest) {
             const result = await initializeCheckoutForm({
                 conversationId,
                 customer,
-                items,
-                totalPrice,
+                items: validatedItems,
+                totalPrice: finalTotal,
                 callbackUrl,
             });
 
@@ -82,12 +117,12 @@ export async function POST(request: NextRequest) {
             customerPhone: customer.phone,
             address: customer.address,
             city: customer.city,
-            items: items.map((item) => ({
+            items: validatedItems.map((item) => ({
                 name: item.name,
                 quantity: item.quantity,
                 price: item.price,
             })),
-            totalPrice,
+            totalPrice: finalTotal,
             paymentMethod: paymentMethod || "cod",
             notes,
         });
@@ -96,8 +131,8 @@ export async function POST(request: NextRequest) {
             conversationId,
             customer: `${customer.firstName} ${customer.lastName}`,
             email: customer.email,
-            items: items.length,
-            total: totalPrice,
+            items: validatedItems.length,
+            total: finalTotal,
             paymentMethod: paymentMethod || "unknown",
         });
 
