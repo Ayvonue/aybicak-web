@@ -10,8 +10,12 @@ import { formatPrice, getSizesFromDescription } from "@/lib/utils";
 import { Check, Shield, Truck, PenTool } from "lucide-react";
 import { motion } from "framer-motion";
 import ProductMarquee from "@/components/shared/ProductMarquee";
+import RecentlyViewed from "@/components/shared/RecentlyViewed";
 import { Product } from "@/types";
 import { whatsappLink } from "@/lib/site";
+import { useToast } from "@/context/ToastContext";
+import { addRecentlyViewed } from "@/lib/recentlyViewed";
+import { getDeliveryEstimate } from "@/lib/delivery";
 
 interface ProductDetailClientProps {
     product: Product;
@@ -22,10 +26,12 @@ interface ProductDetailClientProps {
 
 export default function ProductDetailClient({ product, relatedProducts, categoryContent }: ProductDetailClientProps) {
     const { dispatch } = useCart();
+    const { toast } = useToast();
     const [customText, setCustomText] = useState("");
     const [selectedImage, setSelectedImage] = useState(product?.imageUrl || "");
     const [hoveredImage, setHoveredImage] = useState<string | null>(null);
     const [imageError, setImageError] = useState(false);
+    const delivery = React.useMemo(() => getDeliveryEstimate(), []);
 
     // Size Logic
     const availableSizes = React.useMemo(() => {
@@ -43,6 +49,11 @@ export default function ProductDetailClient({ product, relatedProducts, category
         }
     }, [product]);
 
+    // Son görüntülenenlere ekle (kişiselleştirme)
+    React.useEffect(() => {
+        if (product?.id) addRecentlyViewed(product.id);
+    }, [product?.id]);
+
     const handleAddToCart = () => {
         if (availableSizes.length > 0 && !selectedSize) return;
 
@@ -53,10 +64,11 @@ export default function ProductDetailClient({ product, relatedProducts, category
                 selectedSize: selectedSize || undefined
             }
         });
+        toast(`${product.name.trim()} sepete eklendi`, "success");
     };
 
     return (
-        <main className="min-h-screen bg-background text-foreground selection:bg-yellow-100 selection:text-yellow-900">
+        <main className="min-h-screen bg-background text-foreground selection:bg-yellow-100 selection:text-yellow-900 pb-20 md:pb-0">
             <Navbar />
 
             <div className="pt-32 pb-10 max-w-7xl mx-auto px-6">
@@ -121,6 +133,25 @@ export default function ProductDetailClient({ product, relatedProducts, category
                             <p className="text-zinc-300 text-sm md:text-base leading-snug line-clamp-4">
                                 {(product.description || `Geleneksel el işçiliği ile %100 yerli üretim. ${product.steel} çeliğin gücü ve ${product.handle} sap malzemesinin zarafeti bir arada. Uzun yıllar güvenle kullanabileceğiniz bir üründür.`)}
                             </p>
+
+                            {/* Teslimat ve stok güven sinyalleri */}
+                            <div className="mt-4 space-y-2">
+                                <div className="flex items-center gap-2 text-sm text-emerald-400">
+                                    <Check className="w-4 h-4 shrink-0" />
+                                    <span className="font-medium">Stokta — hemen kargolanır</span>
+                                </div>
+                                <div className="flex items-center gap-2 text-sm text-zinc-300">
+                                    <Truck className="w-4 h-4 shrink-0 text-zinc-400" />
+                                    <span>
+                                        Tahmini teslimat: <span className="text-white font-semibold">{delivery.label}</span>
+                                    </span>
+                                </div>
+                                <p className="text-xs text-zinc-500">
+                                    {delivery.cutoffPassed
+                                        ? "Saat 15:00 sonrası verilen siparişler ertesi iş günü hazırlanır."
+                                        : "Bugün saat 15:00'e kadar verilen siparişler aynı gün hazırlanır."}
+                                </p>
+                            </div>
                         </div>
 
                         {/* Technical Specs Grid (Compact) */}
@@ -225,6 +256,25 @@ export default function ProductDetailClient({ product, relatedProducts, category
             </div>
 
             {categoryContent}
+
+            {/* Son gezilen ürünler */}
+            <RecentlyViewed excludeId={product.id} />
+
+            {/* Mobilde sabit Sepete Ekle çubuğu (Baymard: satın al butonu hep görünür) */}
+            <div className="md:hidden fixed bottom-0 left-0 right-0 z-[95] bg-zinc-950/95 backdrop-blur-lg border-t border-white/10 px-4 py-3 flex items-center gap-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+                <div className="flex flex-col leading-tight shrink-0">
+                    <span className="text-[11px] text-zinc-500">Fiyat</span>
+                    <span className="text-lg font-black text-white">{formatPrice(product.price)}</span>
+                </div>
+                <Button
+                    size="lg"
+                    className="flex-1 h-12 text-base font-bold bg-white text-black hover:bg-zinc-100 rounded-xl disabled:opacity-50"
+                    onClick={handleAddToCart}
+                    disabled={availableSizes.length > 0 && !selectedSize}
+                >
+                    {availableSizes.length > 0 && !selectedSize ? "Boyut Seçin" : "Sepete Ekle"}
+                </Button>
+            </div>
 
             <Footer />
         </main>

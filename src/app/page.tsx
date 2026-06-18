@@ -7,6 +7,7 @@ import ProductMarquee from "@/components/shared/ProductMarquee";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
+import RecentlyViewed from "@/components/shared/RecentlyViewed";
 
 export const metadata: Metadata = {
   alternates: {
@@ -98,6 +99,9 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Son gezilen ürünler (kişiselleştirme) */}
+      <RecentlyViewed />
 
       <Footer />
     </main>
