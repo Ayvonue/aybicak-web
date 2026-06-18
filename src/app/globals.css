@@ -132,3 +132,11 @@ body {
   left: 150%;
   transition: 0.7s ease-in-out;
 }
+/* Yatay kaydırmalı şeritlerde scrollbar gizleme (mobil swipe için) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
