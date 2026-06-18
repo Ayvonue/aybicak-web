@@ -96,7 +96,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
             {/* Product Grid */}
             <section className="pb-16 px-6">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
                     {categoryProducts.map((product) => (
                         <KnifeCard
                             key={product.id}

@@ -15,6 +15,10 @@ interface FilterSidebarProps {
     steels: string[];
     handles: string[];
     categories: string[];
+    // Drawer modunda (mobil) kapatma butonu gösterilir; layoutId çakışmasını
+    // önlemek için her örneğe benzersiz id verilir.
+    onClose?: () => void;
+    instanceId?: string;
 }
 
 const STATIC_CATEGORIES = [
@@ -46,6 +50,8 @@ export default function FilterSidebar({
     steels,
     handles,
     categories,
+    onClose,
+    instanceId = "desktop",
 }: FilterSidebarProps) {
     const toggleSelection = (key: "steel" | "handle" | "category", value: string) => {
         if (key === "category") {
@@ -67,7 +73,21 @@ export default function FilterSidebar({
     const hasActiveFilters = filters.minPrice > 0 || filters.maxPrice > 0 || filters.steel.length > 0 || filters.handle.length > 0 || filters.category.length > 0;
 
     return (
-        <aside className="w-full md:w-72 space-y-8 sticky top-32">
+        <aside className={cn("space-y-8", onClose ? "w-full" : "w-full md:w-72 sticky top-32")}>
+
+            {/* Drawer header (yalnızca mobil çekmece modunda) */}
+            {onClose && (
+                <div className="flex items-center justify-between pb-2">
+                    <h2 className="text-lg font-bold text-white">Filtreler & Kategoriler</h2>
+                    <button
+                        onClick={onClose}
+                        className="p-2 -mr-2 text-zinc-400 hover:text-white"
+                        aria-label="Kapat"
+                    >
+                        <X className="w-6 h-6" />
+                    </button>
+                </div>
+            )}
 
             {/* Categories Section (Premium Glass Style) */}
             <div className="bg-white/[0.15] backdrop-blur-lg border border-white/10 shadow-lg shadow-white/5 rounded-2xl mb-6 overflow-hidden">
@@ -89,7 +109,7 @@ export default function FilterSidebar({
                                 {/* Active State Pill */}
                                 {isSelected && (
                                     <motion.div
-                                        layoutId="activeCategory"
+                                        layoutId={`activeCategory-${instanceId}`}
                                         className="absolute inset-0 bg-yellow-600 rounded-lg shadow-lg shadow-yellow-600/30 z-[-1]"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}

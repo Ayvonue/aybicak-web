@@ -6,12 +6,21 @@ import KnifeCard from "@/components/shared/KnifeCard";
 import FilterSidebar from "@/components/shop/FilterSidebar";
 import { useKnifeFilter } from "@/hooks/useKnifeFilter";
 import { products } from "@/data/products";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
+import { SlidersHorizontal } from "lucide-react";
 
 export default function ShopPage() {
     const { filteredProducts, filters, updateFilter, clearFilters } = useKnifeFilter(products);
     const [sortOrder, setSortOrder] = useState<string>("default");
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+    const activeFilterCount =
+        (filters.category.length) +
+        (filters.steel.length) +
+        (filters.handle.length) +
+        (filters.minPrice > 0 ? 1 : 0) +
+        (filters.maxPrice < 100000 ? 1 : 0);
 
     // Extract unique values for filters - Memoized
     const { steels, handles, categories } = useMemo(() => {
@@ -72,29 +81,84 @@ export default function ShopPage() {
 
             <div className="pb-20 max-w-[1600px] mx-auto px-6 -mt-10 relative z-30">
                 <div className="flex flex-col md:flex-row gap-8">
-                    {/* Sidebar */}
-                    <FilterSidebar
-                        filters={filters}
-                        updateFilter={updateFilter}
-                        clearFilters={clearFilters}
-                        steels={steels}
-                        handles={handles}
-                        categories={categories}
-                    />
+                    {/* Sidebar - Desktop only */}
+                    <div className="hidden md:block">
+                        <FilterSidebar
+                            filters={filters}
+                            updateFilter={updateFilter}
+                            clearFilters={clearFilters}
+                            steels={steels}
+                            handles={handles}
+                            categories={categories}
+                        />
+                    </div>
+
+                    {/* Sidebar - Mobile drawer */}
+                    <AnimatePresence>
+                        {isFilterOpen && (
+                            <>
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    onClick={() => setIsFilterOpen(false)}
+                                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[70] md:hidden"
+                                />
+                                <motion.div
+                                    initial={{ x: "-100%" }}
+                                    animate={{ x: 0 }}
+                                    exit={{ x: "-100%" }}
+                                    transition={{ type: "tween", duration: 0.3 }}
+                                    className="fixed top-0 left-0 bottom-0 w-[85%] max-w-sm bg-[#0a0a0a] z-[80] md:hidden overflow-y-auto p-5 overscroll-contain"
+                                >
+                                    <FilterSidebar
+                                        filters={filters}
+                                        updateFilter={updateFilter}
+                                        clearFilters={clearFilters}
+                                        steels={steels}
+                                        handles={handles}
+                                        categories={categories}
+                                        onClose={() => setIsFilterOpen(false)}
+                                        instanceId="mobile"
+                                    />
+                                    <button
+                                        onClick={() => setIsFilterOpen(false)}
+                                        className="w-full mt-4 py-3 bg-yellow-600 hover:bg-yellow-500 text-white font-bold rounded-xl transition-colors"
+                                    >
+                                        {sortedProducts.length} Ürünü Göster
+                                    </button>
+                                </motion.div>
+                            </>
+                        )}
+                    </AnimatePresence>
 
                     {/* Product Grid */}
                     <div className="flex-1">
-                        <div className="flex items-center justify-between mb-6 bg-white/5 border border-white/5 p-4 rounded-xl backdrop-blur-md">
-                            <span className="text-zinc-400 text-sm font-medium flex items-center gap-2">
-                                <span className="w-2 h-2 bg-yellow-500 rounded-full" />
-                                {sortedProducts.length} ürün listeleniyor
+                        <div className="flex items-center justify-between gap-3 mb-6 bg-white/5 border border-white/5 p-3 md:p-4 rounded-xl backdrop-blur-md">
+                            {/* Mobile filter button */}
+                            <button
+                                onClick={() => setIsFilterOpen(true)}
+                                className="md:hidden flex items-center gap-2 bg-yellow-600 hover:bg-yellow-500 text-white font-bold text-sm px-4 py-2 rounded-lg transition-colors shrink-0"
+                            >
+                                <SlidersHorizontal className="w-4 h-4" />
+                                Filtrele
+                                {activeFilterCount > 0 && (
+                                    <span className="w-5 h-5 grid place-items-center bg-white text-yellow-700 text-[11px] rounded-full">
+                                        {activeFilterCount}
+                                    </span>
+                                )}
+                            </button>
+
+                            <span className="text-zinc-400 text-xs md:text-sm font-medium flex items-center gap-2 min-w-0">
+                                <span className="w-2 h-2 bg-yellow-500 rounded-full shrink-0" />
+                                <span className="truncate">{sortedProducts.length} ürün</span>
                             </span>
                             <select
-                                className="bg-black/30 border border-white/10 rounded-lg px-4 py-2 text-sm text-zinc-200 focus:border-yellow-600 outline-none hover:bg-white/5 transition-all cursor-pointer appearance-none"
+                                className="bg-black/30 border border-white/10 rounded-lg px-3 md:px-4 py-2 text-xs md:text-sm text-zinc-200 focus:border-yellow-600 outline-none hover:bg-white/5 transition-all cursor-pointer appearance-none shrink-0"
                                 onChange={(e) => setSortOrder(e.target.value)}
                                 value={sortOrder}
                             >
-                                <option value="default">Varsayılan Sıralama</option>
+                                <option value="default">Sıralama</option>
                                 <option value="price-asc">Fiyat: Artan</option>
                                 <option value="price-desc">Fiyat: Azalan</option>
                             </select>
@@ -102,7 +166,7 @@ export default function ShopPage() {
 
                         {sortedProducts.length > 0 ? (
                             <div
-                                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                                className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6"
                                 id="product-grid"
                             >
                                 {sortedProducts.map((product, index) => (

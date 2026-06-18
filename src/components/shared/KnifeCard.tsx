@@ -127,24 +127,24 @@ export default function KnifeCard({ id, name, price, imageUrl, steel, isNew, opt
 
             {/* Content */}
             <div className={cn(
-                "p-4 space-y-2 relative z-10 border-t border-white/5", // Subtle separator
+                "p-3 sm:p-4 space-y-2 relative z-10 border-t border-white/5", // Subtle separator
                 "bg-transparent" // Fully transparent to show same metal layout as top
             )}>
-                <h3 className="text-zinc-900 font-bold text-base leading-snug line-clamp-2 min-h-[3rem]" title={name}>
+                <h3 className="text-zinc-900 font-bold text-sm sm:text-base leading-snug line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem]" title={name}>
                     {name.trim()}
                 </h3>
 
-                <div className="flex items-center justify-between pt-2 border-t border-zinc-200/50">
-                    <div className="flex flex-col">
-                        <span className="text-[11px] text-zinc-500 line-through font-medium">{formatPrice(price * 1.25)}</span>
-                        <div className="text-zinc-900 font-black text-lg font-sans tracking-tight leading-none">
+                <div className="flex items-center justify-between gap-2 pt-2 border-t border-zinc-200/50">
+                    <div className="flex flex-col min-w-0">
+                        <span className="text-[10px] sm:text-[11px] text-zinc-500 line-through font-medium">{formatPrice(price * 1.25)}</span>
+                        <div className="text-zinc-900 font-black text-base sm:text-lg font-sans tracking-tight leading-none">
                             {formatPrice(price)}
                         </div>
                     </div>
                     <Button
                         size="sm"
                         variant="default"
-                        className="opacity-0 group-hover:opacity-100 transition-opacity bg-white text-zinc-900 hover:bg-zinc-100 shadow-lg btn-glint font-medium tracking-wide h-8 text-xs px-3"
+                        className="hidden md:inline-flex opacity-0 group-hover:opacity-100 transition-opacity bg-white text-zinc-900 hover:bg-zinc-100 shadow-lg btn-glint font-medium tracking-wide h-8 text-xs px-3 shrink-0"
                     >
                         <ShoppingBag className="w-3 h-3 mr-1.5" />
                         İncele

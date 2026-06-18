@@ -60,27 +60,38 @@ export default function Navbar() {
                 </div>
                 {/* Main Navbar */}
                 <div className={`w-full transition-all duration-500 ease-in-out ${isScrolled ? "py-3" : "py-5"}`}>
-                    <div className="max-w-7xl mx-auto px-6 relative flex items-center justify-between bg-white/[0.15] backdrop-blur-lg rounded-2xl border border-white/10 shadow-lg shadow-white/5 p-2">
+                    <div className="max-w-7xl mx-auto px-4 md:px-6 relative flex items-center justify-between bg-white/[0.15] backdrop-blur-lg rounded-2xl border border-white/10 shadow-lg shadow-white/5 p-2">
 
-                        {/* Left: Desktop Links */}
-                        <div className="hidden md:flex items-center gap-8 pl-4 flex-1">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className={cn(
-                                        "text-sm font-medium transition-colors relative group text-zinc-100 hover:text-white uppercase tracking-wider",
-                                    )}
-                                >
-                                    {link.name}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-yellow-600 transition-all duration-300 group-hover:w-full" />
-                                </Link>
-                            ))}
+                        {/* Left: Hamburger (mobile) + Desktop Links */}
+                        <div className="flex items-center gap-8 flex-1 min-w-0">
+                            {/* Mobile hamburger */}
+                            <button
+                                className="md:hidden p-2 -ml-1 text-zinc-100 hover:text-white"
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                aria-label="Menü"
+                            >
+                                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            </button>
+                            {/* Desktop links */}
+                            <div className="hidden md:flex items-center gap-8 pl-4">
+                                {navLinks.map((link) => (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        className={cn(
+                                            "text-sm font-medium transition-colors relative group text-zinc-100 hover:text-white uppercase tracking-wider",
+                                        )}
+                                    >
+                                        {link.name}
+                                        <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-yellow-600 transition-all duration-300 group-hover:w-full" />
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
 
                         {/* Center: Logo - Inside glassmorphism container */}
-                        <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]">
-                            <div className="relative h-10 md:h-14 flex items-center justify-center">
+                        <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[60]" aria-label="Ay Bıçak ana sayfa">
+                            <div className="relative h-9 md:h-14 flex items-center justify-center">
                                 <img
                                     src="/logo-final-v33.png"
                                     alt="Ay Bıçak"
@@ -90,9 +101,9 @@ export default function Navbar() {
                         </Link>
 
                         {/* Right: Actions */}
-                        <div className="flex items-center justify-end gap-2 md:gap-4 flex-1">
+                        <div className="flex items-center justify-end gap-1 md:gap-4 flex-1 min-w-0">
                             {user ? (
-                                <div className="relative group/user">
+                                <div className="relative group/user hidden md:block">
                                     <button className="flex items-center gap-2 text-sm font-medium text-zinc-100 hover:text-white transition-colors">
                                         <div className="w-8 h-8 rounded-full bg-yellow-600 text-white flex items-center justify-center font-bold">
                                             {user.name[0]}{user.surname[0]}
@@ -137,11 +148,12 @@ export default function Navbar() {
                             <button
                                 className="p-2 transition-colors text-zinc-100 hover:text-white hover:scale-110"
                                 onClick={() => setIsSearchOpen(true)}
+                                aria-label="Ara"
                             >
                                 <Search className="w-5 h-5" />
                             </button>
 
-                            <Link href="/favorites" className="relative p-2 transition-colors group text-zinc-100 hover:text-white">
+                            <Link href="/favorites" className="relative p-2 transition-colors group text-zinc-100 hover:text-white hidden md:block" aria-label="Favoriler">
                                 <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse z-10 hidden group-hover:block" />
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 hover:fill-red-500 hover:text-red-500 transition-all">
                                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
@@ -151,6 +163,7 @@ export default function Navbar() {
                             <button
                                 className="relative p-2 transition-colors group text-zinc-100 hover:text-white"
                                 onClick={() => dispatch({ type: "TOGGLE_CART" })}
+                                aria-label="Sepet"
                             >
                                 <ShoppingBag className="w-5 h-5" />
 
@@ -161,14 +174,6 @@ export default function Navbar() {
                                 )}
                             </button>
                         </div>
-
-                        {/* Mobile Toggle */}
-                        <button
-                            className="md:hidden p-2 text-foreground"
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        >
-                            {isMobileMenuOpen ? <X /> : <Menu />}
-                        </button>
                     </div>
                 </div>
 
