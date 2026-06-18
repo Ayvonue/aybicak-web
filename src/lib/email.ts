@@ -185,6 +185,86 @@ export async function sendOrderEmails(order: OrderEmailData) {
     return { success: results.some((r) => r.status === 'fulfilled') };
 }
 
+// İletişim formu mesajını ORDER_NOTIFY_EMAIL/CONTACT_EMAIL adresine iletir.
+export async function sendContactEmail(data: {
+    name: string;
+    email: string;
+    phone?: string;
+    message: string;
+}) {
+    const resend = getResendClient();
+    if (!resend) {
+        console.warn('RESEND_API_KEY tanımlı değil; iletişim mesajı gönderilemedi.');
+        return { success: false, error: 'E-posta servisi yapılandırılmamış.' };
+    }
+
+    const to = process.env.CONTACT_EMAIL || process.env.ORDER_NOTIFY_EMAIL;
+    if (!to) {
+        console.warn('CONTACT_EMAIL/ORDER_NOTIFY_EMAIL tanımlı değil; iletişim mesajı gönderilemedi.');
+        return { success: false, error: 'Alıcı adresi yapılandırılmamış.' };
+    }
+
+    try {
+        const { error } = await resend.emails.send({
+            from: process.env.EMAIL_FROM || 'AYBIÇAK <onboarding@resend.dev>',
+            to,
+            replyTo: data.email,
+            subject: `İletişim Formu — ${data.name}`,
+            html: `
+                <div style="font-family: 'Segoe UI', Tahoma, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #fff; padding: 40px; border-radius: 16px;">
+                    <h1 style="font-size: 22px; margin: 0 0 24px 0;">Yeni İletişim Mesajı</h1>
+                    <div style="background: #18181b; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; font-size: 14px; line-height: 1.8; color: #ccc;">
+                        <p style="margin: 0;"><strong style="color:#fff;">Ad:</strong> ${data.name}</p>
+                        <p style="margin: 0;"><strong style="color:#fff;">E-posta:</strong> ${data.email}</p>
+                        ${data.phone ? `<p style="margin: 0;"><strong style="color:#fff;">Telefon:</strong> ${data.phone}</p>` : ''}
+                        <p style="margin: 16px 0 0 0;"><strong style="color:#fff;">Mesaj:</strong></p>
+                        <p style="margin: 4px 0 0 0; white-space: pre-wrap;">${data.message}</p>
+                    </div>
+                </div>
+            `,
+        });
+
+        if (error) {
+            console.error('Contact email error:', error);
+            return { success: false, error: 'Mesaj gönderilemedi.' };
+        }
+        return { success: true };
+    } catch (error) {
+        console.error('Contact email error:', error);
+        return { success: false, error: 'Mesaj gönderilemedi.' };
+    }
+}
+
+// Bülten aboneliğini ORDER_NOTIFY_EMAIL/NEWSLETTER_EMAIL adresine bildirir.
+// (Kalıcı abone listesi için ileride DB/posta servisi entegre edilebilir.)
+export async function sendNewsletterNotification(email: string) {
+    const resend = getResendClient();
+    if (!resend) {
+        console.warn('RESEND_API_KEY tanımlı değil; bülten aboneliği bildirilemedi.');
+        return { success: false, error: 'E-posta servisi yapılandırılmamış.' };
+    }
+
+    const to = process.env.NEWSLETTER_EMAIL || process.env.ORDER_NOTIFY_EMAIL;
+    if (!to) {
+        // Alıcı yoksa sessizce başarı dön; kullanıcı deneyimi bozulmasın
+        console.warn('Bülten alıcı adresi tanımlı değil:', email);
+        return { success: true };
+    }
+
+    try {
+        await resend.emails.send({
+            from: process.env.EMAIL_FROM || 'AYBIÇAK <onboarding@resend.dev>',
+            to,
+            subject: 'Yeni Bülten Aboneliği',
+            html: `<p>Yeni bülten abonesi: <strong>${email}</strong></p>`,
+        });
+        return { success: true };
+    } catch (error) {
+        console.error('Newsletter email error:', error);
+        return { success: false, error: 'Abonelik kaydedilemedi.' };
+    }
+}
+
 export function generateVerificationCode(): string {
     // Math.random tahmin edilebilir olduğu için kriptografik rastgelelik kullanılır
     return crypto.randomInt(100000, 1000000).toString();

@@ -4,6 +4,7 @@ import Footer from "@/components/shared/Footer";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { getLocalBusinessSchema } from "@/lib/schema";
+import ContactForm from "@/components/shared/ContactForm";
 
 export const metadata: Metadata = {
     title: "İletişim",
@@ -62,9 +63,13 @@ export default function ContactPage() {
                             <Mail className="w-6 h-6" />
                         </div>
                         <h3 className="text-xl font-bold mb-2 text-white">E-Posta</h3>
-                        <p className="text-zinc-400">info@aybicak.com</p>
+                        <p className="text-zinc-400">{siteConfig.email}</p>
                         <p className="text-zinc-500 text-sm mt-1">24 saat içinde dönüş</p>
                     </div>
+                </div>
+
+                <div className="mt-12 max-w-2xl mx-auto">
+                    <ContactForm />
                 </div>
             </div>
             <Footer />

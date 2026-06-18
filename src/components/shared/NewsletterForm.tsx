@@ -2,25 +2,39 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle } from "lucide-react";
-
-const STORAGE_KEY = "aybicak-newsletter";
+import { CheckCircle, Loader2 } from "lucide-react";
 
 export default function NewsletterForm() {
     const [email, setEmail] = useState("");
     const [subscribed, setSubscribed] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
-    const handleSubscribe = (e: React.FormEvent) => {
+    const handleSubscribe = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             setError("Geçerli bir e-posta adresi girin.");
             return;
         }
-        // Backend bülten servisi eklenene kadar abonelik tercihi yerelde tutulur
-        localStorage.setItem(STORAGE_KEY, email);
-        setSubscribed(true);
+        setLoading(true);
         setError("");
+        try {
+            const res = await fetch("/api/newsletter", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email }),
+            });
+            const data = await res.json();
+            if (!res.ok) {
+                setError(data.error || "Abonelik kaydedilemedi.");
+                return;
+            }
+            setSubscribed(true);
+        } catch {
+            setError("Bağlantı hatası. Lütfen tekrar deneyin.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     if (subscribed) {
@@ -46,8 +60,8 @@ export default function NewsletterForm() {
                 <div className="absolute inset-0 rounded-lg bg-yellow-600/20 opacity-0 group-hover:opacity-100 blur transition-opacity -z-10" />
             </div>
             {error && <p className="text-xs text-red-400">{error}</p>}
-            <Button type="submit" variant="premium" className="w-full font-bold text-white">
-                Abone Ol
+            <Button type="submit" disabled={loading} variant="premium" className="w-full font-bold text-white disabled:opacity-50">
+                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Abone Ol"}
             </Button>
         </form>
     );
