@@ -1,16 +1,19 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { ToastProvider } from "@/context/ToastContext";
 import { getOrganizationSchema, getWebsiteSchema } from "@/lib/schema";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import SmoothScroll from "@/components/shared/SmoothScroll";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import BackgroundLayer from "@/components/shared/BackgroundLayer";
 import CookieBanner from "@/components/shared/CookieBanner";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 
 const playfair = Playfair_Display({
   subsets: ["latin", "latin-ext"],
@@ -23,6 +26,13 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aybicak.com"),
@@ -101,14 +111,18 @@ export default function RootLayout({
         <FavoritesProvider>
           <AuthProvider>
             <CartProvider>
-              {children}
-              <ScrollToTop />
-              <CookieBanner />
-              <div className="titanium-sheen" />
+              <ToastProvider>
+                {children}
+                <ScrollToTop />
+                <WhatsAppButton />
+                <CookieBanner />
+                <div className="titanium-sheen" />
+              </ToastProvider>
             </CartProvider>
           </AuthProvider>
         </FavoritesProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
