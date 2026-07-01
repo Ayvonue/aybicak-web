@@ -4,9 +4,9 @@ import { neon } from "@neondatabase/serverless";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
-const url = process.env.DATABASE_URL;
+const url = process.env.DATABASE_URL || process.env.POSTGRES_URL || process.env.POSTGRES_PRISMA_URL;
 if (!url) {
-    console.error("DATABASE_URL yok. node --env-file=.env.local scripts/db_setup.mjs ile çalıştırın.");
+    console.error("DATABASE_URL/POSTGRES_URL yok. node --env-file=.env.local scripts/db_setup.mjs ile çalıştırın.");
     process.exit(1);
 }
 const sql = neon(url);
