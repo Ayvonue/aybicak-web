@@ -37,9 +37,10 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: "E-posta ve şifre zorunludur." }, { status: 400 });
         }
 
+        // Mobil klavye/yapıştırma kaynaklı baş-son boşlukları temizle
         const ok =
-            safeEqual(String(email).toLowerCase(), adminEmail.toLowerCase()) &&
-            safeEqual(String(password), adminPassword);
+            safeEqual(String(email).trim().toLowerCase(), adminEmail.trim().toLowerCase()) &&
+            safeEqual(String(password).trim(), adminPassword.trim());
 
         if (!ok) {
             return NextResponse.json({ error: "E-posta veya şifre hatalı." }, { status: 401 });

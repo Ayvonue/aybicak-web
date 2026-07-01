@@ -61,6 +61,11 @@ function LoginForm() {
                         <input
                             type="email"
                             required
+                            autoCapitalize="none"
+                            autoCorrect="off"
+                            spellCheck={false}
+                            autoComplete="username"
+                            inputMode="email"
                             className={inputClass}
                             placeholder="admin@aybicak.com"
                             value={email}
@@ -72,6 +77,10 @@ function LoginForm() {
                         <input
                             type="password"
                             required
+                            autoCapitalize="none"
+                            autoCorrect="off"
+                            spellCheck={false}
+                            autoComplete="current-password"
                             className={inputClass}
                             placeholder="••••••••"
                             value={password}
