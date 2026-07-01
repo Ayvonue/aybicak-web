@@ -1,5 +1,5 @@
-import { products } from '@/data/products';
 import { siteConfig } from '@/lib/site';
+import type { Product } from '@/types';
 
 // Organization Schema
 export function getOrganizationSchema() {
@@ -49,8 +49,7 @@ export function getWebsiteSchema() {
 }
 
 // Product Schema
-export function getProductSchema(productId: string) {
-    const product = products.find(p => p.id === productId);
+export function getProductSchema(product: Product) {
     if (!product) return null;
 
     return {

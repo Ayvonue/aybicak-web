@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next';
-import { products } from '@/data/products';
 import { categories } from '@/data/categories';
+import { getAllProducts } from '@/lib/products-source';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://aybicak.com';
+    const products = await getAllProducts();
 
     // Static pages
     const staticPages: MetadataRoute.Sitemap = [

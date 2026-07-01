@@ -1,23 +1,26 @@
 import { notFound } from "next/navigation";
-import { products } from "@/data/products";
 import ProductDetailClient from "@/components/shop/ProductDetailClient";
 import { Metadata } from "next";
 import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
 import { getProductSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { getCategoryByName } from "@/data/categories";
+import { getAllProducts, getProductById } from "@/lib/products-source";
+import type { Product } from "@/types";
 
-// Tüm ürün sayfaları build sırasında statik üretilir (SSG) — daha hızlı
-// yükleme ve daha iyi tarama bütçesi kullanımı sağlar.
-export function generateStaticParams() {
+// Ürün sayfaları build sırasında üretilir; yeni/güncellenen ürünler için
+// ISR ile en fazla 5 dakikada bir tazelenir (admin değişiklikleri yansır).
+export async function generateStaticParams() {
+    const products = await getAllProducts();
     return products.map((product) => ({ id: product.id }));
 }
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+export const revalidate = 300;
 
 // Ürün özelliklerinden benzersiz meta açıklama üretir; katalogdaki şablon
 // açıklamaların yarattığı yinelenen içerik (duplicate content) sorununu çözer.
-function buildMetaDescription(product: (typeof products)[number]): string {
+function buildMetaDescription(product: Product): string {
     const parts = [
         `${product.name.trim()}`,
         `${product.steel} çelik, ${product.hardness} sertlik, ${product.handle} kabze`,
@@ -30,7 +33,7 @@ function buildMetaDescription(product: (typeof products)[number]): string {
 // Generate SEO Metadata
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const resolvedParams = await params;
-    const product = products.find((p) => p.id === resolvedParams.id);
+    const product = await getProductById(resolvedParams.id);
 
     if (!product) {
         return {
@@ -85,17 +88,18 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 // Server Component
 export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const resolvedParams = await params;
-    const product = products.find((p) => p.id === resolvedParams.id);
+    const product = await getProductById(resolvedParams.id);
 
     if (!product) {
         return notFound();
     }
 
-    const relatedProducts = products.filter(
+    const allProducts = await getAllProducts();
+    const relatedProducts = allProducts.filter(
         (p) => p.category === product.category && p.id !== product.id
     );
 
-    const productSchema = getProductSchema(product.id);
+    const productSchema = getProductSchema(product);
     const categoryConfig = getCategoryByName(product.category);
     const breadcrumbSchema = getBreadcrumbSchema([
         { name: "Ana Sayfa", url: "https://aybicak.com" },
