@@ -265,6 +265,44 @@ export async function sendNewsletterNotification(email: string) {
     }
 }
 
+const STATUS_MESSAGES: Record<string, { title: string; body: string }> = {
+    processing: { title: "Siparişiniz Hazırlanıyor", body: "Siparişiniz alındı ve hazırlanmaya başlandı." },
+    shipped: { title: "Siparişiniz Kargoya Verildi 🚚", body: "Siparişiniz kargoya teslim edildi, yakında elinizde olacak." },
+    delivered: { title: "Siparişiniz Teslim Edildi ✅", body: "Siparişiniz teslim edildi. Bizi tercih ettiğiniz için teşekkürler!" },
+    cancelled: { title: "Siparişiniz İptal Edildi", body: "Siparişiniz iptal edilmiştir. Sorularınız için bize ulaşabilirsiniz." },
+};
+
+// Sipariş durumu değişince müşteriye bilgilendirme e-postası gönderir.
+export async function sendOrderStatusEmail(to: string, orderId: string, status: string) {
+    const resend = getResendClient();
+    if (!resend) return { success: false };
+    const msg = STATUS_MESSAGES[status];
+    if (!msg) return { success: false };
+    try {
+        await resend.emails.send({
+            from: process.env.EMAIL_FROM || 'AYBIÇAK <onboarding@resend.dev>',
+            to,
+            subject: `${msg.title} — ${orderId}`,
+            html: `
+                <div style="font-family: 'Segoe UI', Tahoma, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #fff; padding: 40px; border-radius: 16px;">
+                    <div style="text-align: center; margin-bottom: 24px;">
+                        <h1 style="font-size: 24px; margin: 0;">AYBIÇAK</h1>
+                    </div>
+                    <div style="background: #18181b; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 28px; text-align: center;">
+                        <h2 style="color:#fff; font-size: 20px; margin: 0 0 12px;">${msg.title}</h2>
+                        <p style="color:#ccc; font-size: 14px; margin: 0 0 16px;">${msg.body}</p>
+                        <p style="color:#888; font-size: 13px; margin: 0;">Sipariş No: <strong style="color:#fff;">${orderId}</strong></p>
+                    </div>
+                </div>
+            `,
+        });
+        return { success: true };
+    } catch (e) {
+        console.error("Order status email error:", e);
+        return { success: false };
+    }
+}
+
 export function generateVerificationCode(): string {
     // Math.random tahmin edilebilir olduğu için kriptografik rastgelelik kullanılır
     return crypto.randomInt(100000, 1000000).toString();

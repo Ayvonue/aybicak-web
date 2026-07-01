@@ -49,10 +49,10 @@ export function getWebsiteSchema() {
 }
 
 // Product Schema
-export function getProductSchema(product: Product) {
+export function getProductSchema(product: Product, rating?: { average: number; count: number } | null) {
     if (!product) return null;
 
-    return {
+    const base = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": product.name,
@@ -91,6 +91,19 @@ export function getProductSchema(product: Product) {
             }
         }
     };
+
+    // Gerçek yorum varsa aggregateRating ekle (uydurma değil — DB'den)
+    if (rating && rating.count > 0) {
+        return {
+            ...base,
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": rating.average,
+                "reviewCount": rating.count,
+            },
+        };
+    }
+    return base;
 }
 
 // BreadcrumbList Schema

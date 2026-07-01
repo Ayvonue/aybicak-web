@@ -42,6 +42,12 @@ export default function CheckoutPage() {
     const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("cod");
     const [errors, setErrors] = useState<FormErrors>({});
 
+    // Kupon durumu
+    const [couponInput, setCouponInput] = useState("");
+    const [coupon, setCoupon] = useState<{ code: string; discount: number } | null>(null);
+    const [couponMsg, setCouponMsg] = useState("");
+    const [couponLoading, setCouponLoading] = useState(false);
+
     const [formData, setFormData] = useState<FormData>({
         firstName: "",
         lastName: "",
@@ -84,6 +90,35 @@ export default function CheckoutPage() {
         return Object.keys(newErrors).length === 0;
     };
 
+    // Kupon uygula/kaldır
+    const applyCoupon = async () => {
+        if (!couponInput.trim()) return;
+        setCouponLoading(true);
+        setCouponMsg("");
+        try {
+            const res = await fetch("/api/coupon", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ code: couponInput, subtotal: state.finalTotal }),
+            });
+            const data = await res.json();
+            if (data.valid) {
+                setCoupon({ code: data.code, discount: data.discount });
+                setCouponMsg("");
+            } else {
+                setCoupon(null);
+                setCouponMsg(data.error || "Geçersiz kupon.");
+            }
+        } catch {
+            setCouponMsg("Kupon doğrulanamadı.");
+        } finally {
+            setCouponLoading(false);
+        }
+    };
+
+    const couponDiscount = coupon?.discount || 0;
+    const payableTotal = Math.max(0, state.finalTotal - couponDiscount);
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -112,9 +147,10 @@ export default function CheckoutPage() {
                         price: item.price,
                         quantity: item.quantity
                     })),
-                    totalPrice: state.finalTotal,
+                    totalPrice: payableTotal,
                     paymentMethod,
                     notes: formData.notes,
+                    couponCode: coupon?.code,
                     callbackUrl: `${window.location.origin}/checkout/callback`
                 })
             });
@@ -447,10 +483,41 @@ export default function CheckoutPage() {
                                         </span>
                                         <span className="text-green-400 font-medium">Ücretsiz</span>
                                     </div>
+                                    {couponDiscount > 0 && (
+                                        <div className="flex justify-between text-zinc-400">
+                                            <span>Kupon ({coupon?.code})</span>
+                                            <span className="text-green-400 font-medium">-{formatPrice(couponDiscount)}</span>
+                                        </div>
+                                    )}
                                     <div className="flex justify-between text-xl font-bold text-white pt-2 border-t border-zinc-800">
                                         <span>Toplam</span>
-                                        <span>{formatPrice(state.finalTotal)}</span>
+                                        <span>{formatPrice(payableTotal)}</span>
                                     </div>
+                                </div>
+
+                                {/* Kupon kodu */}
+                                <div className="border-t border-zinc-800 pt-4">
+                                    {coupon ? (
+                                        <div className="flex items-center justify-between bg-green-500/10 border border-green-500/20 rounded-lg px-3 py-2">
+                                            <span className="text-sm text-green-400 font-medium">✓ {coupon.code} uygulandı</span>
+                                            <button type="button" onClick={() => { setCoupon(null); setCouponInput(""); }} className="text-xs text-zinc-400 hover:text-white">Kaldır</button>
+                                        </div>
+                                    ) : (
+                                        <>
+                                            <div className="flex gap-2">
+                                                <input
+                                                    value={couponInput}
+                                                    onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
+                                                    placeholder="İndirim kodu"
+                                                    className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white outline-none focus:border-yellow-500 uppercase"
+                                                />
+                                                <Button type="button" onClick={applyCoupon} disabled={couponLoading} variant="outline" className="shrink-0">
+                                                    {couponLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Uygula"}
+                                                </Button>
+                                            </div>
+                                            {couponMsg && <p className="text-xs text-red-400 mt-2">{couponMsg}</p>}
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>

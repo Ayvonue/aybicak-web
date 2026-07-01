@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, Plus, Pencil, Trash2, Search, X, Loader2 } from "lucide-react";
+import { ArrowLeft, Plus, Pencil, Trash2, Search, X, Loader2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { formatPrice } from "@/lib/utils";
 import type { Product } from "@/types";
@@ -24,6 +24,24 @@ export default function ProductsClient({ products }: { products: AdminProduct[] 
     const [isNew, setIsNew] = useState(false);
     const [saving, setSaving] = useState(false);
     const [error, setError] = useState("");
+    const [uploading, setUploading] = useState(false);
+
+    const uploadImage = async (file: File) => {
+        setUploading(true);
+        setError("");
+        try {
+            const fd = new FormData();
+            fd.append("file", file);
+            const res = await fetch("/api/admin/upload", { method: "POST", body: fd });
+            const data = await res.json();
+            if (!res.ok) { setError(data.error || "Yükleme başarısız."); return; }
+            setEditing((f) => f ? { ...f, imageUrl: data.url } : f);
+        } catch {
+            setError("Yükleme sırasında hata.");
+        } finally {
+            setUploading(false);
+        }
+    };
 
     const filtered = products.filter(
         (p) => p.name.toLowerCase().includes(query.toLowerCase()) || p.id.includes(query)
@@ -161,8 +179,30 @@ export default function ProductsClient({ products }: { products: AdminProduct[] 
                                 {field("fullLength", "Tam Boy")}
                                 {field("barrelLength", "Namlu")}
                                 {field("thickness", "Kalınlık")}
-                                {field("imageUrl", "Görsel Yolu (/products/...)")}
+                                {field("imageUrl", "Görsel Yolu / URL")}
                             </div>
+
+                            {/* Görsel yükleme + önizleme */}
+                            <div className="flex items-center gap-4">
+                                {editing.imageUrl ? (
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    <img src={editing.imageUrl} alt="önizleme" className="w-16 h-16 rounded-lg object-cover bg-white/5 border border-white/10" />
+                                ) : (
+                                    <div className="w-16 h-16 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-zinc-600 text-[10px]">Görsel yok</div>
+                                )}
+                                <label className="cursor-pointer inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-4 py-2 text-sm text-zinc-300 transition-colors">
+                                    {uploading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Upload className="w-4 h-4" />}
+                                    {uploading ? "Yükleniyor..." : "Görsel Yükle"}
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        className="hidden"
+                                        disabled={uploading}
+                                        onChange={(e) => { const f = e.target.files?.[0]; if (f) uploadImage(f); }}
+                                    />
+                                </label>
+                            </div>
+
                             <div>
                                 <label className="text-xs text-zinc-500 block mb-1">Açıklama</label>
                                 <textarea

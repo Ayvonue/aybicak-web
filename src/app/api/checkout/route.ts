@@ -5,6 +5,7 @@ import { sendOrderEmails } from "@/lib/email";
 import { rateLimit } from "@/lib/auth";
 import { getAllProducts } from "@/lib/products-source";
 import { createOrder } from "@/lib/orders";
+import { validateCoupon } from "@/lib/coupons";
 
 // İstemciden gelen fiyatlara ASLA güvenilmez; her ürün ve toplam tutar
 // sunucu tarafında products.ts (tek doğru kaynak) ile yeniden hesaplanır.
@@ -21,8 +22,8 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        const body: CreatePaymentRequest & { notes?: string } = await request.json();
-        const { customer, items, totalPrice, callbackUrl, paymentMethod, notes } = body;
+        const body: CreatePaymentRequest & { notes?: string; couponCode?: string } = await request.json();
+        const { customer, items, totalPrice, callbackUrl, paymentMethod, notes, couponCode } = body;
 
         // Validate required fields
         if (!customer?.firstName || !customer?.lastName || !customer?.email || !customer?.phone) {
@@ -67,17 +68,33 @@ export async function POST(request: NextRequest) {
             });
         }
 
-        // Toplam tutar sunucuda hesaplanır; istemci değeri yalnızca üye
-        // indirimi (en fazla %5) sınırları içinde kabul edilir.
+        // Ara toplam sunucuda hesaplanır (istemci fiyatları yok sayılır).
         const subtotal = validatedItems.reduce((acc, it) => acc + it.price * it.quantity, 0);
-        const minAcceptable = subtotal * (1 - MAX_MEMBER_DISCOUNT);
+
+        // Kupon sunucuda yeniden doğrulanır (istemcinin bildirdiği indirime güvenilmez).
+        let couponDiscount = 0;
+        let appliedCoupon: string | undefined;
+        if (couponCode) {
+            const cResult = await validateCoupon(String(couponCode), subtotal);
+            if (cResult.valid && cResult.discount) {
+                couponDiscount = cResult.discount;
+                appliedCoupon = cResult.code;
+            }
+        }
+
+        // Kupon sonrası tutar; üstüne üye indirimi (en fazla %5) esnekliği tanınır.
+        const afterCoupon = subtotal - couponDiscount;
+        const minAcceptable = afterCoupon * (1 - MAX_MEMBER_DISCOUNT);
         const clientTotal = Number(totalPrice);
         const finalTotal =
-            Number.isFinite(clientTotal) && clientTotal >= minAcceptable && clientTotal <= subtotal
+            Number.isFinite(clientTotal) && clientTotal >= minAcceptable && clientTotal <= afterCoupon
                 ? clientTotal
-                : subtotal;
+                : afterCoupon;
 
         const conversationId = generateConversationId();
+        const orderNotes = appliedCoupon
+            ? `${notes ? notes + " | " : ""}Kupon: ${appliedCoupon} (-${couponDiscount}₺)`
+            : notes;
 
         // Kredi kartı: İyzico Ödeme Formu başlatılır, müşteri ödeme sayfasına yönlendirilir
         if (paymentMethod === "card") {
@@ -115,7 +132,7 @@ export async function POST(request: NextRequest) {
                 total: finalTotal,
                 paymentMethod: "card",
                 status: "pending",
-                notes,
+                notes: orderNotes,
             });
 
             return NextResponse.json({
@@ -138,7 +155,7 @@ export async function POST(request: NextRequest) {
             total: finalTotal,
             paymentMethod: paymentMethod || "cod",
             status: "processing",
-            notes,
+            notes: orderNotes,
         });
 
         // E-posta gönderimi başarısız olsa bile sipariş reddedilmez (loglanır).

@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.bicakmarket.com",
       },
+      {
+        // Admin panelinden yüklenen ürün görselleri (Vercel Blob)
+        protocol: "https",
+        hostname: "*.blob.vercel-storage.com",
+      },
     ],
     formats: ["image/avif", "image/webp"],
     // Bileşenlerde kullanılan quality değerleri (Next 16 varsayılanı yalnızca 75)

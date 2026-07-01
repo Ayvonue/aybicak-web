@@ -55,6 +55,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const logout = () => {
         setUser(null);
         localStorage.removeItem("aybicak-user");
+        // Sunucu oturum çerezini de temizle
+        fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
         window.dispatchEvent(new Event("aybicak-auth-change"));
     };
 

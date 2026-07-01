@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
-import { verifiedUsers } from '../verify/route';
-import { verifyPassword, rateLimit } from '@/lib/auth';
+import { rateLimit } from '@/lib/auth';
+import { authenticateUser } from '@/lib/users';
+import { createCustomerToken, CUSTOMER_COOKIE } from '@/lib/customerSession';
 
 export async function POST(request: Request) {
     try {
@@ -22,30 +23,24 @@ export async function POST(request: Request) {
             );
         }
 
-        const user = verifiedUsers.get(email);
-
         // Kullanıcı bulunamasa da aynı hata mesajı döner (hesap varlığı sızdırılmaz)
-        if (!user || !verifyPassword(password, user.password)) {
+        const user = await authenticateUser(email, password);
+        if (!user) {
             return NextResponse.json(
                 { error: 'E-posta veya şifre hatalı.' },
                 { status: 401 }
             );
         }
 
-        const userWithoutPassword = {
-            name: user.name,
-            surname: user.surname,
-            email: user.email,
-            phone: user.phone,
-            birthDate: user.birthDate,
-            gender: user.gender,
-            createdAt: user.createdAt,
-        };
-
-        return NextResponse.json({
-            success: true,
-            user: userWithoutPassword
+        const res = NextResponse.json({ success: true, user });
+        res.cookies.set(CUSTOMER_COOKIE, await createCustomerToken(user.email), {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            path: "/",
+            maxAge: 30 * 24 * 60 * 60,
         });
+        return res;
 
     } catch (error) {
         console.error('Login error:', error);

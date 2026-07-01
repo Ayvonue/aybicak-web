@@ -14,6 +14,7 @@ import ScrollToTop from "@/components/shared/ScrollToTop";
 import BackgroundLayer from "@/components/shared/BackgroundLayer";
 import CookieBanner from "@/components/shared/CookieBanner";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 
 const playfair = Playfair_Display({
   subsets: ["latin", "latin-ext"],
@@ -123,6 +124,7 @@ export default function RootLayout({
         </FavoritesProvider>
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics />
       </body>
     </html>
   );
