@@ -11,3 +11,4 @@ Disallow: /_next/
 Disallow: /account/
 Disallow: /checkout
 Disallow: /favorites
+Disallow: /admin/
