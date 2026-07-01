@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Navbar from "@/components/shared/Navbar";
 import Hero from "@/components/shared/Hero";
 import Footer from "@/components/shared/Footer";
-import { products } from "@/data/products";
 import ProductMarquee from "@/components/shared/ProductMarquee";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import RecentlyViewed from "@/components/shared/RecentlyViewed";
+import { getAllProducts } from "@/lib/products-source";
 
 export const metadata: Metadata = {
   alternates: {
@@ -15,7 +15,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export const revalidate = 300;
+
+export default async function Home() {
+  const products = await getAllProducts();
   // Filter Logic
   const newArrivals = products.filter(p => p.isNew).slice(0, 15); // Top 15 new items
   // Featured: Shuffle or pick high value items. For now, let's pick a diverse set (e.g. Damascus or specific items)

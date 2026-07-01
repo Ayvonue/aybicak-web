@@ -3,7 +3,8 @@ import { generateConversationId, CreatePaymentRequest } from "@/lib/payment";
 import { initializeCheckoutForm, isIyzicoConfigured } from "@/lib/iyzico";
 import { sendOrderEmails } from "@/lib/email";
 import { rateLimit } from "@/lib/auth";
-import { products } from "@/data/products";
+import { getAllProducts } from "@/lib/products-source";
+import { createOrder } from "@/lib/orders";
 
 // İstemciden gelen fiyatlara ASLA güvenilmez; her ürün ve toplam tutar
 // sunucu tarafında products.ts (tek doğru kaynak) ile yeniden hesaplanır.
@@ -39,9 +40,11 @@ export async function POST(request: NextRequest) {
         }
 
         // Her kalemi gerçek ürün verisiyle doğrula ve fiyatı sunucudan al
+        // (DB varsa oradan, yoksa dosyadan — admin fiyat değişiklikleri de geçerli)
+        const catalog = await getAllProducts();
         const validatedItems: { id: string; name: string; category: string; price: number; quantity: number }[] = [];
         for (const item of items) {
-            const product = products.find((p) => p.id === item.id);
+            const product = catalog.find((p) => p.id === item.id);
             if (!product) {
                 return NextResponse.json(
                     { success: false, error: `Ürün bulunamadı: ${item.id}` },
@@ -100,6 +103,21 @@ export async function POST(request: NextRequest) {
                 );
             }
 
+            // Kart siparişi ödeme onayı beklediği için 'pending' kaydedilir
+            await createOrder({
+                id: conversationId,
+                customerName: `${customer.firstName} ${customer.lastName}`,
+                customerEmail: customer.email,
+                customerPhone: customer.phone,
+                address: customer.address,
+                city: customer.city,
+                items: validatedItems.map((i) => ({ id: i.id, name: i.name, quantity: i.quantity, price: i.price })),
+                total: finalTotal,
+                paymentMethod: "card",
+                status: "pending",
+                notes,
+            });
+
             return NextResponse.json({
                 success: true,
                 orderId: conversationId,
@@ -108,7 +126,21 @@ export async function POST(request: NextRequest) {
             });
         }
 
-        // Kapıda ödeme / Havale: sipariş onay e-postaları gönderilir.
+        // Kapıda ödeme / Havale: sipariş veritabanına kaydedilir + e-posta gönderilir.
+        await createOrder({
+            id: conversationId,
+            customerName: `${customer.firstName} ${customer.lastName}`,
+            customerEmail: customer.email,
+            customerPhone: customer.phone,
+            address: customer.address,
+            city: customer.city,
+            items: validatedItems.map((i) => ({ id: i.id, name: i.name, quantity: i.quantity, price: i.price })),
+            total: finalTotal,
+            paymentMethod: paymentMethod || "cod",
+            status: "processing",
+            notes,
+        });
+
         // E-posta gönderimi başarısız olsa bile sipariş reddedilmez (loglanır).
         await sendOrderEmails({
             orderId: conversationId,
