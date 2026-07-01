@@ -22,9 +22,11 @@ interface ProductDetailClientProps {
     relatedProducts: Product[];
     // Sunucudan gelen kategoriye özel SEO içerik bloğu (bakım rehberi vb.)
     categoryContent?: React.ReactNode;
+    // Sunucudan gelen değerlendirmeler bölümü
+    reviewsSlot?: React.ReactNode;
 }
 
-export default function ProductDetailClient({ product, relatedProducts, categoryContent }: ProductDetailClientProps) {
+export default function ProductDetailClient({ product, relatedProducts, categoryContent, reviewsSlot }: ProductDetailClientProps) {
     const { dispatch } = useCart();
     const { toast } = useToast();
     const [customText, setCustomText] = useState("");
@@ -256,6 +258,9 @@ export default function ProductDetailClient({ product, relatedProducts, category
             </div>
 
             {categoryContent}
+
+            {/* Değerlendirmeler */}
+            {reviewsSlot}
 
             {/* Son gezilen ürünler */}
             <RecentlyViewed excludeId={product.id} />

@@ -1,18 +1,8 @@
 import { NextResponse } from 'next/server';
 import { pendingRegistrations } from '../register/route';
 import { rateLimit } from '@/lib/auth';
-
-// In-memory store for verified users (in production, use a database)
-export const verifiedUsers = new Map<string, {
-    name: string;
-    surname: string;
-    email: string;
-    phone: string;
-    password: string;
-    birthDate?: string;
-    gender?: string;
-    createdAt: number;
-}>();
+import { createUser } from '@/lib/users';
+import { createCustomerToken, CUSTOMER_COOKIE } from '@/lib/customerSession';
 
 export async function POST(request: Request) {
     try {
@@ -62,21 +52,35 @@ export async function POST(request: Request) {
             );
         }
 
-        // Move user from pending to verified
-        verifiedUsers.set(email, {
-            ...pending.userData,
-            createdAt: Date.now()
+        // Kalıcı kullanıcıyı veritabanına yaz (şifre zaten hash'li)
+        const ud = pending.userData;
+        await createUser({
+            name: ud.name,
+            surname: ud.surname,
+            email: ud.email,
+            phone: ud.phone,
+            passwordHash: ud.password,
+            birthDate: ud.birthDate,
+            gender: ud.gender,
         });
         pendingRegistrations.delete(email);
 
         // Return user data (without password)
         const { password, ...userWithoutPassword } = pending.userData;
 
-        return NextResponse.json({
+        const res = NextResponse.json({
             success: true,
             message: 'Hesabınız başarıyla doğrulandı!',
             user: userWithoutPassword
         });
+        res.cookies.set(CUSTOMER_COOKIE, await createCustomerToken(ud.email), {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            path: "/",
+            maxAge: 30 * 24 * 60 * 60,
+        });
+        return res;
 
     } catch (error) {
         console.error('Verification error:', error);

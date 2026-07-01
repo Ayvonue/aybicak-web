@@ -93,6 +93,28 @@ export async function listOrders(limit = 100): Promise<Order[]> {
     return rows.map(rowToOrder);
 }
 
+export async function listOrdersByEmail(email: string): Promise<Order[]> {
+    if (!isDbConfigured()) return [];
+    const rows = (await getSql()`
+        SELECT * FROM orders WHERE lower(customer_email) = ${email.toLowerCase()} ORDER BY created_at DESC LIMIT 100
+    `) as OrderRow[];
+    return rows.map(rowToOrder);
+}
+
+export async function getOrderByIdAndEmail(id: string, email: string): Promise<Order | null> {
+    if (!isDbConfigured()) return null;
+    const rows = (await getSql()`
+        SELECT * FROM orders WHERE id = ${id} AND lower(customer_email) = ${email.toLowerCase()} LIMIT 1
+    `) as OrderRow[];
+    return rows && rows.length > 0 ? rowToOrder(rows[0]) : null;
+}
+
+export async function getOrderById(id: string): Promise<Order | null> {
+    if (!isDbConfigured()) return null;
+    const rows = (await getSql()`SELECT * FROM orders WHERE id = ${id} LIMIT 1`) as OrderRow[];
+    return rows && rows.length > 0 ? rowToOrder(rows[0]) : null;
+}
+
 export async function updateOrderStatus(id: string, status: string): Promise<boolean> {
     if (!isDbConfigured()) return false;
     if (!ORDER_STATUSES.includes(status as (typeof ORDER_STATUSES)[number])) return false;

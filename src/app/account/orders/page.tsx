@@ -2,14 +2,24 @@
 
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { User, Package, MapPin, LogOut, ChevronRight, Clock, Truck, CheckCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { User, Package, MapPin, LogOut, Clock, Truck, CheckCircle, Loader2 } from "lucide-react";
+import { cn, formatPrice } from "@/lib/utils";
+
+interface AccountOrder {
+    id: string;
+    status: string;
+    total: number;
+    createdAt: string;
+    items: { id: string; name: string; quantity: number; price: number }[];
+}
 
 export default function OrdersPage() {
     const { user, logout } = useAuth();
     const router = useRouter();
+    const [orders, setOrders] = useState<AccountOrder[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (!user) {
@@ -17,17 +27,16 @@ export default function OrdersPage() {
         }
     }, [user, router]);
 
-    if (!user) return null;
+    useEffect(() => {
+        if (!user) return;
+        fetch("/api/account/orders")
+            .then((r) => r.json())
+            .then((d) => setOrders(d.orders || []))
+            .catch(() => setOrders([]))
+            .finally(() => setLoading(false));
+    }, [user]);
 
-    // Sipariş geçmişi henüz sunucuda tutulmuyor; kalıcı sipariş altyapısı
-    // eklenene kadar boş liste gösterilir.
-    const orders: {
-        id: string;
-        date: string;
-        status: string; // processing, shipped, delivered, cancelled
-        total: number;
-        items: { name: string; variant: string }[];
-    }[] = [];
+    if (!user) return null;
 
     const getStatusConfig = (status: string) => {
         switch (status) {
@@ -96,6 +105,17 @@ export default function OrdersPage() {
                             </div>
                         )}
 
+                        {loading ? (
+                            <div className="py-20 flex justify-center"><Loader2 className="w-6 h-6 animate-spin text-zinc-500" /></div>
+                        ) : orders.length === 0 ? (
+                            <div className="bg-[#18181B] border border-white/10 rounded-2xl p-12 text-center space-y-4">
+                                <Package className="w-12 h-12 mx-auto text-zinc-600" />
+                                <p className="text-zinc-400">Henüz siparişiniz bulunmuyor.</p>
+                                <Link href="/shop" className="inline-block text-sm text-yellow-500 hover:text-yellow-400 font-medium">
+                                    Koleksiyonu Keşfet →
+                                </Link>
+                            </div>
+                        ) : (
                         <div className="space-y-4">
                             {orders.map((order) => {
                                 const status = getStatusConfig(order.status);
@@ -108,20 +128,17 @@ export default function OrdersPage() {
                                             <div className="flex gap-4 md:gap-8">
                                                 <div>
                                                     <p className="text-xs text-zinc-500 mb-1">Sipariş Tarihi</p>
-                                                    <p className="text-sm font-medium text-white">{order.date}</p>
+                                                    <p className="text-sm font-medium text-white">{new Date(order.createdAt).toLocaleDateString("tr-TR")}</p>
                                                 </div>
                                                 <div>
                                                     <p className="text-xs text-zinc-500 mb-1">Toplam Tutar</p>
-                                                    <p className="text-sm font-medium text-white">₺{order.total.toLocaleString("tr-TR")},00</p>
+                                                    <p className="text-sm font-medium text-white">{formatPrice(order.total)}</p>
                                                 </div>
                                                 <div>
                                                     <p className="text-xs text-zinc-500 mb-1">Sipariş No</p>
-                                                    <p className="text-sm font-medium text-white">{order.id}</p>
+                                                    <p className="text-sm font-medium text-white font-mono">{order.id}</p>
                                                 </div>
                                             </div>
-                                            <button className="text-sm font-medium text-yellow-500 hover:text-yellow-400 flex items-center gap-1">
-                                                Detayları Gör <ChevronRight className="w-4 h-4" />
-                                            </button>
                                         </div>
 
                                         {/* Content */}
@@ -135,30 +152,23 @@ export default function OrdersPage() {
                                                     {order.items.map((item, idx) => (
                                                         <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">
                                                             <div className="w-1 h-1 rounded-full bg-zinc-600" />
-                                                            <span>{item.name}</span>
-                                                            <span className="text-zinc-500 text-xs">({item.variant})</span>
+                                                            <span>{item.quantity}× {item.name}</span>
                                                         </div>
                                                     ))}
                                                 </div>
                                             </div>
 
-                                            {/* Action Buttons */}
                                             <div className="flex flex-col gap-2 min-w-[200px]">
-                                                {order.status === "delivered" ? (
-                                                    <button className="w-full py-2.5 px-4 rounded-lg bg-white text-black font-bold text-sm hover:bg-zinc-200 transition-colors">
-                                                        Tekrar Satın Al
-                                                    </button>
-                                                ) : (
-                                                    <button className="w-full py-2.5 px-4 rounded-lg bg-yellow-600 text-white font-bold text-sm hover:bg-yellow-500 transition-colors">
-                                                        Kargo Takibi
-                                                    </button>
-                                                )}
+                                                <Link href={`/order-track?id=${encodeURIComponent(order.id)}`} className="w-full py-2.5 px-4 rounded-lg bg-yellow-600 text-white font-bold text-sm hover:bg-yellow-500 transition-colors text-center">
+                                                    Sipariş Takibi
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
                                 );
                             })}
                         </div>
+                        )}
                     </div>
                 </div>
             </div>

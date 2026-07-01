@@ -6,6 +6,8 @@ import { formatPrice } from "@/lib/utils";
 import { getProductSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { getCategoryByName } from "@/data/categories";
 import { getAllProducts, getProductById } from "@/lib/products-source";
+import { listReviews, getRatingSummary } from "@/lib/reviews";
+import ProductReviews from "@/components/shop/ProductReviews";
 import type { Product } from "@/types";
 
 // Ürün sayfaları build sırasında üretilir; yeni/güncellenen ürünler için
@@ -99,7 +101,12 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         (p) => p.category === product.category && p.id !== product.id
     );
 
-    const productSchema = getProductSchema(product);
+    const [reviews, ratingSummary] = await Promise.all([
+        listReviews(product.id),
+        getRatingSummary(product.id),
+    ]);
+
+    const productSchema = getProductSchema(product, ratingSummary);
     const categoryConfig = getCategoryByName(product.category);
     const breadcrumbSchema = getBreadcrumbSchema([
         { name: "Ana Sayfa", url: "https://aybicak.com" },
@@ -142,6 +149,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 product={product}
                 relatedProducts={relatedProducts}
                 categoryContent={categoryContent}
+                reviewsSlot={
+                    <ProductReviews
+                        productId={product.id}
+                        initialReviews={reviews}
+                        average={ratingSummary?.average || 0}
+                        count={ratingSummary?.count || 0}
+                    />
+                }
             />
         </>
     );
