@@ -4,15 +4,16 @@ import Link from "next/link";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import KnifeCard from "@/components/shared/KnifeCard";
-import { products } from "@/data/products";
 import { categories, getCategoryBySlug } from "@/data/categories";
 import { getBreadcrumbSchema } from "@/lib/schema";
+import { getAllProducts } from "@/lib/products-source";
 
 export function generateStaticParams() {
     return categories.map((category) => ({ slug: category.slug }));
 }
 
 export const dynamicParams = false;
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
@@ -40,7 +41,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     const config = getCategoryBySlug(slug);
     if (!config) return notFound();
 
-    const categoryProducts = products.filter((p) => p.category === config.category);
+    const allProducts = await getAllProducts();
+    const categoryProducts = allProducts.filter((p) => p.category === config.category);
 
     const collectionSchema = {
         "@context": "https://schema.org",
