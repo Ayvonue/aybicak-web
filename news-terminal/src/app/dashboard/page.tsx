@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 type Me = { id: number; email: string; plan_tier: string };
 type KeyRow = {
@@ -105,6 +106,7 @@ export default function DashboardPage() {
           <a className="mode-link" href="/terminal">
             terminale dön →
           </a>
+          <ThemeToggle />
         </div>
       </div>
 

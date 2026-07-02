@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { useNewsStream, type StreamItem } from "@/hooks/useNewsStream";
 import { useTickerStream } from "@/hooks/useTickerStream";
 import { TickerTape } from "@/components/TickerTape";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const CATEGORIES = [
   { slug: "all", label: "Tümü", key: "1" },
@@ -24,6 +25,35 @@ const STATUS_LABEL = {
   connecting: { text: "BAĞLANIYOR", className: "connecting" },
   offline: { text: "ÇEVRİMDIŞI — REST yedeği", className: "offline" },
 } as const;
+
+// memo: her yeni WS eventi yalnız değişen satırları çizer, 200 satırlık
+// listenin tamamını değil.
+const NewsRow = memo(function NewsRow({
+  item,
+  index,
+  isSelected,
+  onSelect,
+}: {
+  item: StreamItem;
+  index: number;
+  isSelected: boolean;
+  onSelect: (i: number) => void;
+}) {
+  return (
+    <div
+      data-row={index}
+      className={`t-row ${isSelected ? "selected" : ""}`}
+      onClick={() => onSelect(index)}
+      onDoubleClick={() => window.open(item.url, "_blank", "noopener")}
+    >
+      <span className="t-time">{clock(item.published_at)}</span>
+      <span className={`badge ${item.category}`}>{item.category}</span>
+      <span className="t-source">{item.source_name}</span>
+      <span className="t-title">{item.title}</span>
+      {item.source_count > 1 && <span className="cluster-badge">{item.source_count} kaynak</span>}
+    </div>
+  );
+});
 
 export default function TerminalPage() {
   const { items: wsItems, status } = useNewsStream(["news:all"]);
@@ -166,6 +196,7 @@ export default function TerminalPage() {
           <a className="mode-link" href="/feed">
             sade görünüm →
           </a>
+          <ThemeToggle />
         </div>
       </div>
 
@@ -203,21 +234,13 @@ export default function TerminalPage() {
             </div>
           )}
           {visible.map((item, i) => (
-            <div
+            <NewsRow
               key={item.id}
-              data-row={i}
-              className={`t-row ${i === selected ? "selected" : ""}`}
-              onClick={() => setSelected(i)}
-              onDoubleClick={() => window.open(item.url, "_blank", "noopener")}
-            >
-              <span className="t-time">{clock(item.published_at)}</span>
-              <span className={`badge ${item.category}`}>{item.category}</span>
-              <span className="t-source">{item.source_name}</span>
-              <span className="t-title">{item.title}</span>
-              {item.source_count > 1 && (
-                <span className="cluster-badge">{item.source_count} kaynak</span>
-              )}
-            </div>
+              item={item}
+              index={i}
+              isSelected={i === selected}
+              onSelect={setSelected}
+            />
           ))}
         </div>
         <div className="t-detail">

@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState, type CSSProperties } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 type NewsItem = {
   id: number;
@@ -21,7 +22,7 @@ const CATEGORIES: { slug: string; label: string }[] = [
   { slug: "genel", label: "Genel" },
 ];
 
-const POLL_INTERVAL_MS = 15000; // Phase 1 uses polling; Phase 2 replaces this with the WS feed.
+const POLL_INTERVAL_MS = 15000; // Phase 1 uses polling; the WS feed powers /terminal.
 
 function timeAgo(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
@@ -31,6 +32,45 @@ function timeAgo(iso: string): string {
   const hours = Math.floor(mins / 60);
   if (hours < 24) return `${hours} sa önce`;
   return `${Math.floor(hours / 24)} gün önce`;
+}
+
+// memo: 15 sn'lik her poll döngüsünde değişmeyen kartlar yeniden çizilmez.
+const NewsCard = memo(function NewsCard({ item, index }: { item: NewsItem; index: number }) {
+  return (
+    <a
+      className="card"
+      href={item.url}
+      target="_blank"
+      rel="noreferrer"
+      style={{ "--i": index } as CSSProperties}
+    >
+      <div className="card-meta">
+        <span className={`badge ${item.category}`}>{item.category}</span>
+        <span>{item.source_name}</span>
+        <span>·</span>
+        <span>{timeAgo(item.published_at)}</span>
+        {item.source_count > 1 && (
+          <span className="cluster-badge">{item.source_count} kaynak bildiriyor</span>
+        )}
+      </div>
+      <h2>{item.title}</h2>
+      {item.summary && <p>{item.summary}</p>}
+    </a>
+  );
+});
+
+function SkeletonCards() {
+  return (
+    <>
+      {[0, 1, 2, 3, 4].map((i) => (
+        <div className="skeleton" key={i} aria-hidden>
+          <div className="sk-title" />
+          <div className="sk-line" />
+          <div className="sk-half" />
+        </div>
+      ))}
+    </>
+  );
 }
 
 export default function FeedPage() {
@@ -86,6 +126,7 @@ export default function FeedPage() {
           <a className="mode-link" href="/terminal">
             terminal modu →
           </a>
+          <ThemeToggle />
         </div>
       </div>
 
@@ -105,23 +146,11 @@ export default function FeedPage() {
         ))}
       </div>
 
-      {loading && items.length === 0 && <div className="empty">Yükleniyor…</div>}
+      {loading && items.length === 0 && <SkeletonCards />}
       {!loading && items.length === 0 && <div className="empty">Bu kategoride henüz haber yok.</div>}
 
-      {items.map((item) => (
-        <a key={item.id} className="card" href={item.url} target="_blank" rel="noreferrer">
-          <div className="card-meta">
-            <span className={`badge ${item.category}`}>{item.category}</span>
-            <span>{item.source_name}</span>
-            <span>·</span>
-            <span>{timeAgo(item.published_at)}</span>
-            {item.source_count > 1 && (
-              <span className="cluster-badge">{item.source_count} kaynak bildiriyor</span>
-            )}
-          </div>
-          <h2>{item.title}</h2>
-          {item.summary && <p>{item.summary}</p>}
-        </a>
+      {items.map((item, i) => (
+        <NewsCard key={item.id} item={item} index={i} />
       ))}
     </div>
   );
