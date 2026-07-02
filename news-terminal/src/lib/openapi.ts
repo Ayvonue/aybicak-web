@@ -110,6 +110,45 @@ export const openApiSpec = {
         },
       },
     },
+    "/v1/search": {
+      get: {
+        summary: "Haber arşivinde tam metin arama",
+        parameters: [
+          {
+            name: "q",
+            in: "query",
+            required: true,
+            schema: { type: "string" },
+            description: 'Arama sorgusu; websearch sözdizimi desteklenir ("dolar faiz", "btc OR eth", "-hisse")',
+          },
+          {
+            name: "category",
+            in: "query",
+            schema: { type: "string", enum: ["finans", "oyun", "hobi", "genel"] },
+          },
+          { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 50 } },
+        ],
+        responses: {
+          "200": {
+            description: "İlgililik sırasına göre sonuçlar",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    items: { type: "array", items: { $ref: "#/components/schemas/NewsItem" } },
+                    count: { type: "integer" },
+                  },
+                },
+              },
+            },
+          },
+          "400": { description: "q parametresi eksik" },
+          "401": { description: "Geçersiz veya eksik API anahtarı" },
+          "429": { description: "Dakikalık istek limiti aşıldı" },
+        },
+      },
+    },
     "/v1/tickers/{symbol}": {
       get: {
         summary: "Tek sembol: son fiyat + 100 noktalık tarihçe",

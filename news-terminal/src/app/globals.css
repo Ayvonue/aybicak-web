@@ -221,6 +221,22 @@ a {
   color: var(--fg-dim);
 }
 
+.t-search {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--fg);
+  font: inherit;
+  font-size: 12px;
+  padding: 4px 10px;
+  width: 180px;
+}
+
+.t-search:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
 .t-body {
   display: grid;
   grid-template-columns: 1fr 320px;

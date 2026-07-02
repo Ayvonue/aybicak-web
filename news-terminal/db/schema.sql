@@ -126,6 +126,13 @@ CREATE TABLE IF NOT EXISTS ticker_prices (
 -- worker's duplicate-tick guard both ride this index.
 CREATE UNIQUE INDEX IF NOT EXISTS idx_ticker_prices_ticker_ts ON ticker_prices (ticker_id, ts DESC);
 
+-- Phase 5 slice: full-text search. 'simple' config (no stemming) because the
+-- corpus is mixed Turkish/English; Meilisearch replaces this when typo
+-- tolerance / prefix search is needed (plan Faz 5).
+ALTER TABLE news_items ADD COLUMN IF NOT EXISTS search_tsv tsvector
+  GENERATED ALWAYS AS (to_tsvector('simple', coalesce(title, '') || ' ' || coalesce(summary, ''))) STORED;
+CREATE INDEX IF NOT EXISTS idx_news_items_search ON news_items USING GIN (search_tsv);
+
 INSERT INTO categories (slug, label) VALUES
   ('finans', 'Finans'),
   ('oyun', 'Oyun'),

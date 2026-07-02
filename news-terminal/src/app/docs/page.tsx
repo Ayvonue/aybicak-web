@@ -58,6 +58,7 @@ export default function DocsPage() {
 
       <h2>REST uçları</h2>
       <pre>{`GET /api/v1/news?category=finans&limit=20&since=2026-07-01T00:00:00Z
+GET /api/v1/search?q=dolar+faiz&category=finans
 GET /api/v1/tickers
 GET /api/v1/tickers/BTC`}</pre>
       <p>

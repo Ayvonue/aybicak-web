@@ -31,7 +31,43 @@ export default function TerminalPage() {
   const [fallbackItems, setFallbackItems] = useState<StreamItem[]>([]);
   const [category, setCategory] = useState("all");
   const [selected, setSelected] = useState(0);
+  const [query, setQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<StreamItem[] | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  // '/' araması: 300ms debounce ile arşivde tam metin arama; sonuç görünümü
+  // canlı akışın yerine geçer, Esc/temizleme akışa döndürür.
+  useEffect(() => {
+    if (!query.trim()) return; // boş sorguda temizlik onChange/Esc handler'ında
+    let cancelled = false;
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(
+          `/api/internal/search?q=${encodeURIComponent(query)}&category=${category === "all" ? "" : category}`,
+          { cache: "no-store" }
+        );
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!cancelled) {
+          setSearchResults(
+            (data.items ?? []).map((it: StreamItem & { cluster_id?: number | null }) => ({
+              ...it,
+              cluster_id: it.cluster_id ?? null,
+              source_count: it.source_count ?? 1,
+            }))
+          );
+          setSelected(0);
+        }
+      } catch {
+        // arama başarısızsa canlı akış görünümü zaten ayakta
+      }
+    }, 300);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [query, category]);
 
   // Progressive enhancement: if the WS gateway is unreachable, fall back to
   // REST polling so the terminal degrades to ~15s freshness instead of dying.
@@ -64,10 +100,10 @@ export default function TerminalPage() {
   }, [status]);
 
   const items = wsItems.length > 0 ? wsItems : fallbackItems;
-  const visible = useMemo(
-    () => (category === "all" ? items : items.filter((it) => it.category === category)),
-    [items, category]
-  );
+  const visible = useMemo(() => {
+    if (searchResults !== null) return searchResults;
+    return category === "all" ? items : items.filter((it) => it.category === category);
+  }, [items, category, searchResults]);
   const current: StreamItem | undefined = visible[selected];
 
   const switchCategory = (slug: string) => {
@@ -77,7 +113,19 @@ export default function TerminalPage() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        if (e.key === "Escape") {
+          setQuery("");
+          setSearchResults(null);
+          (e.target as HTMLElement).blur();
+        }
+        return;
+      }
+      if (e.key === "/") {
+        e.preventDefault();
+        searchRef.current?.focus();
+        return;
+      }
       if (e.key === "j" || e.key === "ArrowDown") {
         e.preventDefault();
         setSelected((s) => Math.min(s + 1, Math.max(visible.length - 1, 0)));
@@ -133,12 +181,27 @@ export default function TerminalPage() {
             <span className="dim">{c.key}</span> {c.label}
           </button>
         ))}
-        <span className="t-hint">j/k gezin · Enter aç · 1-5 kategori</span>
+        <input
+          ref={searchRef}
+          className="t-search"
+          type="search"
+          placeholder="/ ara…"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            if (!e.target.value.trim()) setSearchResults(null);
+          }}
+        />
+        <span className="t-hint">j/k gezin · Enter aç · 1-5 kategori · / ara · Esc temizle</span>
       </div>
 
       <div className="t-body">
         <div className="t-list" ref={listRef}>
-          {visible.length === 0 && <div className="empty">Akış bekleniyor…</div>}
+          {visible.length === 0 && (
+            <div className="empty">
+              {searchResults !== null ? "Sonuç bulunamadı." : "Akış bekleniyor…"}
+            </div>
+          )}
           {visible.map((item, i) => (
             <div
               key={item.id}

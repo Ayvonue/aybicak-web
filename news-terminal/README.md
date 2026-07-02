@@ -61,8 +61,18 @@ Faz 4 ile eklenenler:
   (REST + WebSocket protokol dokümantasyonu). Eski paylaşılan key
   (`NEWS_API_SHARED_KEY`) ops/iç kullanım için geriye uyumlu çalışır
 
-Henüz yok (sonraki fazlar — plana bakın): billing/ödeme (iyzico deseni hazır),
-hesap tabanlı sunucu-taraflı alarmlar, Meilisearch/AI özellikler + Timescale (Faz 5).
+Faz 5'ten şimdilik uygulanan dilim — **tam metin arama**:
+
+- Postgres FTS: `search_tsv` generated column + GIN indeksi ('simple' config —
+  karışık TR/EN korpus için köklemesiz); Meilisearch, yazım toleransı/önek arama
+  gerektiğinde bunun yerine geçer
+- `GET /api/v1/search?q=&category=&limit=` — websearch sözdizimi ("dolar faiz",
+  "btc OR eth", "-hisse"), ilgililik sıralaması, cluster başına tek sonuç
+- Terminalde `/` kısayolu: 300ms debounce ile arşiv araması, Esc canlı akışa döner
+
+Henüz yok (sonraki fazlar — plana bakın, dış servis/anahtar kararı gerektirir):
+billing/ödeme (iyzico deseni hazır), hesap tabanlı sunucu-taraflı alarmlar,
+Meilisearch, AI sentiment/etki skoru, KAP çevirisi, Timescale, lisanslı BIST verisi.
 
 ## Yerelde çalıştırma
 
