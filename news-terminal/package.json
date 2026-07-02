@@ -1,0 +1,32 @@
+{
+  "name": "news-terminal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Low-latency news terminal for traders and enthusiasts, with its own public API.",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "db:setup": "tsx src/ingestion/db-setup.ts",
+    "ingest": "tsx src/ingestion/poller.ts"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "pg": "^8.13.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^16.0.0",
+    "playwright": "^1.61.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
