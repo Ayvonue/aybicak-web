@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getPool } from "@/lib/db";
-import { isAuthorized } from "@/lib/apiAuth";
+import { authorizeApiRequest } from "@/lib/apiAuth";
 
 export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ symbol: string }> }
 ) {
-  if (!isAuthorized(req)) {
-    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  }
+  const auth = await authorizeApiRequest(req);
+  if (!auth.ok) return auth.response;
   const { symbol } = await params;
   const pool = getPool();
 
@@ -28,16 +27,19 @@ export async function GET(
     [t.id]
   );
 
-  return NextResponse.json({
-    ticker: {
-      symbol: t.symbol,
-      exchange: t.exchange,
-      name: t.name,
-      currency: t.currency,
-      is_delayed: t.is_delayed,
-      data_source: t.data_source,
+  return NextResponse.json(
+    {
+      ticker: {
+        symbol: t.symbol,
+        exchange: t.exchange,
+        name: t.name,
+        currency: t.currency,
+        is_delayed: t.is_delayed,
+        data_source: t.data_source,
+      },
+      latest: history.rows[0] ?? null,
+      history: history.rows,
     },
-    latest: history.rows[0] ?? null,
-    history: history.rows,
-  });
+    { headers: auth.rateHeaders }
+  );
 }

@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import { isAuthorized } from "@/lib/apiAuth";
+import { authorizeApiRequest } from "@/lib/apiAuth";
 import { listTickersWithLatest } from "@/lib/tickers";
 
 export async function GET(req: NextRequest) {
-  if (!isAuthorized(req)) {
-    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  }
+  const auth = await authorizeApiRequest(req);
+  if (!auth.ok) return auth.response;
+
   const tickers = await listTickersWithLatest();
-  return NextResponse.json({ tickers, count: tickers.length });
+  return NextResponse.json(
+    { tickers, count: tickers.length },
+    { headers: auth.rateHeaders }
+  );
 }

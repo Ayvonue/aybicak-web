@@ -453,3 +453,129 @@ a {
   padding: 10px 14px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
+
+/* --- Dashboard / docs --- */
+
+.auth-box {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-box input {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--fg);
+  font: inherit;
+  font-size: 13px;
+  padding: 8px 12px;
+}
+
+.auth-box input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button.primary {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: var(--bg);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.form-error {
+  color: #f85149;
+  font-size: 12px;
+}
+
+.key-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.new-key-box {
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: rgba(212, 175, 55, 0.08);
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.new-key-box code {
+  color: var(--accent);
+  word-break: break-all;
+  font-size: 13px;
+}
+
+.new-key-box .tab { align-self: flex-start; }
+
+.key-card.revoked { opacity: 0.45; }
+
+.revoke {
+  background: none;
+  border: 1px solid #f85149;
+  border-radius: 2px;
+  color: #f85149;
+  font: inherit;
+  font-size: 11px;
+  padding: 1px 8px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.docs {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.docs h2 {
+  color: var(--accent);
+  font-size: 16px;
+  margin-top: 32px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+.docs code, .docs pre {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.docs code { padding: 1px 6px; }
+
+.docs pre {
+  padding: 12px 14px;
+  overflow-x: auto;
+}
+
+.docs table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+.docs th, .docs td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.docs th { color: var(--fg-dim); font-weight: 600; }

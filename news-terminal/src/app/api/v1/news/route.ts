@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getPool } from "@/lib/db";
-import { isAuthorized } from "@/lib/apiAuth";
+import { authorizeApiRequest } from "@/lib/apiAuth";
 
 export async function GET(req: NextRequest) {
-  if (!isAuthorized(req)) {
-    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  }
+  const auth = await authorizeApiRequest(req);
+  if (!auth.ok) return auth.response;
 
   const { searchParams } = new URL(req.url);
   const category = searchParams.get("category"); // finans | oyun | hobi | genel
@@ -46,8 +45,8 @@ export async function GET(req: NextRequest) {
     params
   );
 
-  return NextResponse.json({
-    items: result.rows,
-    count: result.rows.length,
-  });
+  return NextResponse.json(
+    { items: result.rows, count: result.rows.length },
+    { headers: auth.rateHeaders }
+  );
 }

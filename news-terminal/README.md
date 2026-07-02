@@ -10,7 +10,7 @@ bölümü). Tam mimari/rekabet analizi/yol haritası için proje köküne yakın
 bakın: `/root/.claude/plans/bir-bilgi-terminali-yapmak-serialized-dragon.md` (bu oturuma
 özel bir yol — kalıcı bir kopya isteniyorsa bu README'ye taşınabilir).
 
-## Bu klasörde ne var (Faz 1 + Faz 2 + Faz 3)
+## Bu klasörde ne var (Faz 1-4)
 
 - `db/schema.sql` — Postgres şeması (organizations/users en baştan, çok kiracılı büyümeye hazır)
 - `src/lib/db.ts` — `pg` tabanlı bağlantı katmanı
@@ -47,8 +47,22 @@ Faz 3 ile eklenenler:
 - Gateway artık iki stream'i birden okur (haber + ticker); ticker abonelikleri
   bağlantıda sembol başına son fiyat snapshot'ı alır
 
-Henüz yok (sonraki fazlar — plana bakın): hesap tabanlı sunucu-taraflı alarmlar ve
-API key/tier yönetimi + billing (Faz 4), Meilisearch/AI özellikler + Timescale (Faz 5).
+Faz 4 ile eklenenler:
+
+- **Hesap + API key yönetimi**: `/dashboard` — e-posta/parola ile kayıt-giriş (scrypt
+  hash + HMAC imzalı session cookie, harici auth bağımlılığı yok), kayıtta otomatik
+  kişisel organization (çok kiracılı model baştan aktif), key oluşturma (tam anahtar
+  yalnızca bir kez gösterilir, DB'de SHA-256 hash saklanır), iptal, son kullanım izleme
+- **Tier'lı rate limiting**: Redis sabit-pencere sayacı; free 60 istek/dk, pro 600,
+  `custom_rate_limit` kolonu ile anahtar bazında özelleştirme; `X-RateLimit-*`
+  başlıkları + `429`/`Retry-After`; Redis çökerse fail-open (API asla Redis yüzünden
+  düşmez). Girişte e-posta başına brute-force koruması
+- **OpenAPI + docs**: `/api/v1/openapi.json` (makine okunur spec) ve `/docs`
+  (REST + WebSocket protokol dokümantasyonu). Eski paylaşılan key
+  (`NEWS_API_SHARED_KEY`) ops/iç kullanım için geriye uyumlu çalışır
+
+Henüz yok (sonraki fazlar — plana bakın): billing/ödeme (iyzico deseni hazır),
+hesap tabanlı sunucu-taraflı alarmlar, Meilisearch/AI özellikler + Timescale (Faz 5).
 
 ## Yerelde çalıştırma
 
@@ -79,4 +93,8 @@ düştüğü, klavye navigasyonu ve kategori kısayolları gözlemlendi. Faz 3: 
 parser'ları fixture'larla birim test edildi (6 test); CoinGecko + ECB'den gerçek
 fiyat çekilip DB + Redis'e yazıldığı, API uçlarının (401/200/404) çalıştığı ve
 tarayıcıda şerit/rozet/watchlist/alarmın canlı tikle tetiklendiği doğrulandı
-(alarm tekilleştirme hatası tarayıcı testinde yakalanıp düzeltildi).
+(alarm tekilleştirme hatası tarayıcı testinde yakalanıp düzeltildi). Faz 4: 6 auth/key
+birim testi + 16 senaryoluk e2e (kayıt/doğrulama/409, key oluşturma, key ile 200 +
+rate başlıkları, geçersiz key 401, 60 istekte 429 + Retry-After, iptal sonrası 401,
+çıkış/giriş, paylaşılan key geriye uyumluluğu, openapi.json) ve tarayıcıda dashboard
+kayıt→key akışı doğrulandı.
