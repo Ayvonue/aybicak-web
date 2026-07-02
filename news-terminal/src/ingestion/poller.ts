@@ -1,7 +1,7 @@
 import Parser from "rss-parser";
 import { getPool } from "@/lib/db";
 import { SOURCE_SEEDS } from "@/ingestion/sources";
-import { normalizeTitle, titleHash, stripHtml, truncateSummary } from "@/ingestion/normalize";
+import { titleHash, stripHtml, truncateSummary } from "@/ingestion/normalize";
 
 const parser = new Parser({
   headers: { "User-Agent": "Mozilla/5.0 (news-terminal ingestion bot)" },
@@ -23,7 +23,10 @@ async function ensureSources(): Promise<Map<string, { id: number; categoryId: nu
     const result = await pool.query<{ id: number }>(
       `INSERT INTO sources (name, type, url, category_id, poll_interval_sec)
        VALUES ($1, 'rss', $2, $3, $4)
-       ON CONFLICT (url) DO UPDATE SET name = EXCLUDED.name
+       ON CONFLICT (url) DO UPDATE
+         SET name = EXCLUDED.name,
+             category_id = EXCLUDED.category_id,
+             poll_interval_sec = EXCLUDED.poll_interval_sec
        RETURNING id`,
       [seed.name, seed.url, categoryId, seed.pollIntervalSec]
     );
@@ -57,16 +60,30 @@ async function pollSource(seed: (typeof SOURCE_SEEDS)[number], sourceId: number,
     const externalId = item.guid || url;
     const hash = titleHash(title);
 
-    const result = await pool.query(
-      `INSERT INTO news_items
-         (source_id, external_id, title, summary, url, published_at, category_id, title_hash)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-       ON CONFLICT (url) DO NOTHING
-       RETURNING id`,
-      [sourceId, externalId, title, summary, url, publishedAt, categoryId, hash]
-    );
-    if (result.rowCount && result.rowCount > 0) inserted++;
-    else skipped++;
+    // The NOT EXISTS guard drops cross-source duplicates by normalized title
+    // within a rolling window (same story from two feeds); ON CONFLICT (url)
+    // drops same-source re-polls that slip past it (>48h old items).
+    try {
+      const result = await pool.query(
+        `INSERT INTO news_items
+           (source_id, external_id, title, summary, url, published_at, category_id, title_hash)
+         SELECT $1, $2, $3, $4, $5, $6, $7, $8
+         WHERE NOT EXISTS (
+           SELECT 1 FROM news_items
+           WHERE title_hash = $8 AND ingested_at > now() - interval '48 hours'
+         )
+         ON CONFLICT (url) DO NOTHING
+         RETURNING id`,
+        [sourceId, externalId, title, summary, url, publishedAt, categoryId, hash]
+      );
+      if (result.rowCount && result.rowCount > 0) inserted++;
+      else skipped++;
+    } catch (err) {
+      // A single bad item (e.g. duplicate (source_id, external_id) with a
+      // changed URL) must not abort the whole ingestion run.
+      console.error(`[poller] insert failed for "${title}" (${url}):`, (err as Error).message);
+      skipped++;
+    }
   }
 
   await pool.query("UPDATE sources SET last_polled_at = now() WHERE id = $1", [sourceId]);

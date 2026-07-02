@@ -1,3 +1,4 @@
+import { timingSafeEqual } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 import { getPool } from "@/lib/db";
 
@@ -9,8 +10,9 @@ import { getPool } from "@/lib/db";
 function isAuthorized(req: NextRequest): boolean {
   const expected = process.env.NEWS_API_SHARED_KEY;
   if (!expected) return true; // no key configured -> open for local dev
-  const header = req.headers.get("authorization");
-  return header === `Bearer ${expected}`;
+  const given = Buffer.from(req.headers.get("authorization") ?? "");
+  const wanted = Buffer.from(`Bearer ${expected}`);
+  return given.length === wanted.length && timingSafeEqual(given, wanted);
 }
 
 export async function GET(req: NextRequest) {

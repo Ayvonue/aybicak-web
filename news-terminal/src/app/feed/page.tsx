@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 
 type NewsItem = {
   id: number;
@@ -37,21 +37,36 @@ export default function FeedPage() {
   const [items, setItems] = useState<NewsItem[]>([]);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [loading, setLoading] = useState(true);
-
-  const fetchNews = useCallback(async (cat: string) => {
-    const res = await fetch(`/api/internal/news?category=${cat}`, { cache: "no-store" });
-    const data = await res.json();
-    setItems(data.items ?? []);
-    setLastUpdated(new Date());
-    setLoading(false);
-  }, []);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    fetchNews(category);
-    const interval = setInterval(() => fetchNews(category), POLL_INTERVAL_MS);
-    return () => clearInterval(interval);
-  }, [category, fetchNews]);
+    // cancelled guards against a slow response for the previous category
+    // overwriting the list after the user has already switched tabs.
+    let cancelled = false;
+
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(`/api/internal/news?category=${category}`, { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        if (cancelled) return;
+        setItems(data.items ?? []);
+        setLastUpdated(new Date());
+        setError(false);
+      } catch {
+        if (!cancelled) setError(true);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    };
+
+    fetchNews();
+    const interval = setInterval(fetchNews, POLL_INTERVAL_MS);
+    return () => {
+      cancelled = true;
+      clearInterval(interval);
+    };
+  }, [category]);
 
   return (
     <div className="page">
@@ -60,7 +75,11 @@ export default function FeedPage() {
           Haber <span className="accent">Terminali</span>
         </h1>
         <div className="status">
-          {lastUpdated ? `son güncelleme: ${timeAgo(lastUpdated.toISOString())}` : "yükleniyor…"}
+          {error
+            ? "bağlantı hatası — yeniden denenecek"
+            : lastUpdated
+              ? `son güncelleme: ${timeAgo(lastUpdated.toISOString())}`
+              : "yükleniyor…"}
         </div>
       </div>
 
@@ -69,7 +88,11 @@ export default function FeedPage() {
           <button
             key={c.slug}
             className={`tab ${category === c.slug ? "active" : ""}`}
-            onClick={() => setCategory(c.slug)}
+            onClick={() => {
+              if (c.slug === category) return;
+              setCategory(c.slug);
+              setLoading(true);
+            }}
           >
             {c.label}
           </button>
