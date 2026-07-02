@@ -10,6 +10,7 @@ type NewsItem = {
   published_at: string;
   category: "finans" | "oyun" | "hobi" | "genel";
   source_name: string;
+  source_count: number;
 };
 
 const CATEGORIES: { slug: string; label: string }[] = [
@@ -74,12 +75,17 @@ export default function FeedPage() {
         <h1>
           Haber <span className="accent">Terminali</span>
         </h1>
-        <div className="status">
-          {error
-            ? "bağlantı hatası — yeniden denenecek"
-            : lastUpdated
-              ? `son güncelleme: ${timeAgo(lastUpdated.toISOString())}`
-              : "yükleniyor…"}
+        <div className="header-right">
+          <span className="status">
+            {error
+              ? "bağlantı hatası — yeniden denenecek"
+              : lastUpdated
+                ? `son güncelleme: ${timeAgo(lastUpdated.toISOString())}`
+                : "yükleniyor…"}
+          </span>
+          <a className="mode-link" href="/terminal">
+            terminal modu →
+          </a>
         </div>
       </div>
 
@@ -109,6 +115,9 @@ export default function FeedPage() {
             <span>{item.source_name}</span>
             <span>·</span>
             <span>{timeAgo(item.published_at)}</span>
+            {item.source_count > 1 && (
+              <span className="cluster-badge">{item.source_count} kaynak bildiriyor</span>
+            )}
           </div>
           <h2>{item.title}</h2>
           {item.summary && <p>{item.summary}</p>}

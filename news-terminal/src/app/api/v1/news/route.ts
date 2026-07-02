@@ -46,12 +46,14 @@ export async function GET(req: NextRequest) {
 
   const pool = getPool();
   const result = await pool.query(
-    `SELECT n.id, n.title, n.summary, n.url, n.image_url, n.published_at,
-            c.slug AS category, s.name AS source_name
+    `SELECT n.id, n.title, n.summary, n.url, n.image_url, n.published_at, n.cluster_id,
+            c.slug AS category, s.name AS source_name,
+            COALESCE(cl.item_count, 1) AS source_count
      FROM news_items n
      JOIN categories c ON c.id = n.category_id
      JOIN sources s ON s.id = n.source_id
-     ${whereClause}
+     LEFT JOIN clusters cl ON cl.id = n.cluster_id
+     ${whereClause ? `${whereClause} AND` : "WHERE"} (n.cluster_id IS NULL OR cl.canonical_item_id = n.id)
      ORDER BY n.published_at DESC
      LIMIT $${params.length}`,
     params

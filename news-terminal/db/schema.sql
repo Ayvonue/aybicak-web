@@ -107,6 +107,11 @@ CREATE TABLE IF NOT EXISTS watchlists (
   PRIMARY KEY (user_id)
 );
 
+-- Phase 2: 64-bit simhash of the title (stored signed) for near-duplicate
+-- clustering; NULL on rows ingested before Phase 2.
+ALTER TABLE news_items ADD COLUMN IF NOT EXISTS simhash BIGINT;
+CREATE INDEX IF NOT EXISTS idx_news_items_ingested_at ON news_items (ingested_at DESC);
+
 INSERT INTO categories (slug, label) VALUES
   ('finans', 'Finans'),
   ('oyun', 'Oyun'),
