@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Nested standalone project with its own tsconfig/eslint setup:
+    "news-terminal/**",
   ]),
 ]);
 

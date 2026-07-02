@@ -10,7 +10,7 @@ bölümü). Tam mimari/rekabet analizi/yol haritası için proje köküne yakın
 bakın: `/root/.claude/plans/bir-bilgi-terminali-yapmak-serialized-dragon.md` (bu oturuma
 özel bir yol — kalıcı bir kopya isteniyorsa bu README'ye taşınabilir).
 
-## Bu klasörde ne var (Faz 1 + Faz 2)
+## Bu klasörde ne var (Faz 1 + Faz 2 + Faz 3)
 
 - `db/schema.sql` — Postgres şeması (organizations/users en baştan, çok kiracılı büyümeye hazır)
 - `src/lib/db.ts` — `pg` tabanlı bağlantı katmanı
@@ -30,8 +30,25 @@ bakın: `/root/.claude/plans/bir-bilgi-terminali-yapmak-serialized-dragon.md` (b
 - `src/app/terminal/page.tsx` — **trader modu**: canlı WS akışı, CANLI/BAĞLANIYOR/ÇEVRİMDIŞI
   durum rozeti, REST polling fallback, j/k + 1-5 klavye navigasyonu, "N kaynak bildiriyor" rozeti
 
-Henüz yok (sonraki fazlar — plana bakın): ticker/BIST entegrasyonu (Faz 3),
-API key/tier yönetimi + billing (Faz 4), Meilisearch/AI özellikler (Faz 5).
+Faz 3 ile eklenenler:
+
+- `src/ticker/adapters.ts` — **pluggable ticker kaynak adapter'ları**: CoinGecko
+  (kripto, anahtarsız, CANLI), Frankfurter/ECB (döviz günlük referans, dürüstçe
+  GECİKMELİ), Finnhub (global hisseler — `FINNHUB_API_KEY` verilince kod değişikliği
+  olmadan devreye girer). Lisanslı BIST vendor'ı geldiğinde yeni bir adapter olarak eklenir.
+- `src/ticker/worker.ts` — her adapter kendi kadansında fiyat çekip `ticker_prices`'a
+  yazar ve `ticker:events` stream'ine yayınlar
+- `src/hooks/useTickerStream.ts` + `src/components/TickerTape.tsx` — canlı fiyat
+  şeridi: sembol başına **CANLI/GECİKMELİ veri rozeti** (farklılaştırıcı #3), yön
+  bazlı renk flaşı, yıldızla watchlist (localStorage), **süresiz fiyat alarmları**
+  (farklılaştırıcı #2 — kendiliğinden sona ermez, tetiklenince bir kez uyarır)
+- `GET /api/v1/tickers`, `GET /api/v1/tickers/:symbol` (son fiyat + 100 noktalık
+  tarihçe), UI fallback için `GET /api/internal/tickers`
+- Gateway artık iki stream'i birden okur (haber + ticker); ticker abonelikleri
+  bağlantıda sembol başına son fiyat snapshot'ı alır
+
+Henüz yok (sonraki fazlar — plana bakın): hesap tabanlı sunucu-taraflı alarmlar ve
+API key/tier yönetimi + billing (Faz 4), Meilisearch/AI özellikler + Timescale (Faz 5).
 
 ## Yerelde çalıştırma
 
@@ -40,9 +57,10 @@ npm install
 cp .env.example .env.local   # DATABASE_URL, NEWS_API_SHARED_KEY, REDIS_URL doldurun
 npm run db:setup             # şemayı uygular (idempotent)
 npm run ws:gateway           # WS gateway :3312 (Redis gerekir)
-npm run ingest:watch          # sürekli ingestion worker (veya tek seferlik: npm run ingest)
+npm run ingest:watch          # sürekli haber ingestion worker (tek seferlik: npm run ingest)
+npm run ticker:watch          # ticker worker (CoinGecko + ECB; FINNHUB_API_KEY opsiyonel)
 npm run dev                   # http://localhost:3000/feed ve /terminal
-npm test                      # normalize/simhash birim testleri
+npm test                      # normalize/simhash/adapter birim testleri
 ```
 
 Redis yoksa ingestion yine çalışır (event yayını atlanır) ve `/terminal` REST polling
@@ -57,4 +75,8 @@ aynı-kaynak skip / birebir başlık katılımı / simhash yakın-başlık katı
 sorgu) test edildi; WS gateway protokolü izole Redis DB'sinde test edildi (boş backlog,
 canlı iletim, kanal filtresi, `last_event_id` replay, metrics — ort. iletim ~1ms);
 tarayıcıda `/terminal` açıkken stream'e enjekte edilen event'in ~1,5 sn'de canlı
-düştüğü, klavye navigasyonu ve kategori kısayolları gözlemlendi.
+düştüğü, klavye navigasyonu ve kategori kısayolları gözlemlendi. Faz 3: adapter
+parser'ları fixture'larla birim test edildi (6 test); CoinGecko + ECB'den gerçek
+fiyat çekilip DB + Redis'e yazıldığı, API uçlarının (401/200/404) çalıştığı ve
+tarayıcıda şerit/rozet/watchlist/alarmın canlı tikle tetiklendiği doğrulandı
+(alarm tekilleştirme hatası tarayıcı testinde yakalanıp düzeltildi).

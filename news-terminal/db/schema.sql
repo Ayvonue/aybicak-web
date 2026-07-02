@@ -112,6 +112,20 @@ CREATE TABLE IF NOT EXISTS watchlists (
 ALTER TABLE news_items ADD COLUMN IF NOT EXISTS simhash BIGINT;
 CREATE INDEX IF NOT EXISTS idx_news_items_ingested_at ON news_items (ingested_at DESC);
 
+-- Phase 3: price tick archive. Plain table for now; becomes a Timescale
+-- hypertable when volume demands it (plan Faz 5) without changing callers.
+CREATE TABLE IF NOT EXISTS ticker_prices (
+  ticker_id  INTEGER NOT NULL REFERENCES tickers(id),
+  ts         TIMESTAMPTZ NOT NULL,
+  price      NUMERIC NOT NULL,
+  volume     NUMERIC,
+  source     TEXT
+);
+
+-- One row per (ticker, source timestamp); latest-price lookups and the
+-- worker's duplicate-tick guard both ride this index.
+CREATE UNIQUE INDEX IF NOT EXISTS idx_ticker_prices_ticker_ts ON ticker_prices (ticker_id, ts DESC);
+
 INSERT INTO categories (slug, label) VALUES
   ('finans', 'Finans'),
   ('oyun', 'Oyun'),

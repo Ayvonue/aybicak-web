@@ -1,6 +1,12 @@
 import { createServer } from "node:http";
 import { WebSocketServer, WebSocket } from "ws";
-import { connectRedis, NEWS_STREAM, type NewsEvent } from "@/lib/events";
+import {
+  connectRedis,
+  NEWS_STREAM,
+  TICKER_STREAM,
+  type NewsEvent,
+  type TickerEvent,
+} from "@/lib/events";
 
 // Standalone always-on WS gateway (plan §"Gerçek Zamanlı İletim Tasarımı"):
 // reads the Redis Stream and fans events out to subscribed clients. Stateless
@@ -32,12 +38,24 @@ const metrics = {
   delivery_latency_ms_count: 0,
 };
 
-function channelOf(event: NewsEvent): string {
-  return `news:${event.category}`;
+type StreamKind = "news" | "ticker";
+
+function channelsOf(kind: StreamKind, event: NewsEvent | TickerEvent): string[] {
+  return kind === "news"
+    ? ["news:all", `news:${(event as NewsEvent).category}`]
+    : ["ticker:all", `ticker:${(event as TickerEvent).symbol}`];
 }
 
-function matches(channels: Set<string>, event: NewsEvent): boolean {
-  return channels.has("news:all") || channels.has(channelOf(event));
+function matches(
+  channels: Set<string>,
+  kind: StreamKind,
+  event: NewsEvent | TickerEvent
+): boolean {
+  return channelsOf(kind, event).some((c) => channels.has(c));
+}
+
+function wantsTickers(channels: Set<string>): boolean {
+  return [...channels].some((c) => c.startsWith("ticker:"));
 }
 
 function send(client: ClientState, payload: unknown): boolean {
@@ -103,13 +121,20 @@ async function main() {
 
         try {
           const backlog = await readBacklog(msg.last_event_id);
-          const events = backlog.filter((e) => matches(client.channels, e.event));
+          const events = backlog.filter((e) => matches(client.channels, "news", e.event));
           send(client, {
             type: "backlog",
             resumed: Boolean(msg.last_event_id),
             events: events.map((e) => ({ stream_id: e.id, event: e.event })),
           });
           metrics.backlog_events_served += events.length;
+
+          // Tickers don't need a history replay — the latest price per
+          // subscribed symbol is the complete state.
+          if (wantsTickers(client.channels)) {
+            const snapshot = await readTickerSnapshot(client.channels);
+            send(client, { type: "ticker_snapshot", events: snapshot });
+          }
         } catch (err) {
           console.error("[gateway] backlog read failed:", (err as Error).message);
           send(client, { type: "error", error: "backlog_failed" });
@@ -139,30 +164,53 @@ async function main() {
     return entries.reverse().map((e) => ({ id: e.id, event: e.message as unknown as NewsEvent }));
   }
 
-  // Fanout loop: blocking-read new stream entries and push to subscribers.
-  let lastDeliveredId = "$";
+  // Latest tick per symbol among the subscribed channels (newest-first scan,
+  // first hit per symbol wins).
+  async function readTickerSnapshot(
+    channels: Set<string>
+  ): Promise<{ stream_id: string; event: TickerEvent }[]> {
+    const entries = await redis.xRevRange(TICKER_STREAM, "+", "-", { COUNT: 500 });
+    const bySymbol = new Map<string, { stream_id: string; event: TickerEvent }>();
+    for (const entry of entries) {
+      const event = entry.message as unknown as TickerEvent;
+      if (!bySymbol.has(event.symbol) && matches(channels, "ticker", event)) {
+        bySymbol.set(event.symbol, { stream_id: entry.id, event });
+      }
+    }
+    return [...bySymbol.values()];
+  }
+
+  // Fanout loop: blocking-read both streams and push to subscribers.
   (async () => {
-    // "$" only works as "new messages" sentinel on the first read; after that
-    // we track concrete IDs ourselves so nothing is lost between reads.
-    const initial = await reader.xRevRange(NEWS_STREAM, "+", "-", { COUNT: 1 });
-    lastDeliveredId = initial.length > 0 ? initial[0].id : "0-0";
+    // "$" only works as "new messages" sentinel on the first read; we track
+    // concrete IDs per stream ourselves so nothing is lost between reads.
+    const streams: { key: string; kind: StreamKind; lastId: string }[] = [
+      { key: NEWS_STREAM, kind: "news", lastId: "0-0" },
+      { key: TICKER_STREAM, kind: "ticker", lastId: "0-0" },
+    ];
+    for (const s of streams) {
+      const initial = await reader.xRevRange(s.key, "+", "-", { COUNT: 1 });
+      s.lastId = initial.length > 0 ? initial[0].id : "0-0";
+    }
 
     for (;;) {
       try {
         const result = await reader.xRead(
-          { key: NEWS_STREAM, id: lastDeliveredId },
+          streams.map((s) => ({ key: s.key, id: s.lastId })),
           { BLOCK: 5000, COUNT: 100 }
         );
         if (!result) continue;
         for (const stream of result) {
+          const meta = streams.find((s) => s.key === stream.name)!;
           for (const entry of stream.messages) {
-            lastDeliveredId = entry.id;
+            meta.lastId = entry.id;
             metrics.events_read++;
-            const event = entry.message as unknown as NewsEvent;
+            const event = entry.message as unknown as NewsEvent | TickerEvent;
             const entryTs = Number(entry.id.split("-")[0]);
+            const type = meta.kind === "news" ? "event" : "ticker";
             for (const client of clients) {
-              if (matches(client.channels, event)) {
-                if (send(client, { type: "event", stream_id: entry.id, event })) {
+              if (matches(client.channels, meta.kind, event)) {
+                if (send(client, { type, stream_id: entry.id, event })) {
                   metrics.events_delivered++;
                   metrics.delivery_latency_ms_sum += Date.now() - entryTs;
                   metrics.delivery_latency_ms_count++;

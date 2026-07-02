@@ -26,6 +26,36 @@ export function newsChannel(categorySlug: string): string {
   return `news:${categorySlug}`;
 }
 
+// Ticker ticks live on their own stream: different retention needs (prices
+// churn far faster than headlines) and the news backlog stays clean.
+export const TICKER_STREAM = "ticker:events";
+export const TICKER_STREAM_MAXLEN = 5_000;
+
+export type TickerEvent = {
+  symbol: string;
+  exchange: string;
+  name: string;
+  currency: string;
+  price: string;
+  change_pct_24h: string; // "" when the source has no meaningful 24h change
+  quote_ts: string; // ISO — when the source says the price is from
+  is_delayed: string; // "1" | "0" — drives the CANLI/GECİKMELİ badge
+  data_source: string;
+};
+
+export function tickerChannel(symbol: string): string {
+  return `ticker:${symbol}`;
+}
+
+export async function publishTickerEvent(
+  redis: RedisClientType,
+  event: TickerEvent
+): Promise<void> {
+  await redis.xAdd(TICKER_STREAM, "*", event as unknown as Record<string, string>, {
+    TRIM: { strategy: "MAXLEN", strategyModifier: "~", threshold: TICKER_STREAM_MAXLEN },
+  });
+}
+
 export async function connectRedis(): Promise<RedisClientType> {
   const client: RedisClientType = createClient({
     url: process.env.REDIS_URL ?? "redis://localhost:6379",

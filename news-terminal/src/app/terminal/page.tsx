@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNewsStream, type StreamItem } from "@/hooks/useNewsStream";
+import { useTickerStream } from "@/hooks/useTickerStream";
+import { TickerTape } from "@/components/TickerTape";
 
 const CATEGORIES = [
   { slug: "all", label: "Tümü", key: "1" },
@@ -25,6 +27,7 @@ const STATUS_LABEL = {
 
 export default function TerminalPage() {
   const { items: wsItems, status } = useNewsStream(["news:all"]);
+  const { tickers, live: tickersLive } = useTickerStream();
   const [fallbackItems, setFallbackItems] = useState<StreamItem[]>([]);
   const [category, setCategory] = useState("all");
   const [selected, setSelected] = useState(0);
@@ -117,6 +120,8 @@ export default function TerminalPage() {
           </a>
         </div>
       </div>
+
+      <TickerTape tickers={tickers} live={tickersLive} />
 
       <div className="t-tabs">
         {CATEGORIES.map((c) => (

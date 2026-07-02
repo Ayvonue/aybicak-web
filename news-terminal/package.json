@@ -11,6 +11,7 @@
     "db:setup": "tsx src/ingestion/db-setup.ts",
     "ingest": "tsx src/ingestion/poller.ts",
     "ingest:watch": "tsx src/ingestion/worker.ts",
+    "ticker:watch": "tsx src/ticker/worker.ts",
     "ws:gateway": "tsx src/ws-gateway/server.ts",
     "test": "tsx --test \"src/**/*.test.ts\""
   },

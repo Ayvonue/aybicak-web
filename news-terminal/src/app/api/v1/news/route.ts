@@ -1,19 +1,6 @@
-import { timingSafeEqual } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 import { getPool } from "@/lib/db";
-
-// Phase 1 MVP auth: a single shared key via Authorization: Bearer <key>.
-// Per-org API keys with tiered rate limiting land in Phase 4 (see plan
-// "Public API Ürünü" — the API is the product's core positioning, not an
-// afterthought, so the auth model is deliberately swappable without
-// changing this route's query/response shape).
-function isAuthorized(req: NextRequest): boolean {
-  const expected = process.env.NEWS_API_SHARED_KEY;
-  if (!expected) return true; // no key configured -> open for local dev
-  const given = Buffer.from(req.headers.get("authorization") ?? "");
-  const wanted = Buffer.from(`Bearer ${expected}`);
-  return given.length === wanted.length && timingSafeEqual(given, wanted);
-}
+import { isAuthorized } from "@/lib/apiAuth";
 
 export async function GET(req: NextRequest) {
   if (!isAuthorized(req)) {
