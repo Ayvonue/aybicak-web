@@ -23,8 +23,20 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Haber Terminali",
-  description: "Düşük gecikmeli haber terminali — finans, oyun, hobi ve genel haberler.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  title: {
+    default: "Haber Terminali — Gürültü değil, haber",
+    template: "%s — Haber Terminali",
+  },
+  description:
+    "Düşük gecikmeli haber terminali: finans, oyun, hobi ve genel haberler. Mükerrer haberleri birleştirir, verinin canlı mı gecikmeli mi olduğunu açıkça söyler. REST + WebSocket API.",
+  openGraph: {
+    title: "Haber Terminali — Gürültü değil, haber",
+    description:
+      "Trader için yoğun terminal, meraklısı için sakin akış — ikisi de aynı düşük gecikmeli altyapıda.",
+    type: "website",
+    locale: "tr_TR",
+  },
 };
 
 export const viewport: Viewport = {

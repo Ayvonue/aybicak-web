@@ -57,10 +57,25 @@ export async function publishTickerEvent(
 }
 
 export async function connectRedis(): Promise<RedisClientType> {
+  let loggedError: string | null = null;
   const client: RedisClientType = createClient({
     url: process.env.REDIS_URL ?? "redis://localhost:6379",
+    socket: {
+      connectTimeout: 3000,
+      // Default strategy retries FOREVER, so connect() never settles when
+      // Redis is down and callers hang (this stalled ingestion in practice).
+      // Bounded backoff: give up after ~10 attempts so best-effort callers
+      // can actually fall back.
+      reconnectStrategy: (retries) => (retries > 10 ? false : Math.min(retries * 200, 2000)),
+    },
   });
-  client.on("error", (err) => console.error("[redis]", err.message));
+  client.on("error", (err) => {
+    // The reconnect loop re-emits the same error every attempt; log once.
+    if (loggedError !== err.message) {
+      loggedError = err.message;
+      console.error("[redis]", err.message);
+    }
+  });
   await client.connect();
   return client;
 }

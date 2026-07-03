@@ -44,4 +44,58 @@ export const SOURCE_SEEDS: SourceSeed[] = [
     categorySlug: "genel",
     pollIntervalSec: 180,
   },
+  {
+    name: "Bloomberg HT",
+    url: "https://www.bloomberght.com/rss",
+    categorySlug: "finans",
+    pollIntervalSec: 60,
+  },
+  {
+    name: "Sözcü - Ekonomi",
+    url: "https://www.sozcu.com.tr/feeds-rss-category-ekonomi",
+    categorySlug: "finans",
+    pollIntervalSec: 120,
+  },
+  {
+    name: "NTV - Ekonomi",
+    url: "https://www.ntv.com.tr/ekonomi.rss",
+    categorySlug: "finans",
+    pollIntervalSec: 180,
+  },
+  {
+    name: "Ars Technica - Gaming",
+    url: "https://feeds.arstechnica.com/arstechnica/gaming",
+    categorySlug: "oyun",
+    pollIntervalSec: 600,
+  },
+  {
+    name: "LOG",
+    url: "https://www.log.com.tr/feed/",
+    categorySlug: "oyun",
+    pollIntervalSec: 600,
+  },
+  {
+    name: "Webtekno",
+    url: "https://www.webtekno.com/rss.xml",
+    categorySlug: "hobi",
+    pollIntervalSec: 600,
+  },
+  {
+    name: "ShiftDelete",
+    url: "https://shiftdelete.net/feed",
+    categorySlug: "hobi",
+    pollIntervalSec: 600,
+  },
+  {
+    name: "CHIP Online",
+    url: "https://www.chip.com.tr/rss",
+    categorySlug: "hobi",
+    pollIntervalSec: 900,
+  },
+  {
+    name: "Anadolu Ajansı - Spor",
+    url: "https://www.aa.com.tr/tr/rss/default?cat=spor",
+    categorySlug: "genel",
+    pollIntervalSec: 300,
+  },
 ];

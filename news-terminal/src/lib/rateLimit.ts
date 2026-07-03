@@ -26,6 +26,12 @@ async function getRedis(): Promise<RedisClientType | null> {
       try {
         const c: RedisClientType = createClient({
           url: process.env.REDIS_URL ?? "redis://localhost:6379",
+          socket: {
+            connectTimeout: 2000,
+            // Fail fast: an API request must never hang on a Redis retry
+            // loop — fail-open is the contract when Redis is down.
+            reconnectStrategy: (retries) => (retries > 3 ? false : retries * 200),
+          },
         });
         c.on("error", () => {}); // logged once below; don't spam per-command
         await c.connect();
