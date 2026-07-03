@@ -63,12 +63,6 @@ export const SOURCE_SEEDS: SourceSeed[] = [
     pollIntervalSec: 180,
   },
   {
-    name: "Ars Technica - Gaming",
-    url: "https://feeds.arstechnica.com/arstechnica/gaming",
-    categorySlug: "oyun",
-    pollIntervalSec: 600,
-  },
-  {
     name: "LOG",
     url: "https://www.log.com.tr/feed/",
     categorySlug: "oyun",

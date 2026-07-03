@@ -5,26 +5,72 @@ import { hammingDistance, fromSigned64 } from "@/ingestion/simhash";
 // 64-bit simhash over title tokens+bigrams: identical titles are 0 apart,
 // reworded variants of the same event typically land ≤ 3.
 const NEAR_DUPLICATE_THRESHOLD = 3;
-const EXACT_WINDOW = "48 hours";
-const NEAR_WINDOW = "6 hours";
-const NEAR_SCAN_LIMIT = 1000;
+const EXACT_WINDOW_MS = 48 * 60 * 60 * 1000;
+const NEAR_WINDOW_MS = 6 * 60 * 60 * 1000;
 
 export type ClusterDecision =
   | { action: "skip" } // exact duplicate from the same source (re-published item)
   | { action: "join"; clusterId: number } // same story already reported by another source
   | { action: "new" }; // first report of this story
 
-type CandidateRow = {
+export type ClusterCandidate = {
   id: number;
   cluster_id: number | null;
   source_id: number;
-  simhash: string | null;
+  simhash: bigint | null;
   title: string;
+  title_hash: string;
+  ingested_at: number; // epoch ms
 };
+
+// In-memory candidate window, loaded ONCE per ingestion cycle instead of
+// querying per feed item (the per-item 1000-row scan dominated poll time).
+// Newly inserted items are appended so later items in the same cycle can
+// cluster against them.
+export type ClusterContext = {
+  byTitleHash: Map<string, ClusterCandidate[]>;
+  recent: ClusterCandidate[];
+};
+
+export async function loadClusterContext(pool: Pool): Promise<ClusterContext> {
+  const result = await pool.query<{
+    id: number;
+    cluster_id: number | null;
+    source_id: number;
+    simhash: string | null;
+    title: string;
+    title_hash: string;
+    ingested_at: string;
+  }>(
+    `SELECT id, cluster_id, source_id, simhash, title, title_hash, ingested_at
+     FROM news_items
+     WHERE ingested_at > now() - interval '48 hours'`
+  );
+  const ctx: ClusterContext = { byTitleHash: new Map(), recent: [] };
+  for (const row of result.rows) {
+    addToContext(ctx, {
+      id: row.id,
+      cluster_id: row.cluster_id,
+      source_id: row.source_id,
+      simhash: row.simhash === null ? null : fromSigned64(row.simhash),
+      title: row.title,
+      title_hash: row.title_hash,
+      ingested_at: new Date(row.ingested_at).getTime(),
+    });
+  }
+  return ctx;
+}
+
+export function addToContext(ctx: ClusterContext, candidate: ClusterCandidate): void {
+  const list = ctx.byTitleHash.get(candidate.title_hash);
+  if (list) list.push(candidate);
+  else ctx.byTitleHash.set(candidate.title_hash, [candidate]);
+  ctx.recent.push(candidate);
+}
 
 // A matched row ingested before clustering existed has cluster_id NULL;
 // retrofit a cluster around it so the incoming item has something to join.
-async function ensureClusterForItem(pool: Pool, row: CandidateRow): Promise<number> {
+async function ensureClusterForItem(pool: Pool, row: ClusterCandidate): Promise<number> {
   if (row.cluster_id !== null) return row.cluster_id;
   const created = await pool.query<{ id: number }>(
     `INSERT INTO clusters (canonical_item_id, canonical_title) VALUES ($1, $2) RETURNING id`,
@@ -32,36 +78,30 @@ async function ensureClusterForItem(pool: Pool, row: CandidateRow): Promise<numb
   );
   const clusterId = created.rows[0].id;
   await pool.query("UPDATE news_items SET cluster_id = $1 WHERE id = $2", [clusterId, row.id]);
+  row.cluster_id = clusterId;
   return clusterId;
 }
 
 export async function decideCluster(
   pool: Pool,
-  input: { titleHash: string; simhash: bigint; sourceId: number }
+  input: { titleHash: string; simhash: bigint; sourceId: number },
+  ctx: ClusterContext,
+  nowMs = Date.now()
 ): Promise<ClusterDecision> {
-  const exact = await pool.query<CandidateRow>(
-    `SELECT id, cluster_id, source_id, simhash, title FROM news_items
-     WHERE title_hash = $1 AND ingested_at > now() - interval '${EXACT_WINDOW}'
-     ORDER BY ingested_at ASC
-     LIMIT 20`,
-    [input.titleHash]
+  const exactMatches = (ctx.byTitleHash.get(input.titleHash) ?? []).filter(
+    (c) => nowMs - c.ingested_at < EXACT_WINDOW_MS
   );
-  if (exact.rows.length > 0) {
-    if (exact.rows.some((r) => r.source_id === input.sourceId)) {
+  if (exactMatches.length > 0) {
+    if (exactMatches.some((c) => c.source_id === input.sourceId)) {
       return { action: "skip" };
     }
-    return { action: "join", clusterId: await ensureClusterForItem(pool, exact.rows[0]) };
+    return { action: "join", clusterId: await ensureClusterForItem(pool, exactMatches[0]) };
   }
 
-  const recent = await pool.query<CandidateRow>(
-    `SELECT id, cluster_id, source_id, simhash, title FROM news_items
-     WHERE simhash IS NOT NULL AND ingested_at > now() - interval '${NEAR_WINDOW}'
-     ORDER BY ingested_at DESC
-     LIMIT ${NEAR_SCAN_LIMIT}`
-  );
-  let best: { row: CandidateRow; distance: number } | null = null;
-  for (const row of recent.rows) {
-    const distance = hammingDistance(input.simhash, fromSigned64(row.simhash!));
+  let best: { row: ClusterCandidate; distance: number } | null = null;
+  for (const row of ctx.recent) {
+    if (row.simhash === null || nowMs - row.ingested_at > NEAR_WINDOW_MS) continue;
+    const distance = hammingDistance(input.simhash, row.simhash);
     if (distance <= NEAR_DUPLICATE_THRESHOLD && (!best || distance < best.distance)) {
       best = { row, distance };
     }
