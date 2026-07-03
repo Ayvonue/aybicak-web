@@ -1110,6 +1110,97 @@ button.primary:hover {
   }
 }
 
+/* ---------- Durum paneli ---------- */
+
+.status-page {
+  max-width: 860px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.status-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.status-panel h3 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.status-panel dl {
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.status-panel dl div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.status-panel dt {
+  color: var(--dim);
+}
+
+.status-panel dd {
+  margin: 0;
+  font-family: var(--font-mono), monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.sources-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.sources-panel th,
+.sources-panel td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sources-panel th {
+  color: var(--dim);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sources-panel tr:last-child td {
+  border-bottom: none;
+}
+
+.sources-panel tr.inactive {
+  opacity: 0.45;
+}
+
+.sources-panel .conn {
+  font-size: 9.5px;
+  padding: 2px 8px;
+}
+
+@media (max-width: 700px) {
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Duyarlılık ---------- */
 
 @media (max-width: 800px) {

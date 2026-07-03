@@ -193,6 +193,9 @@ export default function TerminalPage() {
         </h1>
         <div className="t-header-right">
           <span className={`conn ${statusInfo.className}`}>{statusInfo.text}</span>
+          <a className="mode-link" href="/status">
+            durum
+          </a>
           <a className="mode-link" href="/feed">
             sade görünüm →
           </a>

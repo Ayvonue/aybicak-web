@@ -1,0 +1,36 @@
+# Fly.io örnek konfigürasyonu — "her zaman açık" katman (gateway + worker'lar).
+# Kullanım: cp fly.toml.example fly.toml && fly launch --no-deploy && fly deploy
+# Web katmanı Vercel'de kalır (bkz. DEPLOY.md); burada yalnız kalıcı süreçler koşar.
+#
+# Sırlar (fly secrets set ...): DATABASE_URL (Neon), REDIS_URL (Upstash veya
+# fly redis), SESSION_SECRET, FINNHUB_API_KEY (opsiyonel)
+
+app = "haber-terminali"
+primary_region = "fra" # kullanıcılara ve Neon bölgesine yakın seçin
+
+[build]
+  dockerfile = "Dockerfile"
+
+[processes]
+  gateway = "npm run ws:gateway"
+  ingest = "npm run ingest:watch"
+  ticker = "npm run ticker:watch"
+
+# WS gateway'i dışarı açan servis; ingest/ticker süreçleri port dinlemez.
+[[services]]
+  processes = ["gateway"]
+  internal_port = 3312
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+  [[services.http_checks]]
+    interval = "15s"
+    timeout = "3s"
+    path = "/healthz"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
